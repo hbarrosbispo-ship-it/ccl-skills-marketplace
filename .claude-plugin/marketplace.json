@@ -1,0 +1,20 @@
+{
+  "name": "escritorio-ccl",
+  "owner": {
+    "name": "Escritório CCL"
+  },
+  "plugins": [
+    {
+      "name": "peca-ccl",
+      "source": "./plugins/peca-ccl",
+      "description": "Elaboração assistida de peças processuais e administrativas previdenciárias, tributárias e cíveis do escritório (petição inicial, contestação, réplica, recurso administrativo, recurso inominado, apelação, mandado de segurança e afins), do recebimento dos documentos do caso até a minuta final em .docx.",
+      "version": "0.4.0"
+    },
+    {
+      "name": "planejamento-previdenciario",
+      "source": "./plugins/planejamento-previdenciario",
+      "description": "Conduz a elaboração do Planejamento Previdenciário — o parecer/estudo consultivo que o escritório entrega ao cliente, analisando a situação previdenciária atual, simulando cenários de aposentadoria e recomendando a melhor estratégia contributiva.",
+      "version": "0.4.0"
+    }
+  ]
+}

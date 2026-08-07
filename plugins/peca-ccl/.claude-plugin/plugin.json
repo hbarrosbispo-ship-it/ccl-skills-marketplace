@@ -1,0 +1,8 @@
+{
+  "name": "peca-ccl",
+  "version": "0.4.0",
+  "description": "Elaboração assistida de peças processuais e administrativas previdenciárias, tributárias e cíveis do escritório (petição inicial, contestação, réplica, recurso administrativo, recurso inominado, apelação, mandado de segurança e afins), do recebimento dos documentos do caso até a minuta final em .docx.",
+  "author": {
+    "name": "Escritório"
+  }
+}
