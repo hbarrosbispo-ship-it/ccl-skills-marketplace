@@ -426,6 +426,12 @@ dispositivo citado), as REGRAS DE FORMATAÇÃO e as REGRAS DE INSERÇÃO DE
 IMAGENS NO PARECER abaixo. Gere o arquivo .docx com a skill `docx`,
 replicando o timbre extraído do modelo do escritório.
 
+Local de salvamento do .docx final: se houver uma pasta anexada/fixada ao
+chat (ex.: a pasta do caso mencionada em REGRAS DE ORGANIZAÇÃO DA PASTA DO
+CASO, ou qualquer diretório de projeto vinculado à conversa), salve o
+arquivo gerado nela. Só use a pasta Downloads do usuário como destino se não
+houver nenhuma pasta anexada ao chat.
+
 ### ETAPA 6 — REVISÃO
 Antes de entregar, confira: (a) todo número no documento é rastreável a um
 relatório de cálculo específico — nenhum foi estimado ou calculado pela

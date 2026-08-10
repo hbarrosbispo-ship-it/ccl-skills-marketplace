@@ -922,6 +922,11 @@ Antes de entregar a versão final, confirme com o usuário:
   diretamente da estrutura interna (XML) do modelo .docx real do escritório,
   em vez de apenas replicar visualmente. Use a skill `docx` para essa etapa
   de geração do arquivo.
+- Local de salvamento do .docx final: se houver uma pasta anexada/fixada ao
+  chat (ex.: modo "Pasta anexada" da ETAPA de coleta de documentos, ou
+  qualquer diretório de projeto vinculado à conversa), salve o arquivo
+  gerado nela. Só use a pasta Downloads do usuário como destino se não
+  houver nenhuma pasta anexada ao chat.
 - Manter o mesmo padrão de escrita e fundamentação do modelo, incluindo
   jurisprudências compatíveis já presentes nele, desde que a verificação de
   vigência (ver REGRAS DE CITAÇÃO DE FONTES) não indique que algum
