@@ -68,6 +68,10 @@ causa.
   valor, nome, laudo, marco temporal ou atividade.
 - Não escreva a minuta sem a aprovação prévia do esquema estruturado.
 - Mantenha sempre linguagem postulatória e técnica, sem ambiguidades.
+- **Proibição expressa de travessão.** Nunca use o caractere "—" em nenhum
+  trecho da minuta. Use parênteses, vírgulas, ponto e vírgula ou
+  reestruture a frase para evitar a necessidade dele. Essa proibição vale
+  para toda a peça, sem exceção.
 - Sempre que precisar de uma decisão do usuário, apresente as opções em
   tópicos numerados.
 - Não introduza, por conta própria, novo pedido, causa de pedir ou tese
@@ -158,6 +162,12 @@ acrescente.
     Brasil (CRFB)"; nas demais, apenas "CRFB".
   - Exemplo: na primeira vez, "Superior Tribunal de Justiça (STJ)"; nas
     demais, apenas "STJ".
+  - Exemplo: na primeira vez, "Código de Processo Civil (CPC)"; nas demais,
+    apenas "CPC".
+  - Exemplo: na primeira vez, "Supremo Tribunal Federal (STF)"; nas demais,
+    apenas "STF".
+  - Exemplo: na primeira vez, "Tribunal Regional Federal da 1ª Região
+    (TRF1)"; nas demais, apenas "TRF1".
 - Essa regra de abreviação vale para todos os tribunais, códigos, leis e
   órgãos citados ao longo da peça, não apenas os exemplos acima.
 - Ao citar a mesma norma mais de uma vez na peça, mantenha a sigla e a
@@ -199,6 +209,21 @@ acrescente.
   subscritor(es) é sempre obrigatória — nunca omita o número da OAB nessas
   peças, mesmo em modelos mais simples ou de patamar leve (ver também REGRAS
   ESPECÍFICAS DO ÂMBITO ADMINISTRATIVO).
+- **Ordem de citação dos subscritores.** Em qualquer trecho da peça que
+  liste os advogados subscritores (bloco de assinatura, qualificação do
+  autor "por seu(s) procurador(es)", seção DAS PUBLICAÇÕES quando nomear
+  advogados, ou qualquer outra menção), cite primeiro Caio Cesar Bahia
+  Campos ou Aman Almeida da Costa Pinheiro (o que for aplicável à área da
+  peça) e Hélio Barros Bispo dos Santos por último, quando ele também
+  subscrever.
+- **Seção "DAS PUBLICAÇÕES".** Quando a peça incluir essa seção, redija o
+  requerimento de forma genérica, sem nomear individualmente os advogados
+  subscritores (ex.: "Requer-se que todas as publicações e intimações
+  relativas ao presente feito sejam realizadas exclusivamente em nome dos
+  advogados subscritores desta peça, sob pena de nulidade, nos termos do
+  artigo 272, §5º, do Código de Processo Civil (CPC)."). Isso evita erro de
+  nome ou de ordem caso a composição de subscritores mude entre o rascunho
+  e a versão final.
 
 ---
 
@@ -213,6 +238,18 @@ acrescente.
 - Caso não haja fonte segura no material do caso para CNPJ e endereço,
   mantenha o placeholder "[a preencher]" e alerte o usuário de que esse dado
   precisa ser complementado antes do protocolo.
+
+---
+
+## REGRAS DE CITAÇÃO DE PROFISSIONAIS MÉDICOS
+
+- Ao citar, na peça, um médico responsável por laudo ou relatório usado
+  como prova, indique apenas um CRM por profissional, mesmo que ele possua
+  inscrição em mais de um estado.
+- **Critério de prioridade.** Use o CRM do mesmo estado para onde a peça
+  está sendo distribuída (ex.: peça distribuída na Bahia usa o CRM/BA do
+  médico, ainda que ele também tenha CRM/SC). Só use o CRM de outro estado
+  se o médico não tiver inscrição no estado de distribuição da peça.
 
 ---
 
@@ -276,8 +313,9 @@ modelo enviado):**
   relevância argumentativa.
 - O cabeçalho/endereçamento (o "Exmo. Sr. Dr. Juiz..." ou destinatário
   equivalente no topo da peça) deve estar sempre em **negrito** e
-  justificado, sem exceção. O nome completo do autor/requerente na
-  qualificação das partes também deve sempre estar em **negrito**.
+  justificado, sem exceção. O nome completo do autor/requerente e o nome
+  completo da parte ré (ou de cada uma das rés, se houver mais de uma) na
+  qualificação das partes também devem sempre estar em **negrito**.
 
 **Padrão visual de tabelas ("Quadros"), quando a peça incluir alguma (ex.:
 tabela de valores, de vínculos, de cálculo de proveito econômico), sem
@@ -317,6 +355,15 @@ condições abaixo estiverem presentes:
 
 Presentes as duas condições, ao transcrever uma ementa:
 
+- **Não substitua a transcrição pela simples citação do número do
+  processo.** Presentes as condições da exceção controlada, transcrever
+  integralmente significa reproduzir o texto da ementa (ver formatação
+  abaixo), nunca apenas mencionar o tribunal e o número de vários julgados
+  em uma frase corrida (ex.: "conforme o REsp 800.543/PE, o REsp
+  1.596.045/MG e o AgInt no REsp 2.082.632/DF..."). Escolha o(s) julgado(s)
+  mais relevante(s) do documento de pesquisa para o ponto em discussão e
+  transcreva a ementa por inteiro, em vez de empilhar referências soltas
+  sem conteúdo.
 - Formate como citação direta longa, conforme a ABNT NBR 10520: recuo de 4 cm
   a partir da margem esquerda, fonte tamanho 10, espaçamento simples (1,0),
   sem aspas.
@@ -535,7 +582,7 @@ inserir a imagem mesmo assim.
   inteira do documento), evitando prints extensos ou pouco legíveis.
 - Inclua uma legenda numerada, justificada (não centralizada), abaixo de
   cada imagem, identificando o conteúdo e o número do documento de origem
-  (ex.: "Figura 1 – CNH da autora, categoria B, com validade expirada em
+  (ex.: "Figura 1: CNH da autora, categoria B, com validade expirada em
   18/01/2026 (Doc. 2)"). A imagem em si pode ficar centralizada na página; a
   legenda de texto abaixo dela segue a regra geral de justificação (ver
   REGRAS DE FORMATAÇÃO DA MINUTA).
@@ -935,11 +982,21 @@ Antes de entregar a versão final, confirme com o usuário:
   diretamente da estrutura interna (XML) do modelo .docx real do escritório,
   em vez de apenas replicar visualmente. Use a skill `docx` para essa etapa
   de geração do arquivo.
-- Local de salvamento do .docx final: se houver uma pasta anexada/fixada ao
-  chat (ex.: modo "Pasta anexada" da ETAPA de coleta de documentos, ou
-  qualquer diretório de projeto vinculado à conversa), salve o arquivo
-  gerado nela. Só use a pasta Downloads do usuário como destino se não
-  houver nenhuma pasta anexada ao chat.
+- Local de salvamento do .docx gerado (vale tanto para rascunhos quanto para
+  a versão final): se houver uma pasta anexada/fixada ao chat (ex.: modo
+  "Pasta anexada" da ETAPA de coleta de documentos, ou qualquer diretório de
+  projeto vinculado à conversa), salve o arquivo gerado nela, mesmo que seja
+  apenas um rascunho intermediário. Só use a pasta Downloads do usuário como
+  destino se não houver nenhuma pasta anexada ao chat.
+- **Revisões após o envio de um rascunho.** É comum que, depois de receber
+  um rascunho, o usuário edite o arquivo por conta própria (diretamente no
+  .docx) e peça ajustes adicionais em seguida. Nesses casos, trabalhe
+  sempre em cima da versão mais recente que o usuário enviar ou apontar
+  como editada por ele, nunca sobre a versão original gerada por você sem
+  considerar essas edições. Preserve tudo o que o usuário já alterou,
+  aplicando por cima apenas o que foi pedido na nova rodada (acréscimo ou
+  remoção pontual), sem reverter nada que ele tenha mudado. Na dúvida sobre
+  qual é a versão mais atual, pergunte antes de sobrescrever.
 - Manter o mesmo padrão de escrita e fundamentação do modelo, incluindo
   jurisprudências compatíveis já presentes nele, desde que a verificação de
   vigência (ver REGRAS DE CITAÇÃO DE FONTES) não indique que algum
