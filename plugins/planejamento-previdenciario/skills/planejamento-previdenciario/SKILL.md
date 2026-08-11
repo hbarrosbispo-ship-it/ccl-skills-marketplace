@@ -88,6 +88,10 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
   para a skill decidir sozinha.
 - Sempre que precisar de uma decisão do usuário, apresente as opções em
   tópicos numerados.
+- **Proibição expressa de travessão.** Nunca use o caractere "—" em nenhum
+  trecho do parecer. Use parênteses, vírgulas, ponto e vírgula ou
+  reestruture a frase para evitar a necessidade dele. Essa proibição vale
+  para todo o documento, sem exceção.
 - Se o usuário autorizar expressamente prosseguir "internamente" ou "sem
   perguntar etapa por etapa", a PAUSA da Etapa 4 pode ser suprimida. Mesmo
   assim, ao final, apresente um resumo conciso dos cenários escolhidos e do
@@ -117,6 +121,14 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
     nas demais, apenas "RGPS".
   - Exemplo: na primeira vez, "Instituto Nacional do Seguro Social (INSS)";
     nas demais, apenas "INSS".
+  - Exemplo: na primeira vez, "Código de Processo Civil (CPC)"; nas demais,
+    apenas "CPC".
+  - Exemplo: na primeira vez, "Supremo Tribunal Federal (STF)"; nas demais,
+    apenas "STF".
+  - Exemplo: na primeira vez, "Tribunal Regional Federal da 1ª Região
+    (TRF1)"; nas demais, apenas "TRF1".
+  - Essa regra de abreviação vale para todos os tribunais, códigos, leis e
+    órgãos citados ao longo do parecer, não apenas os exemplos acima.
 - Ao citar a mesma norma ou sigla mais de uma vez no parecer, mantenha a
   grafia idêntica em todas as ocorrências — revise o documento inteiro ao
   final para garantir essa consistência.
@@ -207,8 +219,14 @@ Reaproveita a mesma regra da skill de peças: inclua sempre HÉLIO BARROS
 BISPO DOS SANTOS, OAB/BA 90.527, como subscritor. Se o planejamento tocar em
 questão tributária relevante (raro, mas pode ocorrer em casos de
 complementação de contribuições com efeito fiscal), inclua também CAIO CESAR
-BAHIA CAMPOS, OAB/BA 55.976. Em planejamento puramente previdenciário —
-o caso comum — inclua também AMAN ALMEIDA DA COSTA PINHEIRO, OAB/BA 54.487.
+BAHIA CAMPOS, OAB/BA 55.976. Em planejamento puramente previdenciário (o
+caso comum), inclua também AMAN ALMEIDA DA COSTA PINHEIRO, OAB/BA 54.487.
+
+**Ordem de citação dos subscritores.** Em qualquer trecho que liste os
+advogados subscritores (bloco de assinatura ou qualquer outra menção), cite
+primeiro Caio Cesar Bahia Campos ou Aman Almeida da Costa Pinheiro (o que
+for aplicável) e Hélio Barros Bispo dos Santos por último, quando ele
+também subscrever.
 
 **Nota sobre a restrição geográfica de Hélio nas peças processuais.** Nas
 peças da skill de peças processuais, Hélio só assina peças de processos que
@@ -430,11 +448,21 @@ dispositivo citado), as REGRAS DE FORMATAÇÃO e as REGRAS DE INSERÇÃO DE
 IMAGENS NO PARECER abaixo. Gere o arquivo .docx com a skill `docx`,
 replicando o timbre extraído do modelo do escritório.
 
-Local de salvamento do .docx final: se houver uma pasta anexada/fixada ao
-chat (ex.: a pasta do caso mencionada em REGRAS DE ORGANIZAÇÃO DA PASTA DO
-CASO, ou qualquer diretório de projeto vinculado à conversa), salve o
-arquivo gerado nela. Só use a pasta Downloads do usuário como destino se não
-houver nenhuma pasta anexada ao chat.
+Local de salvamento do .docx gerado (vale tanto para rascunhos quanto para a
+versão final): se houver uma pasta anexada/fixada ao chat (ex.: a pasta do
+caso mencionada em REGRAS DE ORGANIZAÇÃO DA PASTA DO CASO, ou qualquer
+diretório de projeto vinculado à conversa), salve o arquivo gerado nela,
+mesmo que seja apenas um rascunho intermediário. Só use a pasta Downloads
+do usuário como destino se não houver nenhuma pasta anexada ao chat.
+
+**Revisões após o envio de um rascunho.** É comum que, depois de receber um
+rascunho, o usuário edite o arquivo por conta própria e peça ajustes
+adicionais em seguida. Nesses casos, trabalhe sempre em cima da versão mais
+recente que o usuário enviar ou apontar como editada por ele, nunca sobre a
+versão original gerada por você sem considerar essas edições. Preserve tudo
+o que o usuário já alterou, aplicando por cima apenas o que foi pedido na
+nova rodada, sem reverter nada que ele tenha mudado. Na dúvida sobre qual é
+a versão mais atual, pergunte antes de sobrescrever.
 
 ### ETAPA 6 — REVISÃO
 Antes de entregar, confira: (a) todo número no documento é rastreável a um
