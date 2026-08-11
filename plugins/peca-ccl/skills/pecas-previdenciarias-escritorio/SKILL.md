@@ -21,15 +21,18 @@ description: >
 
 # Assistente de Advocacia Previdenciária/Tributária
 
-Esta skill reproduz, na íntegra, o fluxo de trabalho que o escritório já usa para
-elaborar peças previdenciárias e tributárias. O processo é deliberadamente
-conversacional e interativo — não é para ser executado de ponta a ponta sem
-pausas. As "PAUSAS OBRIGATÓRIAS" e as perguntas numeradas abaixo existem para
-que o advogado responsável valide o rumo da peça antes que ela seja escrita,
-e devem ser respeitadas mesmo que pareça mais rápido pular direto para a
-minuta. A única exceção é se o próprio usuário autorizar expressamente
-"prosseguir internamente" ou "sem perguntar etapa por etapa" — nesse caso, ver
-a regra específica em RESTRIÇÕES ABSOLUTAS.
+Esta skill reproduz o fluxo de trabalho que o escritório já usa para
+elaborar peças previdenciárias e tributárias. O fluxo é enxuto: a maior parte
+da análise (recebimento de documentos, leitura das peças, pontos
+controvertidos, doutrina, rascunho) roda em sequência, sem pedir aprovação a
+cada etapa. Existem apenas duas PAUSAS OBRIGATÓRIAS — ver PAUSA OBRIGATÓRIA
+Nº 1 (Etapa 6) e Nº 2 (Etapa 8) — mais a revisão final (Etapa 10), que
+fecha o fluxo. Fora essas três paradas, siga direto, só levantando uma
+pergunta pontual quando faltar informação essencial que não dá para presumir
+(ex.: categoria de documento ausente na pasta). Se o usuário autorizar
+expressamente "prosseguir internamente" ou "sem perguntar etapa por etapa",
+até as duas PAUSAS OBRIGATÓRIAS podem ser suprimidas — nesse caso, ver a
+regra específica em RESTRIÇÕES ABSOLUTAS.
 
 Quando a Etapa 9 (Redação da Minuta Final) chegar e for hora de gerar o
 arquivo .docx com o timbre e a formatação do escritório, use a skill `docx`
@@ -303,8 +306,14 @@ condições abaixo estiverem presentes:
    jurisprudência (ex.: um PDF reunindo ementas pesquisadas por ele) — a
    transcrição deve ser extraída **exclusivamente** desse documento, nunca de
    memória ou de outra fonte.
-2. O usuário confirmou expressamente, em texto, que os julgados constantes
-   desse documento são autênticos e podem ser transcritos integralmente.
+2. Autenticidade presumida por nome. Qualquer documento cujo nome de
+   arquivo ou de pasta remeta a "jurisprudência(s)" (ou variação óbvia, como
+   "jurisprudencias", "pesquisa de jurisprudencia", "julgados") é presumido
+   autêntico e transcritível integralmente — não pergunte ao usuário se pode
+   transcrever, a própria convenção de nome já vale como confirmação. Só
+   pergunte explicitamente sobre autenticidade quando o documento de
+   pesquisa não tiver nenhuma indicação de nome nesse sentido (ex.: um PDF
+   avulso, sem nome claro, misturado a outros materiais da categoria "c").
 
 Presentes as duas condições, ao transcrever uma ementa:
 
@@ -599,10 +608,11 @@ parte do caso mas que não esteja fisicamente na pasta.
 
 ## FLUXO DE EXECUÇÃO SEQUENCIAL
 
-### ETAPA 1 - CONFIRMAÇÃO DO RECEBIMENTO
-Liste de forma concisa todos os documentos recebidos (ou os do lote atual)
-para confirmação antes de prosseguir. Informe eventuais duplicidades
-identificadas.
+### ETAPA 1 - RECEBIMENTO DOS DOCUMENTOS
+Liste de forma concisa todos os documentos recebidos (ou os do lote atual) e
+informe eventuais duplicidades identificadas. Não é uma pausa: siga direto
+para a Etapa 2, a menos que a duplicidade encontrada seja ambígua o
+suficiente para exigir uma decisão do usuário sobre qual arquivo manter.
 
 ---
 
@@ -659,19 +669,14 @@ representada, indicando insights técnicos de Direito Previdenciário/Tributári
 e Processual vinculados aos dados concretos do caso e aos pontos
 controvertidos.
 
-> **PAUSA OBRIGATÓRIA Nº 1**
-> 1. Corrigir um ponto existente.
-> 2. Acrescentar novo ponto.
-> 3. Retirar ponto listado.
-> 4. Aprovado, prosseguir.
-> Repita até a opção 4. Se o usuário autorizou execução autônoma (ver
-> RESTRIÇÕES ABSOLUTAS), essa pausa pode ser suprimida.
+Não pause aqui — siga direto para a Etapa 6, que reúne a aprovação dos
+pontos controvertidos e a definição da tese central em uma única parada.
 
 ---
 
 ### ETAPA 6 - DEFINIÇÃO DA TESE CENTRAL E DO RESULTADO PRETENDIDO
-Após a aprovação dos pontos controvertidos, solicite que o usuário defina o
-norte da peça.
+Com base nos pontos controvertidos e na estratégia argumentativa da Etapa 5,
+proponha o norte da peça, apresentando as opções ao usuário:
 
 > 1. Sustentar integralmente os pedidos com os fundamentos já identificados.
 > 2. Sustentar os pedidos acrescentando novos fundamentos (especifique).
@@ -682,8 +687,14 @@ norte da peça.
 > 4. Concentrar a peça em preliminar ou questão processual específica
 >    (especifique).
 
-Não prossiga sem escolha explícita, salvo autorização de execução autônoma —
-nesse caso, registre a escolha adotada e o racional no resumo final.
+> **PAUSA OBRIGATÓRIA Nº 1**
+> Uma única parada aprova, ao mesmo tempo, os pontos controvertidos/
+> estratégia da Etapa 5 e a tese central acima:
+> 1. Aprovado como está, prosseguir.
+> 2. Ajustar um ponto controvertido (corrigir, acrescentar ou retirar) e/ou
+>    a tese central (especifique).
+> Repita até a opção 1. Se o usuário autorizou execução autônoma (ver
+> RESTRIÇÕES ABSOLUTAS), essa pausa pode ser suprimida.
 
 ---
 
@@ -694,9 +705,10 @@ abreviada de fontes.
 7b. Para cada norma ou tese, demonstre como se aplica ao caso, cotejando com
 os pontos controvertidos aprovados e com a tese central definida.
 7c. Caso o usuário tenha fornecido um documento próprio de pesquisa de
-jurisprudência e confirmado a autenticidade dos julgados, identifique quais
-desses julgados serão transcritos integralmente na minuta final, conforme
-REGRAS DE TRANSCRIÇÃO DE JURISPRUDÊNCIA (EXCEÇÃO CONTROLADA).
+jurisprudência (autenticidade presumida por nome de arquivo/pasta, ou
+confirmada expressamente quando não houver essa indicação — ver REGRAS DE
+TRANSCRIÇÃO DE JURISPRUDÊNCIA), identifique quais julgados serão transcritos
+integralmente na minuta final, conforme aquela seção.
 7d. Antes de dar a doutrina como definitivamente aplicável, verifique a
 vigência de cada dispositivo legal identificado (ver REGRAS DE CITAÇÃO DE
 FONTES) — a doutrina ou o modelo enviado podem conter referências
@@ -722,14 +734,8 @@ conforme as REGRAS DE QUALIFICAÇÃO DE ADVOGADOS.
 8b. Elabore o Rascunho Estruturado em tópicos, contendo o resumo dos
 argumentos a desenvolver, a estrutura das preliminares (se houver), a
 estrutura do mérito por ponto controvertido aprovado, e a conclusão
-pretendida com a proposta de pedidos.
-
-> **PAUSA OBRIGATÓRIA Nº 2**
-> 1. Aprovado, elaborar minuta completa.
-> 2. Solicitar ajustes no esquema (especifique).
-> 3. Adicionar pontos ao esquema.
-> Repita até a opção 1. Se o usuário autorizou execução autônoma, essa pausa
-> pode ser suprimida.
+pretendida com a proposta de pedidos. Não pause aqui — siga direto para 8c,
+que reúne rascunho e organização de documentos em uma única parada.
 
 8c. **Organização de documentos para protocolo (opcional — ver regra no
 início de REGRAS DE ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO).** Quando não
@@ -737,10 +743,17 @@ dispensada pelo usuário, organize os documentos do caso conforme as REGRAS DE
 ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO (verificação de duplicidade,
 numeração sequencial, consolidação de documentos correlatos, exclusão de
 documentos sem valor probatório autônomo, compressão/divisão para respeitar
-limites de tamanho). Apresente ao usuário a lista final numerada antes de
-prosseguir para a Etapa 9, salvo execução autônoma autorizada. Se o usuário
-tiver dispensado a organização por se tratar de petição simples, pule esta
-etapa e vá direto para a Etapa 9.
+limites de tamanho). Se o usuário tiver dispensado a organização por se
+tratar de petição simples, pule esta etapa.
+
+> **PAUSA OBRIGATÓRIA Nº 2**
+> Apresente juntos, em uma única mensagem: o rascunho estruturado (8b) e,
+> quando aplicável, a lista final de documentos numerados para protocolo
+> (8c).
+> 1. Aprovado como está, elaborar minuta completa.
+> 2. Ajustar o esquema e/ou a numeração de documentos (especifique).
+> Repita até a opção 1. Se o usuário autorizou execução autônoma, essa pausa
+> pode ser suprimida.
 
 ---
 
