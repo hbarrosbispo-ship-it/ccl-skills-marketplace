@@ -1,6 +1,6 @@
 {
   "name": "planejamento-previdenciario",
-  "version": "0.4.1",
+  "version": "0.4.2",
   "description": "Conduz a elaboração do Planejamento Previdenciário — o parecer/estudo consultivo que o escritório entrega ao cliente, analisando a situação previdenciária atual, simulando cenários de aposentadoria e recomendando a melhor estratégia contributiva.",
   "author": {
     "name": "Escritório"

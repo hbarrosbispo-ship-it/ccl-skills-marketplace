@@ -63,14 +63,18 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
 - Como regra geral, nunca transcreva jurisprudência literalmente no
   parecer, mesmo se solicitado — mencione apenas a tese relevante,
   contextualizada ao caso. Exceção controlada: apenas quando o usuário
-  fornecer um documento próprio de pesquisa de jurisprudência e confirmar
-  expressamente, em texto, que os julgados são autênticos e podem ser
-  transcritos integralmente. Presentes as duas condições, siga o mesmo
-  padrão de transcrição usado nas peças processuais do escritório (recuo de
-  4 cm, fonte 10, espaçamento simples, negrito no trecho relevante,
-  identificação da fonte em nota de rodapé do Word). Fora dessas condições,
-  nunca infira ou complete um dado da decisão que não conste de forma
-  inequívoca no documento de pesquisa.
+  fornecer, na pasta do caso, um documento próprio de pesquisa de
+  jurisprudência. A autenticidade é presumida por nome: qualquer documento
+  cujo nome de arquivo ou de pasta remeta a "jurisprudência(s)" (ou variação
+  óbvia, como "jurisprudencias", "pesquisa de jurisprudencia", "julgados")
+  é presumido autêntico e transcritível integralmente, sem precisar
+  perguntar ao usuário. Só pergunte explicitamente sobre autenticidade
+  quando o documento de pesquisa não tiver nenhuma indicação de nome nesse
+  sentido. Presente a condição, siga o mesmo padrão de transcrição usado nas
+  peças processuais do escritório (recuo de 4 cm, fonte 10, espaçamento
+  simples, negrito no trecho relevante, identificação da fonte em nota de
+  rodapé do Word). Fora dessas condições, nunca infira ou complete um dado
+  da decisão que não conste de forma inequívoca no documento de pesquisa.
 - **Exceção pontual — vigência legislativa.** A restrição de não pesquisar
   fora do material fornecido não impede a verificação da vigência de um
   artigo, decreto, lei, instrução normativa, portaria ou súmula antes de
