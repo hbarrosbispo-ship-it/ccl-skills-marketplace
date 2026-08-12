@@ -72,9 +72,16 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
   quando o documento de pesquisa não tiver nenhuma indicação de nome nesse
   sentido. Presente a condição, siga o mesmo padrão de transcrição usado nas
   peças processuais do escritório (recuo de 4 cm, fonte 10, espaçamento
-  simples, negrito no trecho relevante, identificação da fonte em nota de
-  rodapé do Word). Fora dessas condições, nunca infira ou complete um dado
-  da decisão que não conste de forma inequívoca no documento de pesquisa.
+  simples, identificação da fonte em nota de rodapé do Word). Toda ementa
+  transcrita deve conter um trecho em **negrito**, sem exceção, e esse
+  trecho deve ser sempre a parte mais importante da ementa para o ponto em
+  discussão, nunca um destaque aleatório. Se o julgado for de tribunal
+  diverso do foro habitual do cliente, prefira uma frase introdutória
+  genérica, como "É o que também reconhece a jurisprudência:", em vez de
+  nomear o tribunal específico na frase (a identificação completa já consta
+  da nota de rodapé). Fora dessas condições, nunca infira ou complete um
+  dado da decisão que não conste de forma inequívoca no documento de
+  pesquisa.
 - **Exceção pontual — vigência legislativa.** A restrição de não pesquisar
   fora do material fornecido não impede a verificação da vigência de um
   artigo, decreto, lei, instrução normativa, portaria ou súmula antes de
@@ -92,6 +99,17 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
   trecho do parecer. Use parênteses, vírgulas, ponto e vírgula ou
   reestruture a frase para evitar a necessidade dele. Essa proibição vale
   para todo o documento, sem exceção.
+- **Restrição ao uso de dois-pontos (":") dentro de frases.** Assim como o
+  travessão, o uso de ":" como conector explicativo no meio de uma frase
+  corrida (ex.: "o cálculo demonstra o ponto: a carência já está cumprida")
+  deixa o texto com cara de redação artificial/gerada por IA. Reestruture a
+  frase em vez de usar ":" nesse papel (ex.: com vírgula, ponto e vírgula, ou
+  duas frases separadas). Essa restrição não se aplica aos usos estruturais
+  padrão do texto jurídico, que continuam permitidos normalmente: ":" antes
+  de uma lista numerada/enumerada, e ":" antes de um bloco de transcrição
+  literal de jurisprudência ou documento (ex.: "É o que também reconhece a
+  jurisprudência:"). Revise o parecer inteiro ao final para garantir que
+  nenhum ":" sobrou em uso explicativo dentro de uma frase.
 - Se o usuário autorizar expressamente prosseguir "internamente" ou "sem
   perguntar etapa por etapa", a PAUSA da Etapa 4 pode ser suprimida. Mesmo
   assim, ao final, apresente um resumo conciso dos cenários escolhidos e do
@@ -501,9 +519,25 @@ CITAÇÃO DE FONTES).
   processuais do escritório.
 - Datas no formato numérico ao longo do corpo (ex.: 25/06/2026), exceto as
   datas de abertura e fechamento do documento, escritas por extenso.
+- **Parágrafos curtos.** Como regra geral, mantenha cada parágrafo em torno
+  de, no máximo, 6 linhas. Ultrapassado esse limite, normalmente é sinal de
+  que o parágrafo está tratando de mais de uma ideia e deve ser dividido.
+  Aplique isso com parcimônia: o objetivo é evitar blocos de texto muito
+  longos e difíceis de acompanhar para o cliente leigo, não dividir
+  mecanicamente todo parágrafo que chegar a 6 linhas. Nunca divida um
+  parágrafo só porque bateu no limite se a divisão não fizer sentido lógico
+  (ex.: deixar o segundo parágrafo resultante com apenas uma linha) — nesses
+  casos, mantenha o parágrafo um pouco mais longo em vez de fragmentar
+  artificialmente.
 - Destaque em **negrito** pontual nas conclusões técnicas centrais de cada
-  parágrafo (ex.: qual regra se aplica, qual data é decisiva, qual valor é o
-  mais eficiente) — mesmo critério comedido usado nas peças: sem excesso.
+  parágrafo. O negrito não é para destacar um trecho aleatório: ele deve
+  marcar o argumento ou a conclusão principal do parágrafo, a frase que
+  melhor resume, para o cliente leigo, do que aquele trecho realmente trata
+  (ex.: qual regra se aplica, qual data é decisiva, qual valor é o mais
+  eficiente). Use com prioridade na frase de conclusão de cada subseção e
+  nos pontos técnicos centrais ao longo dos parágrafos daquele trecho —
+  mesmo critério comedido usado nas peças: sem excesso, sem negrito
+  espalhado sem critério.
 
 **Padrão visual de tabelas ("Quadros"), sem exceções:**
 - Fonte tamanho 10pt em todas as células, inclusive cabeçalho (mesmo com o

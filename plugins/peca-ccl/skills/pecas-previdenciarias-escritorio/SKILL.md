@@ -72,6 +72,18 @@ causa.
   trecho da minuta. Use parênteses, vírgulas, ponto e vírgula ou
   reestruture a frase para evitar a necessidade dele. Essa proibição vale
   para toda a peça, sem exceção.
+- **Restrição ao uso de dois-pontos (":") dentro de frases.** Assim como o
+  travessão, o uso de ":" como conector explicativo no meio de uma frase
+  corrida (ex.: "o documento comprova o fato: a incapacidade é permanente")
+  deixa o texto com cara de redação artificial/gerada por IA. Reestruture a
+  frase em vez de usar ":" nesse papel (ex.: com vírgula, ponto e vírgula, ou
+  duas frases separadas). Essa restrição não se aplica aos usos estruturais
+  padrão do texto jurídico, que continuam permitidos normalmente: ":" antes
+  de uma lista numerada/enumerada (ex.: "pleiteia-se:"), e ":" antes de um
+  bloco de transcrição literal de jurisprudência ou de um documento (ex.:
+  "É o que também reconhece a jurisprudência:"). Revise a minuta inteira ao
+  final para garantir que nenhum ":" sobrou em uso explicativo dentro de uma
+  frase.
 - Sempre que precisar de uma decisão do usuário, apresente as opções em
   tópicos numerados.
 - Não introduza, por conta própria, novo pedido, causa de pedir ou tese
@@ -180,6 +192,18 @@ acrescente.
   processo, órgão julgador, relator quando identificável com segurança, data
   de publicação) deve ser inserida como **nota de rodapé real do Word** ao
   final da citação — não como linha de texto no corpo do documento.
+- **Identificação obrigatória ao citar documento ou decisão dos autos.**
+  Sempre que a peça mencionar um documento ou uma decisão já constante do
+  processo (não a própria peça em elaboração), indique onde ele pode ser
+  encontrado. Use a numeração de protocolo definida em REGRAS DE ORGANIZAÇÃO
+  DE DOCUMENTOS PARA PROTOCOLO quando o documento for um dos que a peça está
+  protocolando (ex.: "Doc. 4"). Para decisões ou documentos já juntados
+  anteriormente aos autos do processo (não numerados por esta peça), cite a
+  folha em que se encontram, no formato "(fl. xx)" ou "(fls. xx/yy)" quando
+  o material do caso trouxer essa informação. Se a folha não constar do
+  material fornecido, não invente o número — cite o documento pelo nome/tipo
+  e sinalize ao usuário que a referência de folha precisa ser complementada
+  antes do protocolo.
 
 ---
 
@@ -306,11 +330,27 @@ modelo enviado):**
   título numerado (continuando a sequência dos tópicos maiores da peça),
   seguida da frase "Diante de todo o exposto, pleiteia-se:" e então a lista
   de pedidos e requerimentos finais.
+- **Parágrafos curtos.** Como regra geral, mantenha cada parágrafo em torno
+  de, no máximo, 6 linhas. Ultrapassado esse limite, normalmente é sinal de
+  que o parágrafo está tratando de mais de uma ideia e deve ser dividido.
+  Aplique isso com parcimônia: o objetivo é evitar blocos de texto muito
+  longos e difíceis de acompanhar, não dividir mecanicamente todo parágrafo
+  que chegar a 6 linhas. Nunca divida um parágrafo só porque bateu no
+  limite se a divisão não fizer sentido lógico (ex.: deixar o segundo
+  parágrafo resultante com apenas uma linha, cortando o raciocínio no meio) —
+  nesses casos, mantenha o parágrafo um pouco mais longo em vez de fragmentar
+  artificialmente.
 - Ao longo do corpo da peça, destacar em **negrito** pontualmente os
-  principais pontos de cada parágrafo, como o nome do documento
-  determinante, o marco temporal central ou a conclusão jurídica do trecho.
-  O uso deve ser comedido, sem excesso, restrito aos pontos de maior
-  relevância argumentativa.
+  principais pontos de cada parágrafo. O negrito não é para destacar um
+  trecho aleatório: ele deve marcar o argumento principal do parágrafo, ou a
+  frase que melhor resume, para o leitor, do que aquele parágrafo realmente
+  trata (ex.: o nome do documento determinante, o marco temporal decisivo ou
+  a conclusão jurídica do trecho). Use com prioridade em duas situações: (1)
+  na frase de conclusão de cada tópico, que sintetiza o que se busca com
+  aquele tópico; e (2) nas principais partes argumentativas ao longo dos
+  parágrafos do tópico. O uso deve ser comedido, sem excesso, restrito aos
+  pontos de maior relevância argumentativa — nunca negrito espalhado sem
+  critério.
 - O cabeçalho/endereçamento (o "Exmo. Sr. Dr. Juiz..." ou destinatário
   equivalente no topo da peça) deve estar sempre em **negrito** e
   justificado, sem exceção. O nome completo do autor/requerente e o nome
@@ -367,8 +407,19 @@ Presentes as duas condições, ao transcrever uma ementa:
 - Formate como citação direta longa, conforme a ABNT NBR 10520: recuo de 4 cm
   a partir da margem esquerda, fonte tamanho 10, espaçamento simples (1,0),
   sem aspas.
-- Destaque em **negrito** apenas o trecho da ementa diretamente relevante
-  para o argumento em discussão.
+- **Negrito obrigatório na transcrição.** Toda ementa transcrita deve conter
+  um trecho em **negrito**, sem exceção — nunca transcreva uma ementa inteira
+  sem nenhum destaque. O trecho destacado deve ser sempre a parte mais
+  importante da ementa para o argumento em discussão, nunca um destaque
+  aleatório ou secundário.
+- Ao introduzir a transcrição, se o julgado for de tribunal diverso daquele
+  em que a peça está sendo litigada (ex.: peça tramitando no TJBA/TRF1 e a
+  ementa transcrita é do TJMG), prefira uma frase introdutória genérica, como
+  "É o que também reconhece a jurisprudência:", em vez de nomear o tribunal
+  específico na frase (ex.: evite "É o que também reconhece o TJMG:") — a
+  identificação completa do tribunal já consta da nota de rodapé da citação.
+  Quando o julgado transcrito for do próprio tribunal ou órgão em que a peça
+  tramita, pode nomeá-lo normalmente na frase introdutória.
 - É permitido omitir trechos menos úteis da ementa, marcando a supressão com
   "(...)".
 - Identifique a fonte (tribunal, número do processo, órgão julgador, relator,
@@ -869,10 +920,13 @@ Dos Pedidos e Requerimentos.
   nunca como letra digitada manualmente no início do texto (ex.: nunca "A. "
   como caractere literal) — isso garante que o Word reconheça e renumere a
   lista automaticamente se um item for inserido, movido ou removido depois.
-- Dentro de cada item da lista, destaque em **negrito** o ponto principal do
-  pedido (a providência central requerida, ex.: "reconhecimento como
-  especial do período de 01/09/2011 a 01/03/2012"), mantendo o restante do
-  texto do item em formatação normal.
+- Dentro de cada item da lista, destaque em **negrito e em CAIXA ALTA** o
+  ponto principal do pedido (a providência central requerida, ex.: "**o
+  RECONHECIMENTO DA PRESCRIÇÃO INTERCORRENTE** da execução fiscal principal,
+  consumada em 18/06/2024, com a extinção do feito, nos termos do art. 40,
+  §4º, da LEF"), mantendo o restante do texto do item em formatação normal,
+  sem caixa alta. A caixa alta acompanha exatamente a extensão do trecho em
+  negrito, nunca mais nem menos que ele.
 - Não cite, dentro de um pedido, um dispositivo, percentual ou fator
   numérico específico (ex.: um fator de conversão) cuja base legal não
   esteja vigente ou não tenha sido explicada na fundamentação do item
