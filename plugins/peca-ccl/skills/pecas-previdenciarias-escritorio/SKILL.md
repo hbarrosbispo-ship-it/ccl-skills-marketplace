@@ -69,9 +69,10 @@ causa.
 - Não escreva a minuta sem a aprovação prévia do esquema estruturado.
 - Mantenha sempre linguagem postulatória e técnica, sem ambiguidades.
 - **Proibição expressa de travessão.** Nunca use o caractere "—" em nenhum
-  trecho da minuta. Use parênteses, vírgulas, ponto e vírgula ou
-  reestruture a frase para evitar a necessidade dele. Essa proibição vale
-  para toda a peça, sem exceção.
+  trecho da minuta. Use parênteses, vírgulas ou reestruture a frase para
+  evitar a necessidade dele; recorra ao ponto e vírgula só se nenhuma dessas
+  opções couber naturalmente (ver também a restrição ao ponto e vírgula
+  abaixo). Essa proibição vale para toda a peça, sem exceção.
 - **Restrição ao uso de dois-pontos (":") dentro de frases.** Assim como o
   travessão, o uso de ":" como conector explicativo no meio de uma frase
   corrida (ex.: "o documento comprova o fato: a incapacidade é permanente")
@@ -84,6 +85,23 @@ causa.
   "É o que também reconhece a jurisprudência:"). Revise a minuta inteira ao
   final para garantir que nenhum ":" sobrou em uso explicativo dentro de uma
   frase.
+- **Uso comedido do ponto e vírgula.** Não force o ponto e vírgula como
+  substituto padrão do travessão ou do dois-pontos. Prefira vírgula ou duas
+  frases separadas; use o ponto e vírgula só quando ele for de fato a
+  pontuação mais natural para o trecho (ex.: separar itens de uma
+  enumeração cujos elementos já contêm vírgulas internas).
+- **Proibição de "regra de ouro" e expressões afins.** Nunca utilize a
+  expressão "regra de ouro", nem variações como "dica de ouro", para
+  introduzir uma orientação, princípio ou conclusão. Apresente a ideia
+  diretamente, sem essa muleta.
+- **Evite adjetivos vazios.** Não qualifique fatos, documentos, laudos ou
+  teses com adjetivos genéricos e sem conteúdo técnico, como "fascinante",
+  "incrível" ou "essencial" usado como reforço retórico. Em vez de
+  classificar algo com um adjetivo vago, descreva concretamente por que
+  aquilo importa para o caso.
+- **Evite a estrutura "não é X, é Y".** Essa construção de contraste
+  artificial é cansativa, sobretudo se repetida mais de uma vez na mesma
+  peça. Afirme a ideia diretamente, sem esse recurso.
 - Sempre que precisar de uma decisão do usuário, apresente as opções em
   tópicos numerados.
 - Não introduza, por conta própria, novo pedido, causa de pedir ou tese
