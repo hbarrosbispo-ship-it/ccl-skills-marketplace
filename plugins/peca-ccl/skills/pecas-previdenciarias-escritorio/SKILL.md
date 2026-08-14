@@ -604,6 +604,15 @@ em CALIBRAGEM DE DENSIDADE (patamar leve) e nas demais seções desta skill.
   Jurisprudência dos Juizados Especiais Federais) logo de início — reserve
   esse tipo de fundamentação para casos que já tramitem em CRPS (Conselho de
   Recursos da Previdência Social) ou fases equivalentes.
+- **Regimento Interno do CRPS desatualizado — alerta obrigatório.** Foi
+  divulgado um novo Regimento Interno do CRPS e o material de referência do
+  escritório (`referencias-escritorio/`) ainda não foi atualizado com ele.
+  Sempre que a peça for citar ou fundamentar algo no Regimento Interno do
+  CRPS, alerte o usuário de que a versão disponível pode estar desatualizada
+  antes de citá-la, e pergunte se ele tem o texto do novo regimento em mãos
+  para atualizar `referencias-escritorio/` (ou a subpasta correspondente)
+  antes de seguir. Remova este alerta da skill assim que o material de
+  referência for atualizado com o novo regimento.
 - RMI (Renda Mensal Inicial) e RMA (Renda Mensal Atual) nem sempre precisam
   ser juntados no processo administrativo — inclua apenas em processos mais
   complexos, onde o próprio cálculo da renda for um ponto controvertido.
