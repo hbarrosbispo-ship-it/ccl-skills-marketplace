@@ -140,21 +140,48 @@ causa.
 
 A skill tem acesso a uma pasta própria, `referencias-escritorio/`, mantida ao
 longo do tempo com material do escritório já validado em peças anteriores.
-Ela é independente da pasta do caso enviada pelo usuário nesta conversa.
+Ela é independente da pasta do caso enviada pelo usuário nesta conversa, e é
+compartilhada com a skill `planejamento-previdenciario`. Tem quatro tipos de
+conteúdo, cada um com sua própria lógica de uso: timbre, orientações gerais,
+material por matéria (lei/jurisprudência, doutrina salva, modelos de peça
+salvos) e modelos de parágrafos reutilizáveis.
 
 **Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
 oficial de timbre/formatação do escritório.
 - Se o usuário enviar um modelo próprio na categoria "d" (INSTRUÇÃO DE
   INÍCIO), use o modelo enviado — ele tem prioridade, pois pode refletir uma
   exigência específica daquele caso ou órgão.
-- Se a categoria "d" ficar ausente, **não trate isso como bloqueio**: em vez
-  de pausar o fluxo pedindo o modelo, use o arquivo de
-  `referencias-escritorio/modelo-timbre/` como timbre padrão, avise o usuário
-  de que está usando o modelo padrão do escritório, e siga o fluxo
-  normalmente.
+- Se a categoria "d" ficar ausente, verifique primeiro se existe um modelo de
+  peça salvo para aquela matéria e tipo de peça em
+  `referencias-escritorio/[matéria]/modelos-peca/` (ver seção própria
+  abaixo). Se existir, use-o e avise o usuário de que está usando o modelo
+  salvo daquela matéria, permitindo que ele peça o timbre padrão genérico no
+  lugar, se preferir. Se não existir, **não trate isso como bloqueio**: use o
+  arquivo de `referencias-escritorio/modelo-timbre/` como timbre padrão,
+  avise o usuário de que está usando o modelo padrão do escritório, e siga o
+  fluxo normalmente.
 
-**Leis e jurisprudência já validadas.** `referencias-escritorio/` também tem
-subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
+**Orientações gerais do escritório.** `referencias-escritorio/orientacoes-gerais.md`
+reúne regras de bastidor que valem para qualquer matéria, não amarradas a uma
+tese específica (ex.: honorários advocatícios geralmente não devidos em
+primeiro grau nos Juizados Especiais Federais). Trate como fonte confiável,
+sem pedir confirmação de autenticidade. Consulte esse arquivo:
+- Na Etapa 5 (Estratégia Argumentativa) e na Etapa 8b (Rascunho
+  Estruturado), para verificar se alguma orientação geral se aplica ao caso
+  antes de propor pedidos ou teses.
+- Na Etapa 9, ao redigir "DOS PEDIDOS E REQUERIMENTOS", para aplicar
+  orientações que mudam o que é ou não pedido (ex.: omitir pedido de
+  honorários de sucumbência de primeiro grau em peça de JEF, conforme
+  detalhado nesse arquivo).
+Se o arquivo trouxer uma orientação relevante ao caso, aplique-a
+silenciosamente na redação (sem precisar perguntar de novo a cada peça,
+já que a orientação já foi validada previamente) — mas, se houver
+ambiguidade sobre se ela se aplica ao caso concreto (ex.: dúvida se o
+processo tramita mesmo em JEF), pergunte ao usuário antes de aplicar ou
+descartar.
+
+**Leis e jurisprudência já validadas, por matéria.** `referencias-escritorio/`
+tem subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
 `previdenciario/loas/`, `civil/...`, `tributario/...`), cada uma reunindo
 trechos de lei, jurisprudência e direcionamentos gerais já usados com
 segurança em peças anteriores daquela matéria específica.
@@ -169,17 +196,72 @@ segurança em peças anteriores daquela matéria específica.
 - Se a subpasta da matéria não existir ou estiver vazia, trabalhe apenas com
   o material que o usuário forneceu nesta conversa, normalmente.
 
+**Doutrina salva por matéria.** Cada subpasta de matéria pode ter uma
+subpasta `doutrina/` (ex.: `previdenciario/auxilio-doenca/doutrina/`), com os
+próprios arquivos de doutrina (PDF/Word) já enviados pelo usuário em casos
+anteriores dessa matéria e guardados para consulta futura — diferente do
+resumo em texto que fica no arquivo de lei/jurisprudência da matéria, aqui
+fica o documento original, íntegro.
+- Sempre que o usuário enviar um documento de doutrina explicitamente para
+  "guardar na base" ou "salvar para a matéria" (fora do fluxo de uma peça
+  específica, ou ao final da Etapa 10 conforme "Alimentando a base" abaixo),
+  salve o arquivo original em `referencias-escritorio/[matéria]/doutrina/`,
+  sem alterar seu conteúdo.
+- Na ETAPA 7, ao consultar a subpasta da matéria, verifique também se há
+  doutrina salva em `doutrina/` e trate-a como fonte adicional, com a mesma
+  confiança dada ao material da categoria "c" enviado nesta conversa.
+- Se houver muitos arquivos de doutrina salvos na mesma matéria, priorize os
+  mais diretamente relacionados aos pontos controvertidos do caso atual, em
+  vez de tentar aplicar todos de uma vez.
+
+**Modelos de peça salvos por matéria.** Cada subpasta de matéria pode ter uma
+subpasta `modelos-peca/` (ex.: `previdenciario/auxilio-doenca/modelos-peca/`),
+com arquivos .docx de peças já elaboradas e aprovadas pelo escritório,
+guardados para reutilizar como ponto de partida em casos futuros da mesma
+matéria e do mesmo tipo de peça (ex.: `peticao-inicial-auxilio-doenca.docx`,
+`recurso-administrativo-bpc-loas.docx`). Nome do arquivo deve indicar
+claramente o tipo de peça.
+- Sempre que o usuário enviar um modelo de peça explicitamente para "guardar
+  na base" ou "salvar para casos futuros dessa matéria" (fora do fluxo de um
+  caso específico, ou ao final da Etapa 10 conforme "Alimentando a base"
+  abaixo), salve o arquivo em
+  `referencias-escritorio/[matéria]/modelos-peca/`, nomeado pelo tipo de
+  peça.
+- Na ETAPA 8a, se a categoria "d" (modelo do caso) não vier preenchida,
+  verifique se existe um modelo salvo para a matéria e o tipo de peça em
+  elaboração antes de recorrer ao timbre genérico (ver regra em "Timbre
+  padrão" acima).
+- Se houver mais de um modelo salvo para o mesmo tipo de peça na mesma
+  matéria, liste as opções ao usuário e pergunte qual usar, em vez de
+  escolher sozinho.
+
 **Alimentando a base (só com permissão explícita).** Depois que o usuário
 aprovar a minuta final (ETAPA 10, opção 4), pergunte se ele autoriza salvar
-na base do escritório os trechos de lei e/ou jurisprudência mais relevantes
-usados na peça, para reaproveitar em casos futuros da mesma matéria:
-> "Posso salvar em `referencias-escritorio/[matéria]/` os trechos de lei e
-> jurisprudência mais relevantes usados nesta peça, para consulta em casos
-> futuros dessa matéria?"
-Se autorizado, grave um resumo objetivo (lei/artigo ou julgado, tese
-associada, e uma nota curta de contexto) no arquivo daquela matéria — nunca
-grave um trecho sem aprovação, e nunca sobrescreva o que já existe lá, apenas
-acrescente.
+na base do escritório o material relevante usado nesta peça, cobrindo cada
+tipo de conteúdo aplicável ao caso:
+> "Posso salvar na base do escritório o material desta peça para reaproveitar
+> em casos futuros?
+> 1. Trechos de lei e jurisprudência mais relevantes, em
+>    `referencias-escritorio/[matéria]/`.
+> 2. Parágrafos/pedidos que valem a pena reutilizar (ex.: justiça gratuita,
+>    tutela de urgência), em `referencias-escritorio/modelos-paragrafos/` ou
+>    na subpasta específica da matéria.
+> 3. A própria peça como modelo para casos futuros do mesmo tipo, em
+>    `referencias-escritorio/[matéria]/modelos-peca/`.
+> 4. Nenhum desses, obrigado."
+Se autorizado (o usuário pode escolher mais de uma opção), grave:
+- Para leis/jurisprudência, um resumo objetivo (lei/artigo ou julgado, tese
+  associada, e uma nota curta de contexto).
+- Para parágrafos/pedidos, o texto do trecho já com placeholders para os
+  dados que mudam de caso para caso, seguindo o padrão descrito no README de
+  `referencias-escritorio/modelos-paragrafos/`.
+- Para a peça como modelo, o arquivo .docx final, renomeado para indicar
+  claramente o tipo de peça.
+Nunca grave nada sem aprovação explícita para aquele item específico, e nunca
+sobrescreva o que já existe lá — para leis/jurisprudência e parágrafos,
+acrescente ao conteúdo existente; para modelo de peça, se já existir um
+arquivo do mesmo tipo, pergunte ao usuário se deve substituir ou manter os
+dois como variações (nomeando de forma a diferenciá-los).
 
 ---
 
@@ -730,6 +812,39 @@ inserir a imagem mesmo assim.
 
 ---
 
+## ENVIO DIRETO PARA A BASE (fora do fluxo de uma peça)
+
+O usuário pode alimentar `referencias-escritorio/` a qualquer momento, sem
+precisar estar no meio da elaboração de uma peça — por exemplo, enviando uma
+doutrina nova que acabou de adquirir, ou um modelo de peça que quer guardar
+para casos futuros. Reconheça esse tipo de pedido mesmo sem o comando
+"INICIAR", por frases como "guarda essa doutrina de [matéria] para uso
+futuro", "salva esse modelo de peça na base de [matéria]" ou "adiciona essa
+orientação geral à base".
+
+Ao identificar um pedido desse tipo:
+1. Confirme a matéria de destino (previdenciário/tributário/cível e, se
+   aplicável, a subárea, ex.: auxílio-doença, LOAS), perguntando se não
+   estiver clara pelo conteúdo do documento ou pelo pedido do usuário.
+2. Para doutrina, salve o arquivo original em
+   `referencias-escritorio/[matéria]/doutrina/`, conforme a seção "Doutrina
+   salva por matéria" em BASE DE REFERÊNCIAS DO ESCRITÓRIO.
+3. Para modelo de peça, salve o .docx em
+   `referencias-escritorio/[matéria]/modelos-peca/`, nomeado pelo tipo de
+   peça, conforme "Modelos de peça salvos por matéria".
+4. Para orientação geral, acrescente a orientação em
+   `referencias-escritorio/orientacoes-gerais.md`, seguindo o padrão de
+   título + regra objetiva + "Como aplicar" já usado nesse arquivo.
+5. Para parágrafo/pedido reutilizável, acrescente ao arquivo correspondente
+   em `referencias-escritorio/modelos-paragrafos/` (ou na subpasta da
+   matéria, se for um parágrafo específico daquela matéria), conforme o
+   README dessa pasta.
+Em qualquer um desses casos, nunca sobrescreva material já existente sem
+confirmação; acrescente, ou pergunte se deve substituir quando já houver algo
+equivalente salvo.
+
+---
+
 ## INSTRUÇÃO DE INÍCIO
 
 Ao receber o comando "INICIAR" (ou uma solicitação equivalente para começar a
@@ -1021,6 +1136,12 @@ Dos Pedidos e Requerimentos.
   fator), deixando o dimensionamento a cargo do órgão julgador.
 - Inclua citações e intimações, proveito econômico (DIP, parcelas,
   correção), gratuidade da justiça, produção de provas e valor da causa.
+- **Honorários advocatícios.** Antes de incluir o pedido de condenação em
+  honorários de sucumbência, verifique a orientação geral sobre honorários
+  em JEF em `referencias-escritorio/orientacoes-gerais.md` (ver BASE DE
+  REFERÊNCIAS DO ESCRITÓRIO) — como regra geral, não são devidos honorários
+  de sucumbência em primeiro grau nos Juizados Especiais Federais, salvo em
+  peça recursal.
 - Não inclua pedido ou tese não aprovada nas Etapas 5/6 sem antes perguntar
   ao usuário.
 - Evite pedidos puramente descritivos, sem efeito prático sobre o processo
