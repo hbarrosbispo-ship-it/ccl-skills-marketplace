@@ -171,6 +171,41 @@ jurídica, sem por isso perder precisão técnica ou virar simplificação vaga.
 
 ---
 
+## REGRA DE REFERÊNCIAS AO CLIENTE (NUNCA CITAR FERRAMENTAS INTERNAS)
+
+O parecer nunca nomeia, no corpo do texto, em legenda de quadro ou em nota
+de rodapé, o sistema de cálculo usado pelo escritório (ex.: "Cálculo
+Jurídico", "CJ") nem qualquer manual, guia ou material interno de
+referência do escritório. Citar essas ferramentas para o cliente não agrega
+nada ao entendimento dele, pode gerar confusão (o cliente tentando procurar
+o "CJ" por conta própria) e dilui o valor do trabalho do escritório como
+autor da análise.
+
+- **O que pode ser referenciado:** artigos de lei, decretos, instruções
+  normativas, portarias e súmulas (conforme REGRAS DE CITAÇÃO DE FONTES), e
+  documentos específicos do próprio segurado ou de origem externa ao
+  escritório, quando isso for objetivamente útil ao cliente (ex.: um
+  formulário de aposentadoria internacional/acordo previdenciário que o
+  cliente eventualmente precisará localizar e preencher, um contracheque,
+  o CNIS).
+- **O que nunca aparece nomeado no documento entregue ao cliente:** o
+  sistema de cálculo do escritório (Cálculo Jurídico/CJ ou qualquer outro),
+  qualquer manual ou material de apoio interno, e o nome de arquivos
+  internos de trabalho.
+- **Como apresentar números sem citar a ferramenta.** Ao explicar a origem
+  de um valor (RMI, GTE, data projetada etc.), refira-se a "o cálculo
+  técnico realizado para o seu caso", "a simulação previdenciária
+  elaborada" ou construção equivalente, nunca ao nome do sistema. A
+  rastreabilidade do número a um relatório específico (ver RESTRIÇÕES
+  ABSOLUTAS) continua obrigatória internamente, para você poder responder
+  de onde veio um número se o usuário perguntar — essa regra restringe
+  apenas o que aparece escrito no documento final ao cliente.
+- Essa restrição vale para toda menção no parecer (corpo do texto, legenda
+  de quadro, nota de rodapé), independentemente de a fonte do dado ser um
+  relatório de cálculo, uma orientação interna ou material de apoio.
+
+---
+
 ## REGRAS DE ORGANIZAÇÃO DA PASTA DO CASO
 
 O material do planejamento é organizado em três categorias, refletindo o que
@@ -346,6 +381,60 @@ cenários), porque ela muda quais cenários fazem sentido propor.
 
 ---
 
+## REGRA DE RECONHECIMENTO CONTROVERTIDO POR DÚVIDA DOCUMENTAL
+
+Ao analisar um período que dependeria de reconhecimento para viabilizar ou
+antecipar uma aposentadoria (ex.: tempo especial por exposição a agente
+nocivo, tempo de magistério/professor, atividade rural, outro requisito
+sujeito a controvérsia), é comum a análise inicial concluir que o
+reconhecimento não é cabível **por razão documental** (documento
+insuficiente, ausente, ou que não comprova com segurança o requisito), sem
+que isso signifique que o direito em si seja inexistente.
+
+**Regra geral: não descarte esse período do planejamento só porque a
+documentação hoje disponível não sustenta o reconhecimento.** Distinga duas
+situações:
+
+1. **Dúvida documental (situação mais comum).** A regra em si é aplicável em
+   tese ao caso (o tipo de atividade, o período, a categoria profissional
+   ou a situação fática têm lastro real na vida do segurado), mas a prova
+   hoje reunida é frágil, incompleta ou ausente para sustentar o
+   reconhecimento com segurança (ex.: falta PPP, laudo técnico, declaração
+   da escola, ou o documento existente tem lacuna). Nesse caso, **apresente
+   dois cenários no planejamento**, um assumindo que o reconhecimento é
+   obtido (com o efeito sobre RMI, data de aposentadoria e demais números) e
+   outro assumindo que não é (mantendo a situação sem esse reconhecimento),
+   explicando ao cliente, em ambos, exatamente qual documento ou
+   providência faria o cenário favorável se concretizar. Isso vale mesmo
+   quando a sua avaliação inicial (ou a do usuário) considerou o
+   reconhecimento pouco provável diante do que já foi analisado — a dúvida
+   documental, por si só, não é motivo para excluir o cenário favorável.
+2. **Impossibilidade absoluta ou sem lastro na realidade.** O período não
+   tem qualquer correspondência factual ou legal defensável (ex.: a
+   atividade nunca teve natureza especial nem remotamente, o segurado nunca
+   exerceu a função alegada, o requisito legal claramente não se aplica ao
+   caso, independentemente de qualquer documento). Só nesses casos,
+   efetivamente excepcionais, o período fica de fora do planejamento sem
+   apresentar cenário duplo — e, mesmo assim, registre ao cliente por que
+   essa via foi descartada, para que a decisão de não incluí-la fique
+   transparente.
+
+Na dúvida sobre em qual das duas situações um período específico se
+enquadra, trate como dúvida documental (situação 1) e pergunte ao usuário
+antes de excluir definitivamente um cenário, em vez de decidir sozinho pela
+exclusão.
+
+**Como isso aparece no documento.** Na ETAPA 4 (seleção de cenários),
+proponha o cenário duplo como dois itens distintos da lista a aprovar, não
+como um único cenário condicional resumido em uma frase. Na seção "DOS
+CENÁRIOS DE APOSENTADORIA" (ver ESTRUTURA DO DOCUMENTO), desenvolva os dois
+cenários lado a lado, deixando claro qual documento/providência específica
+determina qual dos dois se realiza, e qual dos dois é recomendado *em cada
+hipótese* (a recomendação de "qual regra é a mais vantajosa" pode mudar
+conforme o reconhecimento se confirme ou não).
+
+---
+
 ## ESTRUTURA DO DOCUMENTO
 
 A estrutura abaixo é o padrão observado nos planejamentos já produzidos pelo
@@ -392,7 +481,10 @@ Passo a opinar.").
   os cenários estratégicos que o usuário aprovou (ver PAUSA — SELEÇÃO DE
   CENÁRIOS abaixo). Cada cenário é desenvolvido em um ou mais parágrafos,
   explicando a lógica, os requisitos envolvidos e o resultado esperado,
-  sinalizando explicitamente qual cenário é o recomendado e por quê. Ao
+  sinalizando explicitamente qual cenário é o recomendado e por quê. Quando
+  houver período controvertido por dúvida documental (tempo especial,
+  professor, ou outro), aplique a REGRA DE RECONHECIMENTO CONTROVERTIDO POR
+  DÚVIDA DOCUMENTAL acima e desenvolva o cenário duplo lado a lado. Ao
   listar as regras aplicáveis, avalie se vale a pena explicar por que outras
   regras (compulsória, invalidez/incapacidade permanente, regras exclusivas
   de outra categoria) não se aplicam ao caso — inclua essa explicação apenas
@@ -415,8 +507,9 @@ Passo a opinar.").
   calculados pela skill. Sempre que o GTE for mencionado, explicite a
   metodologia: o valor corresponde à soma dos proventos mensais estimados
   desde a Data de Início do Benefício (DIB) até o fim da expectativa de vida
-  do segurado nessa data, conforme apurado pelo sistema de cálculo usado
-  (ex.: Cálculo Jurídico) — isso evita que o cliente interprete o GTE como
+  do segurado nessa data, conforme apurado no cálculo técnico realizado
+  para o caso (sem nomear a ferramenta interna usada, ver REGRA DE
+  REFERÊNCIAS AO CLIENTE) — isso evita que o cliente interprete o GTE como
   um número arbitrário. Cada quadro recebe legenda numerada abaixo (ver
   REGRAS DE FORMATAÇÃO) e, quando a pasta do caso tiver um gráfico
   correspondente, o gráfico é inserido junto ao quadro. Comente os quadros
@@ -504,8 +597,10 @@ do caso na Etapa 5.
 ### ETAPA 4 — PAUSA: SELEÇÃO DE CENÁRIOS
 Com base nas Etapas 2 e 3, proponha ao usuário quais cenários estratégicos
 fazem sentido apresentar no planejamento (ex.: aguardar requisito etário,
-antecipar com RMI menor, alternativa de contribuição internacional). Liste
-em tópicos numerados e pergunte:
+antecipar com RMI menor, alternativa de contribuição internacional). Aplique
+aqui a REGRA DE RECONHECIMENTO CONTROVERTIDO POR DÚVIDA DOCUMENTAL abaixo
+antes de decidir se um período controvertido entra como cenário único,
+cenário duplo, ou fica de fora. Liste em tópicos numerados e pergunte:
 > 1. Aprovar os cenários propostos como estão.
 > 2. Ajustar (adicionar, remover ou modificar algum cenário).
 > Repita até a opção 1.
@@ -603,8 +698,9 @@ CITAÇÃO DE FONTES).
 - Bordas finas em cinza (`999999`), espessura mínima.
 - Numeração sequencial simples ("Quadro 1", "Quadro 2"...), com legenda
   justificada (não centralizada) logo abaixo da tabela, citando o que o
-  quadro mostra (regra de benefício e data-base da simulação) e a fonte dos
-  dados (cálculo, sistema usado, data de emissão).
+  quadro mostra (regra de benefício e data-base da simulação) e a data de
+  apuração do cálculo, sem nomear a ferramenta ou sistema interno usado
+  (ver REGRA DE REFERÊNCIAS AO CLIENTE).
 - Nunca cite um "Quadro N" no texto antes de esse quadro já ter sido
   apresentado — revise a ordem de aparição sempre que uma tabela for movida
   ou uma nova for inserida.
