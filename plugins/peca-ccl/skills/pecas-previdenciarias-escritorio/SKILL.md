@@ -141,10 +141,11 @@ causa.
 A skill tem acesso a uma pasta própria, `referencias-escritorio/`, mantida ao
 longo do tempo com material do escritório já validado em peças anteriores.
 Ela é independente da pasta do caso enviada pelo usuário nesta conversa, e é
-compartilhada com a skill `planejamento-previdenciario`. Tem quatro tipos de
+compartilhada com a skill `planejamento-previdenciario`. Tem cinco tipos de
 conteúdo, cada um com sua própria lógica de uso: timbre, orientações gerais,
 material por matéria (lei/jurisprudência, doutrina salva, modelos de peça
-salvos) e modelos de parágrafos reutilizáveis.
+salvos), modelos de parágrafos reutilizáveis, e endereços de citação por
+órgão e comarca.
 
 **Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
 oficial de timbre/formatação do escritório.
@@ -257,6 +258,8 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
    - Doutrina enviada nesta conversa, quando o usuário já a tiver enviado
      como material de embasamento (categoria "c") de forma que sugira valor
      de reuso, mesmo sem pedido explícito de "guardar".
+   - Endereço de citação de órgão + comarca ainda não salvo em
+     `enderecos-partes-re.md` (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS).
 2. **Verifique duplicidade e pertinência antes de propor.** Para cada
    candidato de lei/jurisprudência ou parágrafo, confira o Índice do
    `base-conhecimento.md`/arquivo correspondente da matéria (ver
@@ -297,6 +300,9 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
      pergunte ao usuário se deve substituir ou manter os dois como variações
      (nomeando de forma a diferenciá-los) — só essa decisão específica exige
      pergunta à parte, por não caber no filtro automático de duplicidade.
+   - Para endereço de citação, uma nova entrada em
+     `enderecos-partes-re.md` com o órgão, a comarca/cidade e o endereço
+     completo, seguindo o formato descrito naquele arquivo.
 Nunca grave nada sem passar pela pergunta única acima (mesmo pré-filtrada,
 ela continua sendo a aprovação do usuário) e nunca sobrescreva uma entrada
 existente sem necessidade — acrescente, ou atualize pontualmente quando a
@@ -405,6 +411,16 @@ entrada já existir e o caso novo trouxer nuance real.
 
 ## REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS
 
+- **Endereço de citação salvo por órgão + comarca.** Antes de tratar o
+  endereço de uma parte ré recorrente (ex.: INSS, União Federal/PGFN) como
+  ausente, verifique `_referencias-escritorio/enderecos-partes-re.md` pelo
+  par órgão + comarca/cidade/seção judiciária onde a peça tramita (ex.:
+  "INSS — Salvador/BA" é uma entrada diferente de "INSS — Feira de
+  Santana/BA"; cada comarca tem seu próprio endereço de citação, nunca
+  presuma que o de uma serve para outra). Se existir entrada, use-a
+  diretamente na qualificação, avisando o usuário de que o endereço veio da
+  base salva (para correção pontual se algo tiver mudado). Se não existir,
+  siga a regra normal abaixo.
 - Sempre que o CNPJ e o endereço da(s) parte(s) ré(s) constarem de algum
   documento do processo administrativo, de correspondência oficial ou
   puderem ser apurados com segurança a partir do material fornecido pelo
@@ -414,6 +430,12 @@ entrada já existir e o caso novo trouxer nuance real.
 - Caso não haja fonte segura no material do caso para CNPJ e endereço,
   mantenha o placeholder "[a preencher]" e alerte o usuário de que esse dado
   precisa ser complementado antes do protocolo.
+- **Novo endereço confirmado entra na triagem final.** Quando o endereço de
+  citação usado numa peça (seja do material do caso, seja informado pelo
+  usuário) for de um órgão + comarca ainda não salvo em
+  `enderecos-partes-re.md`, inclua-o como candidato na pergunta única
+  resumida de "Alimentando a base" (ETAPA 10), junto com os demais itens
+  daquela triagem — nunca grave sem passar por ela.
 
 ---
 
@@ -470,6 +492,53 @@ relatório, e não apenas os trechos favoráveis à tese do cliente.
 
 ---
 
+## PADRÃO DE ABERTURA DA PEÇA
+
+Toda peça judicial (petição inicial e demais peças que se dirigem a um
+juízo) segue esta sequência fixa de abertura, nesta ordem, antes do primeiro
+tópico numerado do corpo (ver ORDEM DOS TÓPICOS DO CORPO DA PEÇA em
+ETAPA 9):
+
+1. **Endereçamento.** "AO JUÍZO DO [vara/juizado/tribunal competente]..."
+   (ou o destinatário equivalente do modelo do escritório), em negrito,
+   justificado, Calibri 14 (ver REGRAS DE FORMATAÇÃO DA MINUTA).
+2. **Caixa de prioridade, quando aplicável.** Se o caso tiver fundamento
+   para tramitação prioritária (ex.: idoso, doença grave, pessoa com
+   deficiência, gestante, nos termos da legislação aplicável), insira logo
+   abaixo do endereçamento uma caixa de texto com borda visível, contendo
+   "Prioridade - [motivo(s), ex.: "Estatuto do Idoso e Doença Grave"]", em
+   negrito. Liste todos os motivos aplicáveis ao caso concreto na mesma
+   caixa, separados por " e " ou vírgula. Se não houver fundamento para
+   prioridade, omita essa caixa inteiramente, sem deixar espaço reservado
+   vazio.
+3. **Qualificação do autor.** Parágrafo justificado, com recuo de 1,25 cm,
+   qualificando o autor (nome em negrito, nacionalidade, estado civil,
+   profissão quando pertinente, CPF, RG, endereço com a citação de
+   protocolo aplicável), encerrando com "vem, respeitosamente, por
+   intermédio de seu procurador infra-assinado (doc. [N. procuração]), com
+   fulcro no [dispositivo legal aplicável ao rito ou ao pedido principal],
+   propor a presente".
+4. **Nome da peça.** Centralizado, negrito, maiúsculo (ex.: "AÇÃO
+   DECLARATÓRIA DE INEXISTÊNCIA DE RELAÇÃO JURÍDICO-TRIBUTÁRIA CUMULADA COM
+   PEDIDO DE RESTITUIÇÃO DO INDÉBITO TRIBUTÁRIO"), conforme a exceção de
+   centralização já prevista em REGRAS DE FORMATAÇÃO DA MINUTA.
+5. **Qualificação da parte ré.** "em face de [RÉU]..." qualificando a parte
+   ré (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS), encerrando com "pelos
+   fundamentos fáticos e jurídicos que passa a expor.".
+6. A partir daqui começa o corpo numerado da peça, sempre iniciando pelo
+   tópico "1. PRELIMINARMENTE" (ver ORDEM DOS TÓPICOS DO CORPO DA PEÇA em
+   ETAPA 9), mesmo quando não houver preliminar propriamente dita a
+   levantar além da tramitação prioritária/justiça gratuita.
+
+Esse padrão vale para petição inicial e demais peças dirigidas a um juízo.
+Peças administrativas (requerimentos e recursos ao INSS) seguem o
+endereçamento e a estrutura próprios do órgão, sem a caixa de prioridade
+nem o "em face de" (que pressupõe parte ré judicial) — mantenha, para essas
+peças, a estrutura de abertura que já constar do modelo do escritório ou do
+modelo enviado pelo usuário.
+
+---
+
 ## REGRAS DE FORMATAÇÃO DA MINUTA
 
 **Fonte (padrão do escritório, vale para toda peça, qualquer que seja o
@@ -485,6 +554,15 @@ modelo enviado):**
   define timbre, layout e ordem das seções; a fonte e o tamanho seguem
   sempre este padrão do escritório, mesmo que o arquivo de modelo tenha sido
   criado ou editado com outra fonte por engano.
+- **Calibri é a única fonte do documento, sem exceção, inclusive na lista
+  de pedidos e requerimentos.** A lista numerada nativa do Word usada em
+  "DOS PEDIDOS E REQUERIMENTOS" (ver aquela seção) às vezes herda uma fonte
+  diferente da usada no corpo do texto para o próprio marcador da lista
+  (a letra maiúscula gerada automaticamente pelo Word), por ser um elemento
+  de formatação separado do texto do parágrafo. Configure explicitamente a
+  fonte do marcador da lista (`w:rPr` dentro de `w:lvl`/`w:pPr` no XML de
+  numeração) como Calibri, no mesmo tamanho do corpo do texto (12), para
+  que não sobre nenhum trecho do documento em fonte diferente de Calibri.
 
 - Espaçamento de 1,5 entre linhas dentro dos parágrafos.
 - Espaço de 12pt depois de cada parágrafo (`w:after`), além do espaçamento
@@ -1198,18 +1276,42 @@ Regras de redação.
   documentos mais relevantes proativamente, salvo a exceção de peças
   simples prevista naquela seção.
 
-Dos Fatos.
-- Inicie com "Trata-se de ação visando o reconhecimento de...".
-- Reconstrua o histórico fático com foco nas provas materiais, observando o
-  mínimo de parágrafos do patamar aplicado.
-
-Do Direito, por ponto controvertido.
-- Estrutura em três movimentos, norma ou doutrina da Etapa 7, depois cotejo
-  com o fato concreto, depois conclusão favorável.
-- Observe o mínimo de parágrafos por tese e por preliminar conforme o
-  patamar aplicado.
-- No administrativo, fundamente em Instruções Normativas e Decretos. No
-  judicial, use também jurisprudência da doutrina.
+ORDEM DOS TÓPICOS DO CORPO DA PEÇA (fixa, salvo peça administrativa sem
+preliminar aplicável).
+1. **PRELIMINARMENTE.** Sempre o primeiro tópico do corpo, em peça judicial
+   (ver PADRÃO DE ABERTURA DA PEÇA). Reúne as preliminares propriamente
+   ditas do caso (ex.: tramitação prioritária, justiça gratuita, e outras
+   preliminares processuais aplicáveis, como incompetência, ilegitimidade
+   ou prescrição, quando arguidas), cada uma em subtópico próprio (1.1, 1.2,
+   ...). Não inclua aqui a tutela de urgência (ver regra própria abaixo) nem
+   o mérito da causa.
+2. **DOS FATOS.** Inicie com "Trata-se de ação visando o reconhecimento
+   de...". Reconstrua o histórico fático com foco nas provas materiais,
+   observando o mínimo de parágrafos do patamar aplicado.
+3. **DO DIREITO, por ponto controvertido.** Estrutura em três movimentos,
+   norma ou doutrina da Etapa 7, depois cotejo com o fato concreto, depois
+   conclusão favorável. Observe o mínimo de parágrafos por tese conforme o
+   patamar aplicado. No administrativo, fundamente em Instruções Normativas
+   e Decretos. No judicial, use também jurisprudência da doutrina.
+4. **DA TUTELA DE URGÊNCIA, quando cabível.** Sempre o último tópico *de
+   direito* do corpo, ou seja, o último tópico que desenvolve
+   fundamentação/argumentação da causa — nunca misturado às preliminares
+   nem disperso ao longo do mérito. Demonstre probabilidade do direito
+   (remetendo objetivamente à fundamentação já exposta em "DO DIREITO", sem
+   repeti-la por extenso) e perigo de dano ou risco ao resultado útil do
+   processo, com base em dado concreto do caso (ex.: natureza alimentar do
+   benefício, urgência médica, risco de dano irreparável). Se o caso não
+   tiver pedido de tutela de urgência, omita esse tópico inteiramente, sem
+   deixar espaço reservado vazio, e ajuste a numeração dos tópicos
+   seguintes.
+5. **Tópicos processuais de fechamento, quando existirem** (ex.: "DAS
+   PUBLICAÇÕES", ver seção própria em REGRAS DE QUALIFICAÇÃO DE ADVOGADOS).
+   Não são tópicos de direito/argumentação, e por isso podem vir depois da
+   tutela de urgência, mantendo esta como o último tópico argumentativo da
+   peça. Inclua apenas os que forem aplicáveis ao caso.
+6. **DOS PEDIDOS E REQUERIMENTOS.** Sempre o último tópico da peça, depois
+   de qualquer tópico processual de fechamento (ver regras específicas
+   abaixo).
 
 Dos Pedidos e Requerimentos.
 - Inicie a seção com o título numerado "DOS PEDIDOS E REQUERIMENTOS"
@@ -1226,6 +1328,11 @@ Dos Pedidos e Requerimentos.
   nunca como letra digitada manualmente no início do texto (ex.: nunca "A. "
   como caractere literal) — isso garante que o Word reconheça e renumere a
   lista automaticamente se um item for inserido, movido ou removido depois.
+- **A letra do marcador também é sempre em negrito.** Configure o negrito
+  diretamente na definição do marcador da lista (`w:rPr` do nível de
+  numeração), não apenas no texto do item — o negrito da letra é
+  independente do negrito do trecho de destaque tratado no ponto abaixo, e
+  vale mesmo nos itens em que nenhum trecho do texto for destacado.
 - Dentro de cada item da lista, destaque em **negrito e em CAIXA ALTA** o
   ponto principal do pedido (a providência central requerida, ex.: "**o
   RECONHECIMENTO DA PRESCRIÇÃO INTERCORRENTE** da execução fiscal principal,
