@@ -348,7 +348,8 @@ entrada já existir e o caso novo trouxer nuance real.
   processo (não a própria peça em elaboração), indique onde ele pode ser
   encontrado. Use a numeração de protocolo definida em REGRAS DE ORGANIZAÇÃO
   DE DOCUMENTOS PARA PROTOCOLO quando o documento for um dos que a peça está
-  protocolando (ex.: "Doc. 4"). Para decisões ou documentos já juntados
+  protocolando, citando o número (ex.: "doc. 4") sem repetir o nome completo
+  do arquivo na citação corrida do texto. Para decisões ou documentos já juntados
   anteriormente aos autos do processo (não numerados por esta peça), cite a
   folha em que se encontram, no formato "(fl. xx)" ou "(fls. xx/yy)" quando
   o material do caso trouxer essa informação. Se a folha não constar do
@@ -645,28 +646,41 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   ao usuário caso identifique arquivos duplicados ou substancialmente
   redundantes, para que ele decida sobre a exclusão. Nunca exclua um
   documento por conta própria sem confirmação.
+- **Formato de nomeação, obrigatório e único.** Todo documento numerado para
+  protocolo é nomeado como "N. NOME DO DOCUMENTO" — o número, seguido de
+  ponto, espaço, e o nome do documento em maiúsculas, sem o prefixo "Doc."
+  e sem outro separador (nunca "Doc. N", nunca "N -", nunca "N)"). Exemplos:
+  "1. PETIÇÃO INICIAL - [NOME DO CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE
+  IDENTIFICAÇÃO", "3. PROCURAÇÃO", "4. COMPROVANTE DE RESIDÊNCIA". Esse é o
+  nome do arquivo físico salvo na subpasta de protocolo, e também o formato
+  usado em qualquer lista de documentos apresentada ao usuário (rascunho da
+  Etapa 8c, confirmação final da Etapa 10). Aplique esse formato sem exceção
+  a todas as regras abaixo.
 - **Numeração sequencial para protocolo.** Renomeie e numere os documentos na
-  ordem em que devem ser protocolados (ex.: "Doc. 1 - Petição Inicial", "Doc.
-  2 - ...", e assim por diante), seguindo a ordem preestabelecida por área
-  definida em ORDEM PADRÃO DE PROTOCOLO POR ÁREA, e ajustada à documentação
-  realmente presente na pasta do caso (ver regra abaixo). Cite corretamente o
-  número de cada documento ao longo do texto da minuta, e mantenha essas
-  citações atualizadas caso a numeração mude ao longo do processo.
-- **A própria peça é sempre o Doc. 1, como arquivo físico real.** Não basta
+  ordem em que devem ser protocolados, seguindo o formato acima ("N. NOME DO
+  DOCUMENTO"), seguindo a ordem preestabelecida por área definida em ORDEM
+  PADRÃO DE PROTOCOLO POR ÁREA, e ajustada à documentação realmente presente
+  na pasta do caso (ver regra abaixo). Cite corretamente o número de cada
+  documento ao longo do texto da minuta, e mantenha essas citações
+  atualizadas caso a numeração mude ao longo do processo.
+- **A própria peça é sempre o item 1, como arquivo físico real.** Não basta
   a peça constar como item 1 na lista textual de documentos: depois que a
   minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
   arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
   dentro da subpasta de protocolo (ver "Entrega em arquivos individuais,
-  nunca em zip" abaixo), nomeado como "Doc. 1 - [nome da peça]", junto com
+  nunca em zip" abaixo), nomeado como "1. PETIÇÃO INICIAL - [NOME DO
+  CLIENTE]" (ou o nome de peça equivalente ao tipo em elaboração), junto com
   os demais documentos numerados. A lista final de documentos (regra
-  "Confirmação final" abaixo) só está completa quando o Doc. 1 é esse
+  "Confirmação final" abaixo) só está completa quando o item 1 é esse
   arquivo físico da peça, não uma referência textual a ele.
-- **Nunca fragmente a numeração em sufixos (2a/2b).** Quando mais de um
+- **Nunca fragmente a numeração em sufixos (2A/2B).** Quando mais de um
   arquivo precisar ocupar o espaço de uma mesma categoria (ex.: um documento
   grande demais dividido pelo limite de tamanho, ou múltiplos documentos que
   não fazem sentido consolidar em um único PDF), nunca nomeie os arquivos
-  com sufixos de letra (ex.: "Doc. 2a", "Doc. 2b"). Cada arquivo recebe seu
-  próprio número inteiro e sequencial (ex.: "Doc. 2", "Doc. 3"), empurrando a
+  com sufixos de letra (ex.: "2A. COMPROVANTE DE RESIDÊNCIA", "2B.
+  COMPROVANTE DE RESIDÊNCIA"). Cada arquivo recebe seu próprio número
+  inteiro e sequencial, no formato padrão (ex.: "2. COMPROVANTE DE
+  RESIDÊNCIA", "3. COMPROVANTE DE RESIDÊNCIA (CONT.)"), empurrando a
   numeração dos documentos seguintes adiante. Ajuste todas as citações no
   texto da minuta de acordo, e informe ao usuário que a numeração de um
   documento específico foi desdobrada em mais de um número por esse motivo.
@@ -675,12 +689,12 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   definida para a área e, para cada uma que tiver arquivo correspondente na
   pasta, atribua o próximo número disponível — categorias sem documento
   correspondente são simplesmente puladas, sem deixar lacuna na numeração
-  (ex.: se não houver comprovante de residência, o Doc. 4 vira o próximo item
-  da lista, não um número vazio). Se a pasta tiver um documento que não se
-  encaixa em nenhuma categoria da ordem padrão, posicione-o ao final, na
-  ordem de relevância que fizer mais sentido para o caso, e informe ao
-  usuário onde ele foi encaixado.
-- **Exceção: procuração é sempre o Doc. 3, posição fixa.** Diferente das
+  (ex.: se não houver comprovante de residência, o item 4 vira o próximo
+  documento da lista, não um número vazio). Se a pasta tiver um documento
+  que não se encaixa em nenhuma categoria da ordem padrão, posicione-o ao
+  final, na ordem de relevância que fizer mais sentido para o caso, e
+  informe ao usuário onde ele foi encaixado.
+- **Exceção: procuração é sempre o item 3, posição fixa.** Diferente das
   demais categorias da ordem padrão, a procuração (ou termo de representação
   junto ao INSS, no caso de requerimento/recurso administrativo) nunca é
   pulada nem tem sua posição deslocada por ausência de outra categoria — ela
@@ -688,8 +702,8 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   requerimento administrativo depende dela para ter validade. Isso significa
   que, ao contrário da regra geral ("Ajuste da ordem à pasta real"), a
   numeração pode sim ficar com uma posição vaga se um documento anterior
-  faltar (ex.: sem identidade, o Doc. 2 fica em aberto e a procuração
-  continua sendo o Doc. 3, em vez de subir para a posição 2).
+  faltar (ex.: sem identidade, o item 2 fica em aberto e a procuração
+  continua sendo o item 3, em vez de subir para a posição 2).
   Se a peça em elaboração for uma petição inicial ou um requerimento
   administrativo e não houver arquivo de procuração/termo de representação
   na pasta, não deixe essa ausência passar batido: trate-a pela regra
@@ -714,17 +728,18 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   planilhas de cálculo, rascunhos de conferência, anotações da entrevista com
   o cliente ou material de apoio usado só para embasar a argumentação —
   entram na análise e podem ser citados como referência de raciocínio, mas
-  não recebem numeração de protocolo nem são citados como "Doc. X" no corpo
-  da peça. Ao apresentar a lista final de documentos (regra "Confirmação
-  final" abaixo), separe claramente os documentos que serão protocolados dos
-  documentos de apoio que ficam só na pasta de trabalho, para não haver
-  confusão entre os dois grupos.
+  não recebem numeração de protocolo nem entram na lista numerada de
+  documentos ("N. NOME DO DOCUMENTO") no corpo da peça. Ao apresentar a
+  lista final de documentos (regra "Confirmação final" abaixo), separe
+  claramente os documentos que serão protocolados dos documentos de apoio
+  que ficam só na pasta de trabalho, para não haver confusão entre os dois
+  grupos.
 - **Contrato de honorários nunca entra no protocolo.** Ainda que o arquivo
   do contrato de honorários esteja na pasta do caso, ele nunca recebe
-  numeração de protocolo nem é citado como "Doc. X" — é documento interno da
-  relação entre escritório e cliente, sem lugar nos autos ou no processo
-  administrativo. Trate-o sempre como documento de apoio não protocolado,
-  sem exceção.
+  numeração de protocolo nem entra na lista numerada de documentos — é
+  documento interno da relação entre escritório e cliente, sem lugar nos
+  autos ou no processo administrativo. Trate-o sempre como documento de
+  apoio não protocolado, sem exceção.
 - **Limite de tamanho por documento.** Verifique o tamanho de cada PDF que
   compõe a lista de documentos numerados. O limite depende do sistema de
   destino da peça:
@@ -743,10 +758,12 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   feito.
 - **Entrega em arquivos individuais, nunca em zip.** A entrega dos
   documentos numerados da pasta do caso é sempre feita como arquivos
-  individuais, um por número ("Doc. 1", "Doc. 2" ...), reunidos dentro de
-  uma subpasta de protocolo. Nunca compacte o conjunto em um único arquivo
-  .zip (ou formato equivalente) — cada documento deve poder ser aberto e
-  protocolado isoladamente, sem exigir extração prévia.
+  individuais, um por número, nomeados no formato padrão ("1. PETIÇÃO
+  INICIAL - [NOME DO CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE
+  IDENTIFICAÇÃO" ...), reunidos dentro de uma subpasta de protocolo. Nunca
+  compacte o conjunto em um único arquivo .zip (ou formato equivalente) —
+  cada documento deve poder ser aberto e protocolado isoladamente, sem
+  exigir extração prévia.
 - **Filtragem explícita e informada.** Ao decidir que um arquivo da pasta do
   caso não entra na lista de documentos numerados (por ser duplicado,
   redundante, sem valor probatório autônomo, documento de apoio interno, ou
@@ -762,6 +779,14 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   cada um, para que nenhuma ausência passe despercebida.
 
 ### ORDEM PADRÃO DE PROTOCOLO POR ÁREA
+
+Cada item abaixo vira o nome do arquivo físico no formato padrão definido em
+"Formato de nomeação, obrigatório e único" (número, ponto, espaço, nome em
+maiúsculas) — ex.: o item 1 abaixo se torna "1. PETIÇÃO INICIAL - [NOME DO
+CLIENTE]" (ou "1. REQUERIMENTO ADMINISTRATIVO - [NOME DO CLIENTE]" /
+"1. RECURSO ADMINISTRATIVO - [NOME DO CLIENTE]", conforme o tipo de peça), o
+item 2 se torna "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO", e assim por
+diante.
 
 Área previdenciária:
 1. Petição inicial / requerimento administrativo / recurso (a própria peça
@@ -876,7 +901,7 @@ inserir a imagem mesmo assim.
 - Inclua uma legenda numerada, justificada (não centralizada), abaixo de
   cada imagem, identificando o conteúdo e o número do documento de origem
   (ex.: "Figura 1: CNH da autora, categoria B, com validade expirada em
-  18/01/2026 (Doc. 2)"). A imagem em si pode ficar centralizada na página; a
+  18/01/2026 (doc. 2)"). A imagem em si pode ficar centralizada na página; a
   legenda de texto abaixo dela segue a regra geral de justificação (ver
   REGRAS DE FORMATAÇÃO DA MINUTA).
 - Quando existirem vários documentos da mesma categoria (ex.: quatro
