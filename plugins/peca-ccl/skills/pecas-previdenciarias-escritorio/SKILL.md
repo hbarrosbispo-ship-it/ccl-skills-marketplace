@@ -136,16 +136,21 @@ causa.
 
 ---
 
-## BASE DE REFERÊNCIAS DO ESCRITÓRIO (timbre e material jurídico já validado)
+## BASE DE REFERÊNCIAS DO ESCRITÓRIO (timbre, orientações fixas e banco de dados local)
 
-A skill tem acesso a uma pasta própria, `referencias-escritorio/`, mantida ao
-longo do tempo com material do escritório já validado em peças anteriores.
-Ela é independente da pasta do caso enviada pelo usuário nesta conversa, e é
-compartilhada com a skill `planejamento-previdenciario`. Tem cinco tipos de
-conteúdo, cada um com sua própria lógica de uso: timbre, orientações gerais,
-material por matéria (lei/jurisprudência, doutrina salva, modelos de peça
-salvos), modelos de parágrafos reutilizáveis, e endereços de citação por
-órgão e comarca.
+A skill usa dois locais de material do escritório já validado em peças
+anteriores, independentes da pasta do caso enviada pelo usuário nesta
+conversa. Eles têm naturezas diferentes e nunca devem ser confundidos:
+
+- **`referencias-escritorio/`** (dentro do repositório da skill, versionado
+  no GitHub): só timbre padrão e orientações gerais fixas — conteúdo de
+  configuração do escritório, que não muda caso a caso.
+- **`C:\Users\Administrador\Desktop\CCL\Base de Referências\`** (pasta local
+  neste computador, **fora do repositório da skill, nunca commitada nem
+  enviada ao GitHub**): o banco de dados que cresce a cada peça —
+  lei/jurisprudência por matéria, doutrina salva, modelos de peça, modelos
+  de parágrafos e endereços de citação. É compartilhada com a skill
+  `planejamento-previdenciario`.
 
 **Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
 oficial de timbre/formatação do escritório.
@@ -153,14 +158,14 @@ oficial de timbre/formatação do escritório.
   INÍCIO), use o modelo enviado — ele tem prioridade, pois pode refletir uma
   exigência específica daquele caso ou órgão.
 - Se a categoria "d" ficar ausente, verifique primeiro se existe um modelo de
-  peça salvo para aquela matéria e tipo de peça em
-  `referencias-escritorio/[matéria]/modelos-peca/` (ver seção própria
-  abaixo). Se existir, use-o e avise o usuário de que está usando o modelo
-  salvo daquela matéria, permitindo que ele peça o timbre padrão genérico no
-  lugar, se preferir. Se não existir, **não trate isso como bloqueio**: use o
-  arquivo de `referencias-escritorio/modelo-timbre/` como timbre padrão,
-  avise o usuário de que está usando o modelo padrão do escritório, e siga o
-  fluxo normalmente.
+  peça salvo para aquela matéria e tipo de peça no banco de dados local (ver
+  "Modelos de peça salvos por matéria" abaixo). Se existir, use-o e avise o
+  usuário de que está usando o modelo salvo daquela matéria, permitindo que
+  ele peça o timbre padrão genérico no lugar, se preferir. Se não existir,
+  **não trate isso como bloqueio**: use o arquivo de
+  `referencias-escritorio/modelo-timbre/` como timbre padrão, avise o
+  usuário de que está usando o modelo padrão do escritório, e siga o fluxo
+  normalmente.
 
 **Orientações gerais do escritório.** `referencias-escritorio/orientacoes-gerais.md`
 reúne regras de bastidor que valem para qualquer matéria, não amarradas a uma
@@ -181,15 +186,28 @@ ambiguidade sobre se ela se aplica ao caso concreto (ex.: dúvida se o
 processo tramita mesmo em JEF), pergunte ao usuário antes de aplicar ou
 descartar.
 
-**Leis e jurisprudência já validadas, por matéria.** `referencias-escritorio/`
-tem subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
+**Consulta ativa do banco de dados local, no início de toda peça.** Assim
+que a matéria e o tema específico do caso estiverem claros (o mais tardar na
+ETAPA 7), abra a subpasta correspondente em
+`C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\`
+(ex.: `...\previdenciario\loas\`) e faça uma análise ativa de pertinência:
+não se limite a abrir o arquivo por abrir — compare os fatos e a tese do
+caso concreto com cada item salvo lá (lei/jurisprudência do
+`base-conhecimento.md`, doutrina em `doutrina/`, modelos em `modelos-peca/`,
+parágrafos em `modelos-paragrafos/`) e identifique especificamente o que é
+útil ou importante para este caso. Se a subpasta da matéria não existir ou
+estiver vazia, trabalhe apenas com o material que o usuário forneceu nesta
+conversa, normalmente.
+
+**Leis e jurisprudência já validadas, por matéria.** A pasta local tem
+subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
 `previdenciario/loas/`, `civil/...`, `tributario/...`), cada uma com um
 arquivo `base-conhecimento.md` reunindo trechos de lei, jurisprudência e
 direcionamentos gerais já usados com segurança em peças anteriores daquela
 matéria específica. O formato desse arquivo (Índice de títulos/tags no topo,
 seguido de entradas padronizadas) está definido em
-`_referencias-escritorio/_TEMPLATE-base-conhecimento.md` — siga sempre esse
-modelo ao ler ou gravar uma entrada, nunca um bloco de texto solto.
+`_MODELO-formato-base-conhecimento.md`, na raiz da pasta local — siga sempre
+esse modelo ao ler ou gravar uma entrada, nunca um bloco de texto solto.
 - Na ETAPA 7 (Análise da Doutrina), além do material que o usuário enviou
   nesta conversa (categoria "c"), consulte também o `base-conhecimento.md`
   da subpasta correspondente à matéria do caso, se existir, e trate o que
@@ -199,8 +217,6 @@ modelo ao ler ou gravar uma entrada, nunca um bloco de texto solto.
   ABSOLUTAS e as REGRAS DE CITAÇÃO DE FONTES sobre como citar (sem
   transcrição literal, salvo a exceção controlada) qualquer que seja a
   origem do material.
-- Se a subpasta da matéria não existir ou estiver vazia, trabalhe apenas com
-  o material que o usuário forneceu nesta conversa, normalmente.
 
 **Doutrina salva por matéria.** Cada subpasta de matéria pode ter uma
 subpasta `doutrina/` (ex.: `previdenciario/auxilio-doenca/doutrina/`), com os
@@ -211,7 +227,8 @@ fica o documento original, íntegro.
 - Sempre que o usuário enviar um documento de doutrina explicitamente para
   "guardar na base" ou "salvar para a matéria" (fora do fluxo de uma peça
   específica, ou ao final da Etapa 10 conforme "Alimentando a base" abaixo),
-  salve o arquivo original em `referencias-escritorio/[matéria]/doutrina/`,
+  salve o arquivo original em
+  `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\doutrina\`,
   sem alterar seu conteúdo.
 - Na ETAPA 7, ao consultar a subpasta da matéria, verifique também se há
   doutrina salva em `doutrina/` e trate-a como fonte adicional, com a mesma
@@ -231,8 +248,8 @@ claramente o tipo de peça.
   na base" ou "salvar para casos futuros dessa matéria" (fora do fluxo de um
   caso específico, ou ao final da Etapa 10 conforme "Alimentando a base"
   abaixo), salve o arquivo em
-  `referencias-escritorio/[matéria]/modelos-peca/`, nomeado pelo tipo de
-  peça.
+  `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\modelos-peca\`,
+  nomeado pelo tipo de peça.
 - Na ETAPA 8a, se a categoria "d" (modelo do caso) não vier preenchida,
   verifique se existe um modelo salvo para a matéria e o tipo de peça em
   elaboração antes de recorrer ao timbre genérico (ver regra em "Timbre
@@ -243,7 +260,10 @@ claramente o tipo de peça.
 
 **Alimentando a base (triagem automática + uma única pergunta resumida).**
 Depois que o usuário aprovar a minuta final (ETAPA 10, opção 4), a própria
-skill faz a triagem do que vale salvar, em vez de perguntar item por item:
+skill faz a triagem do que vale salvar, em vez de perguntar item por item —
+tudo gravado diretamente em
+`C:\Users\Administrador\Desktop\CCL\Base de Referências\`, nunca em
+`referencias-escritorio/` (que fica só com timbre e orientações gerais):
 
 1. **Levante os candidatos.** Percorra o material desta peça e identifique,
    por tipo:
@@ -263,9 +283,9 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
 2. **Verifique duplicidade e pertinência antes de propor.** Para cada
    candidato de lei/jurisprudência ou parágrafo, confira o Índice do
    `base-conhecimento.md`/arquivo correspondente da matéria (ver
-   `_referencias-escritorio/_TEMPLATE-base-conhecimento.md` e o README de
-   `modelos-paragrafos/`). Descarte silenciosamente, sem levar à pergunta,
-   qualquer candidato que:
+   `_MODELO-formato-base-conhecimento.md` e o README de
+   `modelos-paragrafos/`, ambos na raiz da pasta local). Descarte
+   silenciosamente, sem levar à pergunta, qualquer candidato que:
    - já tenha entrada equivalente na base (mesmo título/tema/tags), sem
      nuance nova a acrescentar; ou
    - seja específico demais deste caso concreto para ter valor de reuso
@@ -275,9 +295,9 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
    > "Ao final desta peça, isto pode reforçar a base do escritório para
    > casos futuros:
    > 1. [título curto do trecho de lei/jurisprudência 1] → salvar em
-   >    `referencias-escritorio/[matéria]/base-conhecimento.md`.
+   >    `Base de Referências\[área]\[matéria]\base-conhecimento.md`.
    > 2. [título curto do parágrafo/pedido] → salvar em
-   >    `referencias-escritorio/modelos-paragrafos/` (ou na subpasta da
+   >    `Base de Referências\modelos-paragrafos\` (ou na subpasta da
    >    matéria).
    > 3. Esta peça como modelo de [tipo de peça] para `[matéria]` (ainda não
    >    havia modelo salvo / esta versão é mais completa que a salva).
@@ -288,13 +308,18 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
    para a base desta vez.
 4. **Grave conforme aprovado**, seguindo sempre o formato estruturado do
    template (Índice + entrada, com título, tags, data e peça de origem):
-   - Para leis/jurisprudência, um resumo objetivo (lei/artigo ou julgado,
-     tese associada, e uma nota curta de contexto), como nova entrada ou
-     atualização de uma entrada existente com nuance nova (nunca duplicando
-     o mesmo tema).
+   - Para leis/jurisprudência, **a citação completa exatamente como foi
+     escrita na peça de origem** (tribunal/órgão, número do processo ou
+     artigo, data de julgamento e a tese tal como redigida) — nunca um
+     resumo ainda mais condensado do que já foi usado na peça. É a mesma
+     citação abreviada e não literal já exigida pelas RESTRIÇÕES ABSOLUTAS,
+     só preservada tal como redigida para reuso direto em peças futuras
+     (ver `_MODELO-formato-base-conhecimento.md` na pasta local). Grave
+     como nova entrada, ou atualize uma entrada existente com nuance nova
+     (nunca duplicando o mesmo tema).
    - Para parágrafos/pedidos, o texto do trecho já com placeholders para os
      dados que mudam de caso para caso, seguindo o padrão do README de
-     `referencias-escritorio/modelos-paragrafos/`.
+     `Base de Referências\modelos-paragrafos\`.
    - Para a peça como modelo, o arquivo .docx final, renomeado para indicar
      claramente o tipo de peça; se já existir um arquivo do mesmo tipo,
      pergunte ao usuário se deve substituir ou manter os dois como variações
@@ -306,7 +331,10 @@ skill faz a triagem do que vale salvar, em vez de perguntar item por item:
 Nunca grave nada sem passar pela pergunta única acima (mesmo pré-filtrada,
 ela continua sendo a aprovação do usuário) e nunca sobrescreva uma entrada
 existente sem necessidade — acrescente, ou atualize pontualmente quando a
-entrada já existir e o caso novo trouxer nuance real.
+entrada já existir e o caso novo trouxer nuance real. Essa gravação é sempre
+uma edição direta de arquivo na pasta local do Windows — nunca inclua o
+conteúdo desse banco de dados em commit, push ou qualquer alteração do
+repositório da skill no GitHub.
 
 ---
 
@@ -413,7 +441,8 @@ entrada já existir e o caso novo trouxer nuance real.
 
 - **Endereço de citação salvo por órgão + comarca.** Antes de tratar o
   endereço de uma parte ré recorrente (ex.: INSS, União Federal/PGFN) como
-  ausente, verifique `_referencias-escritorio/enderecos-partes-re.md` pelo
+  ausente, verifique `Base de Referências\enderecos-partes-re.md` (pasta
+  local, ver BASE DE REFERÊNCIAS DO ESCRITÓRIO) pelo
   par órgão + comarca/cidade/seção judiciária onde a peça tramita (ex.:
   "INSS — Salvador/BA" é uma entrada diferente de "INSS — Feira de
   Santana/BA"; cada comarca tem seu próprio endereço de citação, nunca
@@ -730,10 +759,10 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   e sem outro separador (nunca "Doc. N", nunca "N -", nunca "N)"). Exemplos:
   "1. PETIÇÃO INICIAL - [NOME DO CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE
   IDENTIFICAÇÃO", "3. PROCURAÇÃO", "4. COMPROVANTE DE RESIDÊNCIA". Esse é o
-  nome do arquivo físico salvo na subpasta de protocolo, e também o formato
-  usado em qualquer lista de documentos apresentada ao usuário (rascunho da
-  Etapa 8c, confirmação final da Etapa 10). Aplique esse formato sem exceção
-  a todas as regras abaixo.
+  nome do arquivo físico na pasta do caso, e também o formato usado em
+  qualquer lista de documentos apresentada ao usuário (rascunho da Etapa 8c,
+  confirmação final da Etapa 10). Aplique esse formato sem exceção a todas as
+  regras abaixo.
 - **Numeração sequencial para protocolo.** Renomeie e numere os documentos na
   ordem em que devem ser protocolados, seguindo o formato acima ("N. NOME DO
   DOCUMENTO"), seguindo a ordem preestabelecida por área definida em ORDEM
@@ -741,14 +770,24 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   na pasta do caso (ver regra abaixo). Cite corretamente o número de cada
   documento ao longo do texto da minuta, e mantenha essas citações
   atualizadas caso a numeração mude ao longo do processo.
+- **Renomeie os arquivos que já existem na pasta do caso, em vez de criar
+  cópias numeradas ao lado deles.** A organização para protocolo é feita
+  renomeando/movendo o próprio arquivo já enviado pelo usuário para o nome
+  final no formato padrão, diretamente na pasta do caso — nunca criando um
+  arquivo adicional com o nome numerado e deixando o original com o nome
+  antigo também na pasta. Ao final da organização, cada documento numerado
+  deve existir na pasta do caso uma única vez, já com o nome definitivo; não
+  pode haver, ao mesmo tempo, um "CNH - [nome do cliente].pdf" e um
+  "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO.pdf" referentes ao mesmo
+  documento.
 - **A própria peça é sempre o item 1, como arquivo físico real.** Não basta
   a peça constar como item 1 na lista textual de documentos: depois que a
   minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
   arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
-  dentro da subpasta de protocolo (ver "Entrega em arquivos individuais,
-  nunca em zip" abaixo), nomeado como "1. PETIÇÃO INICIAL - [NOME DO
-  CLIENTE]" (ou o nome de peça equivalente ao tipo em elaboração), junto com
-  os demais documentos numerados. A lista final de documentos (regra
+  diretamente na pasta do caso (ver "Entrega em arquivos individuais, nunca
+  em zip" abaixo), nomeado como "1. PETIÇÃO INICIAL - [NOME DO CLIENTE]" (ou
+  o nome de peça equivalente ao tipo em elaboração), junto com os demais
+  documentos numerados. A lista final de documentos (regra
   "Confirmação final" abaixo) só está completa quando o item 1 é esse
   arquivo físico da peça, não uma referência textual a ele.
 - **Nunca fragmente a numeração em sufixos (2A/2B).** Quando mais de um
@@ -835,12 +874,14 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   para nomear as partes resultantes, e informando ao usuário o que foi
   feito.
 - **Entrega em arquivos individuais, nunca em zip.** A entrega dos
-  documentos numerados da pasta do caso é sempre feita como arquivos
-  individuais, um por número, nomeados no formato padrão ("1. PETIÇÃO
-  INICIAL - [NOME DO CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE
-  IDENTIFICAÇÃO" ...), reunidos dentro de uma subpasta de protocolo. Nunca
-  compacte o conjunto em um único arquivo .zip (ou formato equivalente) —
-  cada documento deve poder ser aberto e protocolado isoladamente, sem
+  documentos numerados é sempre feita como arquivos individuais, um por
+  número, nomeados no formato padrão ("1. PETIÇÃO INICIAL - [NOME DO
+  CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO" ...), renomeados
+  diretamente na própria pasta do caso (ver regra "Renomeie os arquivos que
+  já existem na pasta do caso" acima) — não em uma subpasta de protocolo
+  separada nem em cópias adicionais. Nunca compacte o conjunto em um único
+  arquivo .zip (ou formato equivalente) — cada documento deve poder ser
+  aberto e protocolado isoladamente, sem
   exigir extração prévia.
 - **Filtragem explícita e informada.** Ao decidir que um arquivo da pasta do
   caso não entra na lista de documentos numerados (por ser duplicado,
@@ -924,13 +965,13 @@ em CALIBRAGEM DE DENSIDADE (patamar leve) e nas demais seções desta skill.
   Recursos da Previdência Social) ou fases equivalentes.
 - **Regimento Interno do CRPS desatualizado — alerta obrigatório.** Foi
   divulgado um novo Regimento Interno do CRPS e o material de referência do
-  escritório (`referencias-escritorio/`) ainda não foi atualizado com ele.
-  Sempre que a peça for citar ou fundamentar algo no Regimento Interno do
-  CRPS, alerte o usuário de que a versão disponível pode estar desatualizada
-  antes de citá-la, e pergunte se ele tem o texto do novo regimento em mãos
-  para atualizar `referencias-escritorio/` (ou a subpasta correspondente)
-  antes de seguir. Remova este alerta da skill assim que o material de
-  referência for atualizado com o novo regimento.
+  escritório (banco de dados local, ver BASE DE REFERÊNCIAS DO ESCRITÓRIO)
+  ainda não foi atualizado com ele. Sempre que a peça for citar ou
+  fundamentar algo no Regimento Interno do CRPS, alerte o usuário de que a
+  versão disponível pode estar desatualizada antes de citá-la, e pergunte se
+  ele tem o texto do novo regimento em mãos para atualizar a subpasta
+  correspondente da pasta local antes de seguir. Remova este alerta da skill
+  assim que o material de referência for atualizado com o novo regimento.
 - RMI (Renda Mensal Inicial) e RMA (Renda Mensal Atual) nem sempre precisam
   ser juntados no processo administrativo — inclua apenas em processos mais
   complexos, onde o próprio cálculo da renda for um ponto controvertido.
@@ -997,34 +1038,39 @@ inserir a imagem mesmo assim.
 
 ## ENVIO DIRETO PARA A BASE (fora do fluxo de uma peça)
 
-O usuário pode alimentar `referencias-escritorio/` a qualquer momento, sem
-precisar estar no meio da elaboração de uma peça — por exemplo, enviando uma
-doutrina nova que acabou de adquirir, ou um modelo de peça que quer guardar
-para casos futuros. Reconheça esse tipo de pedido mesmo sem o comando
-"INICIAR", por frases como "guarda essa doutrina de [matéria] para uso
-futuro", "salva esse modelo de peça na base de [matéria]" ou "adiciona essa
-orientação geral à base".
+O usuário pode alimentar a base a qualquer momento, sem precisar estar no
+meio da elaboração de uma peça — por exemplo, enviando uma doutrina nova que
+acabou de adquirir, ou um modelo de peça que quer guardar para casos
+futuros. Reconheça esse tipo de pedido mesmo sem o comando "INICIAR", por
+frases como "guarda essa doutrina de [matéria] para uso futuro", "salva esse
+modelo de peça na base de [matéria]" ou "adiciona essa orientação geral à
+base".
 
 Ao identificar um pedido desse tipo:
 1. Confirme a matéria de destino (previdenciário/tributário/cível e, se
    aplicável, a subárea, ex.: auxílio-doença, LOAS), perguntando se não
    estiver clara pelo conteúdo do documento ou pelo pedido do usuário.
 2. Para doutrina, salve o arquivo original em
-   `referencias-escritorio/[matéria]/doutrina/`, conforme a seção "Doutrina
-   salva por matéria" em BASE DE REFERÊNCIAS DO ESCRITÓRIO.
+   `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\doutrina\`,
+   conforme a seção "Doutrina salva por matéria" em BASE DE REFERÊNCIAS DO
+   ESCRITÓRIO.
 3. Para modelo de peça, salve o .docx em
-   `referencias-escritorio/[matéria]/modelos-peca/`, nomeado pelo tipo de
-   peça, conforme "Modelos de peça salvos por matéria".
-4. Para orientação geral, acrescente a orientação em
-   `referencias-escritorio/orientacoes-gerais.md`, seguindo o padrão de
-   título + regra objetiva + "Como aplicar" já usado nesse arquivo.
+   `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\modelos-peca\`,
+   nomeado pelo tipo de peça, conforme "Modelos de peça salvos por matéria".
+4. Para orientação geral (regra fixa que vale para qualquer caso da
+   matéria, não conteúdo aprendido de um caso específico), acrescente a
+   orientação em `referencias-escritorio/orientacoes-gerais.md` (esse
+   arquivo continua no repositório da skill), seguindo o padrão de título +
+   regra objetiva + "Como aplicar" já usado nesse arquivo.
 5. Para parágrafo/pedido reutilizável, acrescente ao arquivo correspondente
-   em `referencias-escritorio/modelos-paragrafos/` (ou na subpasta da
-   matéria, se for um parágrafo específico daquela matéria), conforme o
-   README dessa pasta.
+   em `C:\Users\Administrador\Desktop\CCL\Base de Referências\modelos-paragrafos\`
+   (ou na subpasta da matéria, se for um parágrafo específico daquela
+   matéria), conforme o README dessa pasta.
 Em qualquer um desses casos, nunca sobrescreva material já existente sem
 confirmação; acrescente, ou pergunte se deve substituir quando já houver algo
-equivalente salvo.
+equivalente salvo. Os itens 2, 3 e 5 são sempre gravação direta na pasta
+local do Windows — nunca entram em commit/push do repositório da skill; só o
+item 4 (orientação geral fixa) é editado dentro do repositório da skill.
 
 ---
 

@@ -242,12 +242,18 @@ preencher os Quadros de projeção"), e pergunte:
 
 ---
 
-## BASE DE REFERÊNCIAS DO ESCRITÓRIO (timbre e material jurídico já validado)
+## BASE DE REFERÊNCIAS DO ESCRITÓRIO (timbre, orientações fixas e banco de dados local)
 
-A skill tem acesso a uma pasta própria, `referencias-escritorio/`, mantida ao
-longo do tempo com material do escritório já validado — compartilhada com a
-skill `pecas-previdenciarias-escritorio`. Independente da pasta do caso enviada
-nesta conversa.
+A skill usa dois locais de material do escritório já validado, independentes
+da pasta do caso enviada nesta conversa, compartilhados com a skill
+`pecas-previdenciarias-escritorio`:
+
+- **`referencias-escritorio/`** (dentro do repositório da skill, versionado
+  no GitHub): só timbre padrão e orientações gerais fixas.
+- **`C:\Users\Administrador\Desktop\CCL\Base de Referências\`** (pasta local
+  neste computador, **fora do repositório da skill, nunca commitada nem
+  enviada ao GitHub**): o banco de dados que cresce a cada peça/parecer —
+  lei/jurisprudência por matéria, doutrina salva, modelos, parágrafos.
 
 **Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
 oficial de timbre/formatação do escritório. Se o usuário não enviar um
@@ -264,14 +270,24 @@ mencionar uma futura via judicial ou administrativa como parte da estratégia
 recomendada, consulte esse arquivo como checagem de bastidor, aplicando a
 mesma parcimônia de linguagem já exigida para lei/jurisprudência abaixo.
 
-**Leis e jurisprudência já validadas.** `referencias-escritorio/previdenciario/`
-tem subpastas por matéria (ex.: `auxilio-doenca/`, `loas/`), cada uma com um
-arquivo `base-conhecimento.md` reunindo trechos de lei, jurisprudência e
-direcionamentos gerais já validados em peças e planejamentos anteriores, no
-formato definido em `_referencias-escritorio/_TEMPLATE-base-conhecimento.md`
-(Índice de títulos/tags no topo + entradas padronizadas), além de uma
-subpasta `doutrina/` opcional em cada matéria com os arquivos originais de
-doutrina já salvos (ver seção "Doutrina salva por matéria" na skill
+**Consulta ativa do banco de dados local, no início de todo planejamento.**
+Assim que a matéria/benefício específico do caso estiver claro, abra a
+subpasta correspondente em
+`C:\Users\Administrador\Desktop\CCL\Base de Referências\previdenciario\[matéria]\`
+e faça uma análise ativa de pertinência: compare os fatos e a estratégia do
+caso concreto com o que estiver salvo lá (lei/jurisprudência do
+`base-conhecimento.md`, doutrina em `doutrina/`), em vez de só abrir o
+arquivo por abrir.
+
+**Leis e jurisprudência já validadas.** A pasta local tem subpastas por
+matéria dentro de `previdenciario/` (ex.: `auxilio-doenca/`, `loas/`), cada
+uma com um arquivo `base-conhecimento.md` reunindo trechos de lei,
+jurisprudência e direcionamentos gerais já validados em peças e
+planejamentos anteriores, no formato definido em
+`_MODELO-formato-base-conhecimento.md` (na raiz da pasta local — Índice de
+títulos/tags no topo + entradas padronizadas), além de uma subpasta
+`doutrina/` opcional em cada matéria com os arquivos originais de doutrina
+já salvos (ver seção "Doutrina salva por matéria" na skill
 `pecas-previdenciarias-escritorio`, que usa a mesma pasta compartilhada).
 - Use esse material apenas como **checagem de bastidor** para garantir que a
   explicação de uma regra, requisito ou tese está tecnicamente correta —
@@ -290,7 +306,10 @@ doutrina já salvos (ver seção "Doutrina salva por matéria" na skill
 
 **Alimentando a base (triagem automática + uma única pergunta resumida).**
 Depois que o usuário aprovar o parecer final (ETAPA 6 — Revisão), a própria
-skill faz a triagem do que vale salvar, em vez de perguntar de forma aberta:
+skill faz a triagem do que vale salvar, em vez de perguntar de forma aberta —
+tudo gravado diretamente em
+`C:\Users\Administrador\Desktop\CCL\Base de Referências\`, nunca no
+repositório da skill:
 
 1. **Levante os candidatos.** Percorra os trechos de lei/jurisprudência
    usados na fundamentação do parecer e identifique quais têm potencial de
@@ -299,27 +318,35 @@ skill faz a triagem do que vale salvar, em vez de perguntar de forma aberta:
    para se repetir com outro cliente).
 2. **Verifique duplicidade antes de propor.** Para cada candidato, confira o
    Índice do `base-conhecimento.md` da matéria (ver
-   `_referencias-escritorio/_TEMPLATE-base-conhecimento.md`). Descarte
+   `_MODELO-formato-base-conhecimento.md`, na raiz da pasta local). Descarte
    silenciosamente, sem levar à pergunta, qualquer candidato que já tenha
    entrada equivalente na base sem nuance nova a acrescentar.
 3. **Pergunta única, já pré-filtrada.** Apresente apenas o que sobrou do
    filtro, numa lista curta:
    > "Este parecer trouxe [N] pontos com potencial de reforçar a base do
    > escritório: [título curto 1], [título curto 2]... Aprova salvar em
-   > `referencias-escritorio/previdenciario/[matéria]/base-conhecimento.md`,
+   > `Base de Referências\previdenciario\[matéria]\base-conhecimento.md`,
    > quer ajustar algum item, ou prefere não salvar desta vez?"
    Se não houver nenhum candidato depois do filtro, não faça a pergunta —
    apenas informe em uma frase que nada novo foi identificado para a base.
 4. **Grave conforme aprovado**, seguindo o formato do template (Índice +
-   entrada, com título, tags, data e caso de origem), sempre um resumo
-   objetivo (nunca o texto completo do parecer), como nova entrada ou
-   atualização pontual de uma entrada existente com nuance nova (nunca
-   duplicando o mesmo tema).
+   entrada, com título, tags, data e caso de origem). O corpo da entrada
+   nunca é o texto completo do parecer (que é redigido em linguagem
+   acessível ao cliente) — é a referência legal/jurisprudencial em si
+   (tribunal/órgão, número, artigo, data), preservada tal como
+   identificada, no mesmo formato que a base compartilhada usa em
+   `pecas-previdenciarias-escritorio` (ver
+   `_MODELO-formato-base-conhecimento.md`), para que sirva de fonte
+   confiável e reutilizável também nas peças processuais, não só no
+   próximo parecer. Grave como nova entrada, ou atualize pontualmente uma
+   entrada existente com nuance nova (nunca duplicando o mesmo tema). Essa
+   gravação é sempre edição direta de arquivo na pasta local — nunca
+   inclua esse conteúdo em commit/push do repositório da skill.
 O usuário também pode enviar doutrina ou pedir para guardar material na base
 a qualquer momento, mesmo fora do fluxo de um planejamento específico —
 nesse caso, siga a mesma mecânica descrita em "ENVIO DIRETO PARA A BASE" e
 "Doutrina salva por matéria" na skill `pecas-previdenciarias-escritorio`, já
-que a pasta é compartilhada entre as duas skills.
+que a pasta local é compartilhada entre as duas skills.
 
 ---
 
