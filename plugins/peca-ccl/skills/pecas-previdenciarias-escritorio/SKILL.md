@@ -182,17 +182,22 @@ descartar.
 
 **Leis e jurisprudência já validadas, por matéria.** `referencias-escritorio/`
 tem subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
-`previdenciario/loas/`, `civil/...`, `tributario/...`), cada uma reunindo
-trechos de lei, jurisprudência e direcionamentos gerais já usados com
-segurança em peças anteriores daquela matéria específica.
+`previdenciario/loas/`, `civil/...`, `tributario/...`), cada uma com um
+arquivo `base-conhecimento.md` reunindo trechos de lei, jurisprudência e
+direcionamentos gerais já usados com segurança em peças anteriores daquela
+matéria específica. O formato desse arquivo (Índice de títulos/tags no topo,
+seguido de entradas padronizadas) está definido em
+`_referencias-escritorio/_TEMPLATE-base-conhecimento.md` — siga sempre esse
+modelo ao ler ou gravar uma entrada, nunca um bloco de texto solto.
 - Na ETAPA 7 (Análise da Doutrina), além do material que o usuário enviou
-  nesta conversa (categoria "c"), consulte também a subpasta correspondente
-  à matéria do caso, se existir, e trate o que estiver lá como fonte
-  confiável — sem precisar pedir confirmação de autenticidade ao usuário
-  novamente, já que esse material só entra ali depois de aprovado
-  previamente. Aplique normalmente as RESTRIÇÕES ABSOLUTAS e as REGRAS DE
-  CITAÇÃO DE FONTES sobre como citar (sem transcrição literal, salvo a
-  exceção controlada) qualquer que seja a origem do material.
+  nesta conversa (categoria "c"), consulte também o `base-conhecimento.md`
+  da subpasta correspondente à matéria do caso, se existir, e trate o que
+  estiver lá como fonte confiável — sem precisar pedir confirmação de
+  autenticidade ao usuário novamente, já que esse material só entra ali
+  depois de aprovado previamente. Aplique normalmente as RESTRIÇÕES
+  ABSOLUTAS e as REGRAS DE CITAÇÃO DE FONTES sobre como citar (sem
+  transcrição literal, salvo a exceção controlada) qualquer que seja a
+  origem do material.
 - Se a subpasta da matéria não existir ou estiver vazia, trabalhe apenas com
   o material que o usuário forneceu nesta conversa, normalmente.
 
@@ -235,33 +240,67 @@ claramente o tipo de peça.
   matéria, liste as opções ao usuário e pergunte qual usar, em vez de
   escolher sozinho.
 
-**Alimentando a base (só com permissão explícita).** Depois que o usuário
-aprovar a minuta final (ETAPA 10, opção 4), pergunte se ele autoriza salvar
-na base do escritório o material relevante usado nesta peça, cobrindo cada
-tipo de conteúdo aplicável ao caso:
-> "Posso salvar na base do escritório o material desta peça para reaproveitar
-> em casos futuros?
-> 1. Trechos de lei e jurisprudência mais relevantes, em
->    `referencias-escritorio/[matéria]/`.
-> 2. Parágrafos/pedidos que valem a pena reutilizar (ex.: justiça gratuita,
->    tutela de urgência), em `referencias-escritorio/modelos-paragrafos/` ou
->    na subpasta específica da matéria.
-> 3. A própria peça como modelo para casos futuros do mesmo tipo, em
->    `referencias-escritorio/[matéria]/modelos-peca/`.
-> 4. Nenhum desses, obrigado."
-Se autorizado (o usuário pode escolher mais de uma opção), grave:
-- Para leis/jurisprudência, um resumo objetivo (lei/artigo ou julgado, tese
-  associada, e uma nota curta de contexto).
-- Para parágrafos/pedidos, o texto do trecho já com placeholders para os
-  dados que mudam de caso para caso, seguindo o padrão descrito no README de
-  `referencias-escritorio/modelos-paragrafos/`.
-- Para a peça como modelo, o arquivo .docx final, renomeado para indicar
-  claramente o tipo de peça.
-Nunca grave nada sem aprovação explícita para aquele item específico, e nunca
-sobrescreva o que já existe lá — para leis/jurisprudência e parágrafos,
-acrescente ao conteúdo existente; para modelo de peça, se já existir um
-arquivo do mesmo tipo, pergunte ao usuário se deve substituir ou manter os
-dois como variações (nomeando de forma a diferenciá-los).
+**Alimentando a base (triagem automática + uma única pergunta resumida).**
+Depois que o usuário aprovar a minuta final (ETAPA 10, opção 4), a própria
+skill faz a triagem do que vale salvar, em vez de perguntar item por item:
+
+1. **Levante os candidatos.** Percorra o material desta peça e identifique,
+   por tipo:
+   - Trechos de lei/jurisprudência usados na fundamentação que tenham
+     potencial de reaparecer em casos futuros da mesma matéria (descarte
+     teses genéricas demais para virar entrada, ou hiperespecíficas demais
+     para se repetir).
+   - Parágrafos/pedidos redigidos nesta peça que sejam reutilizáveis (ex.:
+     justiça gratuita, tutela de urgência) e ainda não estejam salvos.
+   - A peça em si, como candidata a modelo, se for de um tipo/matéria sem
+     modelo salvo ainda, ou uma versão sensivelmente melhor da que já existe.
+   - Doutrina enviada nesta conversa, quando o usuário já a tiver enviado
+     como material de embasamento (categoria "c") de forma que sugira valor
+     de reuso, mesmo sem pedido explícito de "guardar".
+2. **Verifique duplicidade e pertinência antes de propor.** Para cada
+   candidato de lei/jurisprudência ou parágrafo, confira o Índice do
+   `base-conhecimento.md`/arquivo correspondente da matéria (ver
+   `_referencias-escritorio/_TEMPLATE-base-conhecimento.md` e o README de
+   `modelos-paragrafos/`). Descarte silenciosamente, sem levar à pergunta,
+   qualquer candidato que:
+   - já tenha entrada equivalente na base (mesmo título/tema/tags), sem
+     nuance nova a acrescentar; ou
+   - seja específico demais deste caso concreto para ter valor de reuso
+     (ex.: um dado de fato, não uma tese ou regra).
+3. **Pergunta única, já pré-filtrada.** Apresente apenas o que sobrou do
+   filtro acima, numa lista curta para aprovação de uma vez:
+   > "Ao final desta peça, isto pode reforçar a base do escritório para
+   > casos futuros:
+   > 1. [título curto do trecho de lei/jurisprudência 1] → salvar em
+   >    `referencias-escritorio/[matéria]/base-conhecimento.md`.
+   > 2. [título curto do parágrafo/pedido] → salvar em
+   >    `referencias-escritorio/modelos-paragrafos/` (ou na subpasta da
+   >    matéria).
+   > 3. Esta peça como modelo de [tipo de peça] para `[matéria]` (ainda não
+   >    havia modelo salvo / esta versão é mais completa que a salva).
+   > Aprova salvar tudo, quer ajustar algum item, ou prefere não salvar
+   > nada desta vez?"
+   Se não houver nenhum candidato depois do filtro, não faça a pergunta —
+   apenas informe rapidamente, em uma frase, que nada novo foi identificado
+   para a base desta vez.
+4. **Grave conforme aprovado**, seguindo sempre o formato estruturado do
+   template (Índice + entrada, com título, tags, data e peça de origem):
+   - Para leis/jurisprudência, um resumo objetivo (lei/artigo ou julgado,
+     tese associada, e uma nota curta de contexto), como nova entrada ou
+     atualização de uma entrada existente com nuance nova (nunca duplicando
+     o mesmo tema).
+   - Para parágrafos/pedidos, o texto do trecho já com placeholders para os
+     dados que mudam de caso para caso, seguindo o padrão do README de
+     `referencias-escritorio/modelos-paragrafos/`.
+   - Para a peça como modelo, o arquivo .docx final, renomeado para indicar
+     claramente o tipo de peça; se já existir um arquivo do mesmo tipo,
+     pergunte ao usuário se deve substituir ou manter os dois como variações
+     (nomeando de forma a diferenciá-los) — só essa decisão específica exige
+     pergunta à parte, por não caber no filtro automático de duplicidade.
+Nunca grave nada sem passar pela pergunta única acima (mesmo pré-filtrada,
+ela continua sendo a aprovação do usuário) e nunca sobrescreva uma entrada
+existente sem necessidade — acrescente, ou atualize pontualmente quando a
+entrada já existir e o caso novo trouxer nuance real.
 
 ---
 
@@ -613,6 +652,24 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   realmente presente na pasta do caso (ver regra abaixo). Cite corretamente o
   número de cada documento ao longo do texto da minuta, e mantenha essas
   citações atualizadas caso a numeração mude ao longo do processo.
+- **A própria peça é sempre o Doc. 1, como arquivo físico real.** Não basta
+  a peça constar como item 1 na lista textual de documentos: depois que a
+  minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
+  arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
+  dentro da subpasta de protocolo (ver "Entrega em arquivos individuais,
+  nunca em zip" abaixo), nomeado como "Doc. 1 - [nome da peça]", junto com
+  os demais documentos numerados. A lista final de documentos (regra
+  "Confirmação final" abaixo) só está completa quando o Doc. 1 é esse
+  arquivo físico da peça, não uma referência textual a ele.
+- **Nunca fragmente a numeração em sufixos (2a/2b).** Quando mais de um
+  arquivo precisar ocupar o espaço de uma mesma categoria (ex.: um documento
+  grande demais dividido pelo limite de tamanho, ou múltiplos documentos que
+  não fazem sentido consolidar em um único PDF), nunca nomeie os arquivos
+  com sufixos de letra (ex.: "Doc. 2a", "Doc. 2b"). Cada arquivo recebe seu
+  próprio número inteiro e sequencial (ex.: "Doc. 2", "Doc. 3"), empurrando a
+  numeração dos documentos seguintes adiante. Ajuste todas as citações no
+  texto da minuta de acordo, e informe ao usuário que a numeração de um
+  documento específico foi desdobrada em mais de um número por esse motivo.
 - **Ajuste da ordem à pasta real.** A ordem padrão é um roteiro, não uma
   lista rígida de posições fixas: percorra as categorias na sequência
   definida para a área e, para cada uma que tiver arquivo correspondente na
@@ -662,6 +719,12 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   final" abaixo), separe claramente os documentos que serão protocolados dos
   documentos de apoio que ficam só na pasta de trabalho, para não haver
   confusão entre os dois grupos.
+- **Contrato de honorários nunca entra no protocolo.** Ainda que o arquivo
+  do contrato de honorários esteja na pasta do caso, ele nunca recebe
+  numeração de protocolo nem é citado como "Doc. X" — é documento interno da
+  relação entre escritório e cliente, sem lugar nos autos ou no processo
+  administrativo. Trate-o sempre como documento de apoio não protocolado,
+  sem exceção.
 - **Limite de tamanho por documento.** Verifique o tamanho de cada PDF que
   compõe a lista de documentos numerados. O limite depende do sistema de
   destino da peça:
@@ -673,13 +736,30 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   Salvo instrução diversa do usuário, aplique o limite correspondente ao
   destino da peça em elaboração. Caso um arquivo exceda o limite aplicável,
   comprima-o (reduzindo a resolução de imagens/scans com PDF de tamanho
-  reduzido, sem perda relevante de legibilidade) ou, se necessário, "quebre-o"
-  em partes, sempre preservando a legibilidade do conteúdo e informando ao
-  usuário o que foi feito.
+  reduzido, sem perda relevante de legibilidade) ou, se necessário, divida-o
+  em mais de um arquivo, sempre preservando a legibilidade do conteúdo,
+  aplicando a regra "Nunca fragmente a numeração em sufixos (2a/2b)" acima
+  para nomear as partes resultantes, e informando ao usuário o que foi
+  feito.
+- **Entrega em arquivos individuais, nunca em zip.** A entrega dos
+  documentos numerados da pasta do caso é sempre feita como arquivos
+  individuais, um por número ("Doc. 1", "Doc. 2" ...), reunidos dentro de
+  uma subpasta de protocolo. Nunca compacte o conjunto em um único arquivo
+  .zip (ou formato equivalente) — cada documento deve poder ser aberto e
+  protocolado isoladamente, sem exigir extração prévia.
+- **Filtragem explícita e informada.** Ao decidir que um arquivo da pasta do
+  caso não entra na lista de documentos numerados (por ser duplicado,
+  redundante, sem valor probatório autônomo, documento de apoio interno, ou
+  o contrato de honorários), registre a decisão à medida que ela é tomada,
+  em vez de deixar a exclusão implícita. Essa filtragem nunca é silenciosa.
 - **Confirmação final.** Antes de finalizar a minuta, confirme com o usuário
   a lista definitiva de documentos numerados, para garantir que as citações
   no texto e a numeração física dos arquivos na pasta estejam coerentes
-  entre si.
+  entre si. Nessa mesma confirmação, liste também todo arquivo da pasta do
+  caso que ficou de fora da numeração de protocolo (duplicado descartado,
+  documento sem valor probatório autônomo, documento de apoio interno,
+  contrato de honorários etc.), indicando o motivo específico da exclusão de
+  cada um, para que nenhuma ausência passe despercebida.
 
 ### ORDEM PADRÃO DE PROTOCOLO POR ÁREA
 

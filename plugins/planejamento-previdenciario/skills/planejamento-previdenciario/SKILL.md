@@ -220,10 +220,24 @@ modelo próprio do escritório para este planejamento, use esse arquivo como
 timbre padrão, avisando o usuário de que está usando o padrão do escritório,
 em vez de pausar o fluxo pedindo o modelo.
 
+**Orientações gerais do escritório.** `referencias-escritorio/orientacoes-gerais.md`
+reúne regras de bastidor válidas para qualquer matéria (ex.: honorários
+geralmente não devidos em primeiro grau nos Juizados Especiais Federais).
+Como o parecer é consultivo e não formula pedidos a um juízo, a maior parte
+dessas orientações não se aplica diretamente aqui — mas, se o planejamento
+mencionar uma futura via judicial ou administrativa como parte da estratégia
+recomendada, consulte esse arquivo como checagem de bastidor, aplicando a
+mesma parcimônia de linguagem já exigida para lei/jurisprudência abaixo.
+
 **Leis e jurisprudência já validadas.** `referencias-escritorio/previdenciario/`
-tem subpastas por matéria (ex.: `auxilio-doenca/`, `loas/`), reunindo trechos
-de lei, jurisprudência e direcionamentos gerais já validados em peças e
-planejamentos anteriores.
+tem subpastas por matéria (ex.: `auxilio-doenca/`, `loas/`), cada uma com um
+arquivo `base-conhecimento.md` reunindo trechos de lei, jurisprudência e
+direcionamentos gerais já validados em peças e planejamentos anteriores, no
+formato definido em `_referencias-escritorio/_TEMPLATE-base-conhecimento.md`
+(Índice de títulos/tags no topo + entradas padronizadas), além de uma
+subpasta `doutrina/` opcional em cada matéria com os arquivos originais de
+doutrina já salvos (ver seção "Doutrina salva por matéria" na skill
+`pecas-previdenciarias-escritorio`, que usa a mesma pasta compartilhada).
 - Use esse material apenas como **checagem de bastidor** para garantir que a
   explicação de uma regra, requisito ou tese está tecnicamente correta —
   nunca como conteúdo a despejar no parecer.
@@ -239,13 +253,38 @@ planejamentos anteriores.
 - Se a subpasta da matéria não existir ou estiver vazia, prossiga apenas com
   o raciocínio técnico já dominado, sem bloquear o fluxo por isso.
 
-**Alimentando a base (só com permissão explícita).** Depois que o usuário
-aprovar o parecer final (ETAPA 6 — Revisão), pergunte se ele autoriza salvar
-em `referencias-escritorio/previdenciario/[matéria]/` os trechos de lei e
-jurisprudência mais relevantes usados na fundamentação, para reaproveitar em
-peças e planejamentos futuros da mesma matéria. Se autorizado, grave um
-resumo objetivo (nunca o texto completo do parecer), sem sobrescrever o que
-já existe no arquivo, apenas acrescentando.
+**Alimentando a base (triagem automática + uma única pergunta resumida).**
+Depois que o usuário aprovar o parecer final (ETAPA 6 — Revisão), a própria
+skill faz a triagem do que vale salvar, em vez de perguntar de forma aberta:
+
+1. **Levante os candidatos.** Percorra os trechos de lei/jurisprudência
+   usados na fundamentação do parecer e identifique quais têm potencial de
+   reaparecer em planejamentos ou peças futuros da mesma matéria (descarte
+   teses genéricas demais para virar entrada, ou hiperespecíficas demais
+   para se repetir com outro cliente).
+2. **Verifique duplicidade antes de propor.** Para cada candidato, confira o
+   Índice do `base-conhecimento.md` da matéria (ver
+   `_referencias-escritorio/_TEMPLATE-base-conhecimento.md`). Descarte
+   silenciosamente, sem levar à pergunta, qualquer candidato que já tenha
+   entrada equivalente na base sem nuance nova a acrescentar.
+3. **Pergunta única, já pré-filtrada.** Apresente apenas o que sobrou do
+   filtro, numa lista curta:
+   > "Este parecer trouxe [N] pontos com potencial de reforçar a base do
+   > escritório: [título curto 1], [título curto 2]... Aprova salvar em
+   > `referencias-escritorio/previdenciario/[matéria]/base-conhecimento.md`,
+   > quer ajustar algum item, ou prefere não salvar desta vez?"
+   Se não houver nenhum candidato depois do filtro, não faça a pergunta —
+   apenas informe em uma frase que nada novo foi identificado para a base.
+4. **Grave conforme aprovado**, seguindo o formato do template (Índice +
+   entrada, com título, tags, data e caso de origem), sempre um resumo
+   objetivo (nunca o texto completo do parecer), como nova entrada ou
+   atualização pontual de uma entrada existente com nuance nova (nunca
+   duplicando o mesmo tema).
+O usuário também pode enviar doutrina ou pedir para guardar material na base
+a qualquer momento, mesmo fora do fluxo de um planejamento específico —
+nesse caso, siga a mesma mecânica descrita em "ENVIO DIRETO PARA A BASE" e
+"Doutrina salva por matéria" na skill `pecas-previdenciarias-escritorio`, já
+que a pasta é compartilhada entre as duas skills.
 
 ---
 
