@@ -303,6 +303,28 @@ já salvos (ver seção "Doutrina salva por matéria" na skill
   literal.
 - Se a subpasta da matéria não existir ou estiver vazia, prossiga apenas com
   o raciocínio técnico já dominado, sem bloquear o fluxo por isso.
+- A subpasta `previdenciario/acordos-internacionais/` merece atenção
+  especial nesta skill: acordos internacionais de previdência social são
+  relevantes sobretudo para planejamento (simulação de cenários que somam
+  tempo de contribuição em mais de um país), mais raramente citados numa
+  peça processual isolada. Sempre que o caso envolver contribuição ou
+  trabalho em outro país, consulte essa subpasta ativamente, mesmo que a
+  matéria principal do planejamento seja outra (ex.: aposentadoria por
+  tempo de contribuição com período trabalhado em Portugal).
+
+**Orientações operacionais de sistema (Cálculo Jurídico/CJ, Tramitação
+Inteligente), por matéria.** Mesma mecânica descrita na skill
+`pecas-previdenciarias-escritorio` (ver seção equivalente lá): quando o
+usuário fornecer, na pasta do caso, um documento próprio ensinando como
+operar o CJ (ou outro sistema) para um procedimento específico de uma
+matéria (ex.: como simular uma determinada regra de transição), leia-o,
+aplique-o ao montar os cenários deste planejamento, oriente o usuário passo
+a passo sobre como proceder no sistema, e ao final grave/atualize
+`orientacoes-sistema.md` na subpasta da matéria (mesmo fluxo de "Alimentando
+a base" abaixo) para reutilizar em planejamentos futuros do mesmo tipo, sem
+precisar que o usuário reenvie o documento. Esse conteúdo é sempre
+operacional/interno — nunca aparece nomeado no parecer entregue ao cliente
+(ver REGRA DE REFERÊNCIAS AO CLIENTE).
 
 **Alimentando a base (triagem automática + uma única pergunta resumida).**
 Depois que o usuário aprovar o parecer final (ETAPA 6 — Revisão), a própria
@@ -315,7 +337,11 @@ repositório da skill:
    usados na fundamentação do parecer e identifique quais têm potencial de
    reaparecer em planejamentos ou peças futuros da mesma matéria (descarte
    teses genéricas demais para virar entrada, ou hiperespecíficas demais
-   para se repetir com outro cliente).
+   para se repetir com outro cliente). Inclua também, quando aplicável,
+   orientação de como operar o CJ/Tramitação Inteligente para um
+   procedimento desta matéria (ver "Orientações operacionais de sistema"
+   acima), se o usuário tiver fornecido esse tipo de documento e ela ainda
+   não estiver salva em `orientacoes-sistema.md`.
 2. **Verifique duplicidade antes de propor.** Para cada candidato, confira o
    Índice do `base-conhecimento.md` da matéria (ver
    `_MODELO-formato-base-conhecimento.md`, na raiz da pasta local). Descarte

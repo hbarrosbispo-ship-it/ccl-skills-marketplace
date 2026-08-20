@@ -258,6 +258,36 @@ claramente o tipo de peça.
   matéria, liste as opções ao usuário e pergunte qual usar, em vez de
   escolher sozinho.
 
+**Orientações operacionais de sistema (Cálculo Jurídico/CJ, Tramitação
+Inteligente), por matéria.** Cada subpasta de matéria pode ter um arquivo
+`orientacoes-sistema.md`, com anotações de como operar o CJ ou a Tramitação
+Inteligente para procedimentos específicos daquela matéria (ex.: "como fazer
+um cálculo de revisão de benefício no CJ"). Diferente do resto da base, esse
+conteúdo só nasce se o **usuário fornecer**, na pasta do caso, um documento
+próprio de orientação sobre como operar um desses sistemas para aquele
+benefício/procedimento — a skill nunca inventa nem infere esse fluxo sozinha.
+- Quando a pasta do caso trouxer um documento desse tipo (guia, manual,
+  passo a passo, print anotado, etc. sobre como operar o CJ/Tramitação
+  Inteligente para a matéria em questão), leia-o e aplique as orientações
+  no que for pertinente à peça em elaboração, e oriente o usuário
+  ativamente, passo a passo, sobre como proceder com o cálculo/procedimento
+  no sistema, com base no que o documento ensina.
+- Ao final da Etapa 10 (mesmo fluxo de "Alimentando a base" abaixo), grave
+  ou atualize `orientacoes-sistema.md` na subpasta da matéria com o que foi
+  aprendido nesse caso sobre como operar o sistema para aquele
+  benefício/procedimento — nunca sobrescrevendo uma orientação já salva sem
+  necessidade, só acrescentando ou refinando.
+- Em casos futuros da mesma matéria, se `orientacoes-sistema.md` já existir,
+  consulte-o proativamente sempre que o caso envolver o mesmo tipo de
+  cálculo/procedimento (ex.: outra revisão de benefício), e oriente o
+  usuário com base nas anotações já salvas, sem precisar que ele reenvie o
+  documento original.
+- Esse conteúdo é estritamente operacional/interno (como usar o sistema),
+  nunca a fonte de dados do caso em si, e nunca deve ser nomeado no corpo da
+  peça protocolada (o sistema é ferramenta de trabalho do escritório, não
+  fato do processo): use-o só para orientar o usuário e conferir o cálculo,
+  nunca cite "CJ" ou "Tramitação Inteligente" no texto da minuta em si.
+
 **Alimentando a base (triagem automática + uma única pergunta resumida).**
 Depois que o usuário aprovar a minuta final (ETAPA 10, opção 4), a própria
 skill faz a triagem do que vale salvar, em vez de perguntar item por item —
@@ -280,6 +310,10 @@ tudo gravado diretamente em
      de reuso, mesmo sem pedido explícito de "guardar".
    - Endereço de citação de órgão + comarca ainda não salvo em
      `enderecos-partes-re.md` (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS).
+   - Orientação de como operar o CJ/Tramitação Inteligente para a matéria,
+     quando o usuário tiver fornecido esse tipo de documento na pasta do
+     caso (ver "Orientações operacionais de sistema" acima) e ela ainda não
+     estiver salva (ou estiver desatualizada) em `orientacoes-sistema.md`.
 2. **Verifique duplicidade e pertinência antes de propor.** Para cada
    candidato de lei/jurisprudência ou parágrafo, confira o Índice do
    `base-conhecimento.md`/arquivo correspondente da matéria (ver
@@ -301,6 +335,8 @@ tudo gravado diretamente em
    >    matéria).
    > 3. Esta peça como modelo de [tipo de peça] para `[matéria]` (ainda não
    >    havia modelo salvo / esta versão é mais completa que a salva).
+   > 4. [resumo curto da orientação de sistema aprendida] → salvar em
+   >    `Base de Referências\[área]\[matéria]\orientacoes-sistema.md`.
    > Aprova salvar tudo, quer ajustar algum item, ou prefere não salvar
    > nada desta vez?"
    Se não houver nenhum candidato depois do filtro, não faça a pergunta —
@@ -328,6 +364,12 @@ tudo gravado diretamente em
    - Para endereço de citação, uma nova entrada em
      `enderecos-partes-re.md` com o órgão, a comarca/cidade e o endereço
      completo, seguindo o formato descrito naquele arquivo.
+   - Para orientação de sistema (CJ/Tramitação Inteligente), o passo a passo
+     aprendido em `orientacoes-sistema.md` da matéria, no mesmo nível de
+     detalhe do documento que o usuário forneceu (não um resumo vago) —
+     nova entrada por procedimento (ex.: "revisão de benefício"), ou
+     atualização da existente se o caso novo trouxer um passo adicional ou
+     uma correção.
 Nunca grave nada sem passar pela pergunta única acima (mesmo pré-filtrada,
 ela continua sendo a aprovação do usuário) e nunca sobrescreva uma entrada
 existente sem necessidade — acrescente, ou atualize pontualmente quando a
@@ -1066,9 +1108,16 @@ Ao identificar um pedido desse tipo:
    em `C:\Users\Administrador\Desktop\CCL\Base de Referências\modelos-paragrafos\`
    (ou na subpasta da matéria, se for um parágrafo específico daquela
    matéria), conforme o README dessa pasta.
+6. Para orientação de como operar o CJ/Tramitação Inteligente num
+   procedimento específico de uma matéria, acrescente ou atualize
+   `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\orientacoes-sistema.md`,
+   conforme "Orientações operacionais de sistema" em BASE DE REFERÊNCIAS DO
+   ESCRITÓRIO — só aceite esse tipo de pedido quando o usuário estiver
+   fornecendo um documento próprio ensinando o procedimento, nunca a partir
+   de conhecimento genérico da skill sobre o sistema.
 Em qualquer um desses casos, nunca sobrescreva material já existente sem
 confirmação; acrescente, ou pergunte se deve substituir quando já houver algo
-equivalente salvo. Os itens 2, 3 e 5 são sempre gravação direta na pasta
+equivalente salvo. Os itens 2, 3, 5 e 6 são sempre gravação direta na pasta
 local do Windows — nunca entram em commit/push do repositório da skill; só o
 item 4 (orientação geral fixa) é editado dentro do repositório da skill.
 
