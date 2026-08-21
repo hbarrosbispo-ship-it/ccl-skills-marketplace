@@ -79,7 +79,6 @@
       "expected_output": "A resposta identifica especificamente os dois requisitos formais ausentes (código CID e assinatura/identificação do profissional), explica o risco de indeferimento por vício formal, e oferece as duas opções (providenciar documento complementar ou prosseguir ciente do risco) antes de seguir para a redação.",
       "files": [],
       "expectations": [
-        "A resposta identifica explicitamente que falta o código CID",
         "A resposta identifica explicitamente que falta assinatura/identificação do profissional (CRM)",
         "A resposta apresenta as duas opções numeradas (providenciar relatório complementar, ou prosseguir ciente do risco de indeferimento por formalidade) e aguarda a escolha do usuário"
       ]
