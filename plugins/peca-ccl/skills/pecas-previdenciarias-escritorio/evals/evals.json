@@ -1,0 +1,99 @@
+{
+  "skill_name": "pecas-previdenciarias-escritorio",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente sem perguntar etapa por etapa. Caso: petição inicial de auxílio-doença/incapacidade temporária, segurada empregada, tramitando no JEF de Salvador/BA. a. Nenhuma peça anterior (é a inicial). b. Processo administrativo: requerimento NB 123.456.789-0 indeferido em 10/03/2026, motivo 'incapacidade não configurada'. c. Doutrina: nenhuma (use só a lei). d. Modelo: nenhum, use o timbre padrão do escritório. e. Demais documentos: laudo médico de 15/02/2026, Dra. Fernanda Melo, CRM/BA 12345, CID M54.5 (lombalgia), atestando afastamento por 90 dias a partir de 20/02/2026, identificação da paciente completa, assinatura eletrônica válida. Autora: Joana Ribeiro dos Santos, brasileira, solteira, auxiliar de produção, CPF 111.222.333-44, RG 12.345.678-90, residente em Salvador/BA. Valor da causa: proveito econômico de R$ 6.600,00 (11 parcelas de R$ 600,00 estimadas). Gere a minuta final completa em .docx.",
+      "expected_output": "Petição inicial completa, com o padrão fixo de fechamento (valor da causa, 'Nestes termos,', 'Pede deferimento.', data por extenso, bloco de assinatura centralizado com nome do(s) advogado(s) em negrito e CAIXA ALTA seguido da OAB em linha própria, sem linha de assinatura sublinhada) e sem nenhuma das construções de estilo proibidas.",
+      "files": [],
+      "expectations": [
+        "O bloco de assinatura final tem o nome do(s) advogado(s) em negrito e CAIXA ALTA, com o número da OAB na linha abaixo",
+        "Não existe nenhuma linha de assinatura tipo '_____________' acima do nome do advogado",
+        "A sequência de fechamento segue, em parágrafos distintos e nesta ordem, valor da causa, 'Nestes termos,', 'Pede deferimento.', local e data por extenso, bloco de assinatura",
+        "Nenhum trecho do texto contém o caractere travessão (—)",
+        "Nenhum ':' aparece como conector explicativo dentro de uma frase corrida (fora de lista numerada ou transcrição)"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "peça CCL. INICIAR, modo pasta anexada, autorizo prosseguir internamente. A pasta do caso (fictícia, considere como se anexada) tem estes arquivos, com estes nomes originais: 'CNH - Marino Del Vecchio.pdf' (identidade), 'procuração assinada.pdf', 'comprovante de residencia CEMIG.pdf', 'CNIS Marino.pdf', 'laudo INSS negado.pdf' (relatório médico completo e válido). Não há peças anteriores nem doutrina. Trata-se de requerimento administrativo de aposentadoria por invalidez para Marino Del Vecchio, autônomo, CPF 222.333.444-55. Organize os documentos para protocolo e gere a minuta final.",
+      "expected_output": "Os arquivos são renomeados diretamente (in-place) para o formato 'N. Nome do Documento' em Título, sem criar cópia adicional ao lado do arquivo original, com a procuração sempre na posição 3.",
+      "files": [],
+      "expectations": [
+        "Cada documento numerado usa o formato 'N. Nome do Documento', em Título (nunca CAIXA ALTA inteira, nunca prefixo 'Doc. N')",
+        "A resposta indica que os arquivos originais foram renomeados no próprio lugar, e não que uma cópia numerada foi criada ao lado do arquivo com o nome antigo",
+        "A procuração recebe o número 3 na numeração de protocolo",
+        "A peça em si (o requerimento) aparece como item 1 da lista de documentos numerados"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Petição inicial judicial de restabelecimento de auxílio-doença com pedido de tutela de urgência, tramitando na Justiça Federal (não é JEF, causa acima de 60 salários mínimos). Preliminar: justiça gratuita (autor comprovadamente hipossuficiente). Dois pontos de mérito: (1) incapacidade demonstrada por laudo pericial judicial anterior não impugnado, (2) qualidade de segurado mantida por período de graça. Urgência: benefício de natureza alimentar, autor sem outra fonte de renda desde a cessação. Gere a minuta final completa.",
+      "expected_output": "A peça segue a ordem fixa de tópicos (1. PRELIMINARMENTE, 2. DOS FATOS, 3. DO DIREITO por ponto controvertido, 4. DA TUTELA DE URGÊNCIA como último tópico argumentativo, 5. DOS PEDIDOS E REQUERIMENTOS por último), com a lista de pedidos em letras maiúsculas nativas do Word, marcador em negrito, e o trecho central de cada pedido em negrito e CAIXA ALTA.",
+      "files": [],
+      "expectations": [
+        "O tópico 1 do corpo é 'PRELIMINARMENTE' e contém a justiça gratuita",
+        "O tópico 'DA TUTELA DE URGÊNCIA' aparece depois de todos os tópicos de 'DO DIREITO' e antes de 'DOS PEDIDOS E REQUERIMENTOS'",
+        "'DOS PEDIDOS E REQUERIMENTOS' é o último tópico da peça",
+        "A lista de pedidos usa letras maiúsculas (A, B, C...), não números",
+        "Dentro de ao menos um pedido, o trecho central da providência requerida aparece em negrito e CAIXA ALTA, com o restante do item em formatação normal"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Recurso administrativo... na verdade, mudando: petição inicial judicial de reconhecimento de tempo especial. Doutrina/categoria c inclui um arquivo chamado 'jurisprudencias-tempo-especial.pdf' contendo duas ementas completas favoráveis à tese de exposição a ruído, uma do STJ (REsp fictício 1.987.654/SP, relatora Min. Fictícia Exemplo, julgado em 12/05/2023, publicado em 20/05/2023) e outra do TRF1. Use a mais relevante para fundamentar o tópico de mérito. Autor trabalhou como operador de máquinas exposto a ruído acima do limite de tolerância por 12 anos, PPP juntado aos autos. Gere a minuta final.",
+      "expected_output": "Ao menos uma ementa é transcrita integralmente no corpo do texto (não apenas citada pelo número do processo em frase corrida), formatada como citação direta longa com um trecho em negrito, com a identificação completa da fonte em nota de rodapé real do Word.",
+      "files": [],
+      "expectations": [
+        "Ao menos uma ementa aparece transcrita por extenso no corpo do texto, não apenas mencionada pelo tribunal e número do processo em frase corrida",
+        "A ementa transcrita contém um trecho em negrito, correspondente ao ponto mais relevante para o argumento",
+        "A identificação da fonte (tribunal, número do processo, data) está em nota de rodapé, não como linha de texto no corpo do documento",
+        "A transcrição está formatada com recuo de 4 cm e fonte reduzida, diferenciada visualmente do corpo do texto"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Recurso inominado em processo que tramita na 3ª Vara do Juizado Especial Federal de São Paulo/SP (não é a Bahia). Área previdenciária, pedido de restabelecimento de benefício por incapacidade. Fundamentos já delineados na sentença recorrida (fictícia, considere que julgou improcedente por ausência de prova pericial suficiente). Gere a minuta final completa, incluindo o bloco de assinatura.",
+      "expected_output": "O bloco de assinatura não inclui Hélio Barros Bispo dos Santos, já que o processo tramita fora da Bahia; inclui apenas o advogado da área previdenciária aplicável.",
+      "files": [],
+      "expectations": [
+        "O nome 'Hélio Barros Bispo dos Santos' não aparece no bloco de assinatura final",
+        "O bloco de assinatura inclui apenas o(s) advogado(s) da área previdenciária aplicável ao caso",
+        "A resposta não pede confirmação desnecessária sobre isso quando o foro já está claro nos documentos do caso"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Requerimento administrativo de aposentadoria por invalidez para segurado especial (trabalhador rural). Documento de categoria 'e': um relatório médico completo e formalmente válido (CID, assinatura, identificação, período de afastamento indeterminado), mas que, no campo de histórico ocupacional, menciona incidentalmente que o paciente trabalhou como vigilante em empresa de segurança na cidade por 8 meses em 2019 antes de retomar a atividade rural. Prossiga com a análise dos documentos (Etapa 3) e me avise antes de seguir para a redação se encontrar algo relevante.",
+      "expected_output": "A resposta identifica e alerta explicitamente sobre o vínculo urbano mencionado incidentalmente no laudo, por ser potencialmente desfavorável à condição de segurado especial, e pergunta ao usuário se o documento deve ser mantido mesmo assim, em vez de seguir direto para a redação ignorando o dado.",
+      "files": [],
+      "expectations": [
+        "A resposta menciona explicitamente o vínculo urbano de 8 meses como fato desfavorável encontrado no documento",
+        "A resposta pergunta ao usuário se, mesmo assim, o documento deve ser mantido na pasta/protocolo, em vez de prosseguir silenciosamente",
+        "A resposta não omite o dado nem segue direto para a minuta final sem esse alerta"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Requerimento administrativo de auxílio-doença. Documento de categoria 'e': um laudo médico datado, com identificação do paciente e diagnóstico descrito em texto ('lombalgia crônica incapacitante'), mas sem código CID explícito e sem qualquer assinatura ou identificação do profissional (nome, CRM) visível no documento. Analise os documentos (Etapa 3) e me diga como proceder antes de redigir.",
+      "expected_output": "A resposta identifica especificamente os dois requisitos formais ausentes (código CID e assinatura/identificação do profissional), explica o risco de indeferimento por vício formal, e oferece as duas opções (providenciar documento complementar ou prosseguir ciente do risco) antes de seguir para a redação.",
+      "files": [],
+      "expectations": [
+        "A resposta identifica explicitamente que falta o código CID",
+        "A resposta identifica explicitamente que falta assinatura/identificação do profissional (CRM)",
+        "A resposta apresenta as duas opções numeradas (providenciar relatório complementar, ou prosseguir ciente do risco de indeferimento por formalidade) e aguarda a escolha do usuário"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente. Petição inicial de restabelecimento de benefício assistencial (BPC-LOAS), causa de valor compatível com a competência dos Juizados Especiais Federais, tramitando no JEF de Feira de Santana/BA. Autor idoso, 68 anos, renda familiar per capita comprovadamente abaixo de 1/4 do salário mínimo. Gere a minuta final completa, incluindo a seção 'DOS PEDIDOS E REQUERIMENTOS'.",
+      "expected_output": "A lista de pedidos não inclui pedido de condenação em honorários de sucumbência de primeiro grau, já que o caso tramita em JEF de primeiro grau.",
+      "files": [],
+      "expectations": [
+        "A seção 'DOS PEDIDOS E REQUERIMENTOS' não contém pedido de condenação da parte ré em honorários de sucumbência de primeiro grau",
+        "Nenhum trecho do texto contém o caractere travessão (—)",
+        "A caixa de prioridade do idoso aparece logo abaixo do endereçamento, compacta e alinhada à esquerda, não ocupando a largura inteira da página"
+      ]
+    }
+  ]
+}

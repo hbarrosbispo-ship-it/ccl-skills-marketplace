@@ -1,0 +1,88 @@
+{
+  "skill_name": "planejamento-previdenciario",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Preciso do planejamento previdenciário da cliente Rosa Almeida Nunes, autorizo prosseguir internamente sem pausar em cada etapa. Cálculos (categoria 'Cálculos'): um relatório do sistema de cálculo do escritório simulando aposentadoria por tempo de contribuição considerando o tempo rural alegado (regra cumprida em 03/2027) e outro relatório da mesma regra sem considerar o tempo rural (regra cumprida só em 08/2031). Documentos da cliente: CNIS com lacunas no período em que ela alega ter trabalhado na roça (1998-2004), e uma única declaração de sindicato rural sem testemunhas nem outros documentos de apoio (sem contrato de arrendamento, sem notas fiscais, sem escritura). Apoio interno: anotação da entrevista dizendo que a cliente 'parece confiável mas a prova está fraca'. Monte o planejamento completo.",
+      "expected_output": "O parecer apresenta dois cenários lado a lado para o período rural controvertido (um assumindo que o reconhecimento é obtido, outro assumindo que não), em vez de simplesmente excluir o período por a prova documental estar frágil, explicando em cada cenário o que faria o resultado favorável se concretizar.",
+      "files": [],
+      "expectations": [
+        "A seção 'DOS CENÁRIOS DE APOSENTADORIA' desenvolve dois cenários distintos relacionados ao período rural: um com o reconhecimento e outro sem",
+        "Cada um dos dois cenários explica qual documento ou providência faria o cenário favorável se concretizar",
+        "O período rural não é simplesmente descartado do planejamento só por causa da fragilidade documental"
+      ]
+    },
+    {
+      "id": 2,
+      "prompt": "Preciso do planejamento previdenciário do cliente Eduardo Farias Lima, autorizo prosseguir internamente. Cálculos: dois relatórios do sistema de cálculo do escritório, um para aposentadoria por idade e outro para tempo de contribuição, ambos com RMI, GTE e datas projetadas completos. Documentos do cliente: CNIS e contracheque atual. Monte o planejamento completo com todas as seções, incluindo os Quadros de projeção.",
+      "expected_output": "O documento final entregue ao cliente não nomeia o sistema de cálculo interno do escritório em nenhum lugar (corpo do texto, legendas de quadro, notas de rodapé), referindo-se sempre a 'o cálculo técnico realizado para o seu caso' ou expressão equivalente.",
+      "files": [],
+      "expectations": [
+        "O texto final não contém as palavras 'Cálculo Jurídico' nem a sigla 'CJ' em nenhum lugar, incluindo legendas de quadro e notas de rodapé",
+        "Os valores de RMI e GTE são atribuídos a uma expressão genérica como 'o cálculo técnico realizado para o seu caso', nunca ao nome do sistema"
+      ]
+    },
+    {
+      "id": 3,
+      "prompt": "Preciso do planejamento previdenciário da cliente Patrícia Souza Menezes, servidora pública estatutária (RPPS), autorizo prosseguir internamente. Cálculo: um único relatório simulando a regra de aposentadoria voluntária aplicável ao seu regime, com RMI e data projetada baseados na manutenção da base de contribuição atual dela. Documentos: contracheque atual mostrando a base de contribuição ao fundo previdenciário do regime próprio. Monte o planejamento completo, incluindo a seção de projeção futura.",
+      "expected_output": "A seção de projeção futura não simula cenários alternativos de nível de contribuição (como salário mínimo ou teto do RGPS), já que a cliente é servidora estatutária sem margem de escolha sobre o valor recolhido; usa apenas o ganho total estimado (GTE) com base na manutenção da base de contribuição atual.",
+      "files": [],
+      "expectations": [
+        "A seção 'DA PROJEÇÃO FUTURA' não apresenta cenários alternativos de nível de contribuição (ex.: salário mínimo, valor intermediário, teto)",
+        "A tabela de projeção assume a manutenção do salário/base de contribuição atual da cliente",
+        "O indicador central discutido é o ganho total estimado (GTE), sem menção a payback em meses ou ROI previdenciário"
+      ]
+    },
+    {
+      "id": 4,
+      "prompt": "Preciso do planejamento previdenciário do cliente Marcelo Andrade Costa, autorizo prosseguir internamente. O cliente mora e trabalha atualmente no Rio de Janeiro/RJ e, se a estratégia recomendada não se confirmar administrativamente, pretende ajuizar ação lá mesmo, não na Bahia. Cálculo: um relatório completo de aposentadoria por tempo de contribuição. Documentos: CNIS e contracheque. Monte o planejamento completo, incluindo o bloco de assinatura.",
+      "expected_output": "O bloco de assinatura do parecer inclui Hélio Barros Bispo dos Santos normalmente, já que a restrição geográfica dele vale só para peças processuais, não para o parecer consultivo; o texto sinaliza a necessidade de reavaliar os subscritores quando a peça processual futura for elaborada.",
+      "files": [],
+      "expectations": [
+        "O bloco de assinatura do parecer inclui Hélio Barros Bispo dos Santos, mesmo o cliente pretendendo litigar fora da Bahia no futuro",
+        "A resposta sinaliza, em algum ponto, que a composição de subscritores deve ser reavaliada quando a peça processual correspondente for elaborada"
+      ]
+    },
+    {
+      "id": 5,
+      "prompt": "Preciso do planejamento previdenciário da cliente Beatriz Lopes Carvalho, autorizo prosseguir internamente. Cálculo: um relatório simulando apenas a regra de aposentadoria por idade. O cliente também pediu para eu comparar com a regra de pontos, mas nenhum relatório de cálculo para a regra de pontos foi anexado. Monte o planejamento com a comparação entre as duas regras.",
+      "expected_output": "O parecer não apresenta nenhum número calculado para a regra de pontos, já que não há relatório correspondente; informa que falta o cálculo daquele cenário e pede que seja gerado antes de prosseguir com a comparação.",
+      "files": [],
+      "expectations": [
+        "A resposta não apresenta nenhum valor numérico (RMI, GTE, data projetada) para a regra de pontos",
+        "A resposta informa explicitamente que falta o relatório de cálculo da regra de pontos e pede que ele seja gerado antes de completar a comparação"
+      ]
+    },
+    {
+      "id": 6,
+      "prompt": "Preciso do planejamento previdenciário do cliente Ricardo Nogueira Pires, autorizo prosseguir internamente. Cálculo: um relatório de aposentadoria especial. Nos documentos de apoio interno enviados junto, há uma anotação minha avisando que a Emenda Constitucional citada no relatório de cálculo antigo (EC fictícia 999/2015, sobre um requisito de idade mínima transitório) foi substituída por regra de transição posterior em 2023, e que o relatório de cálculo ainda menciona a EC antiga no rodapé. Monte o planejamento completo.",
+      "expected_output": "O parecer final não cita a EC 999/2015 como fundamento, usando a norma vigente equivalente ou reformulando o trecho para não depender do dispositivo revogado, mesmo que o relatório de cálculo original mencione a norma antiga.",
+      "files": [],
+      "expectations": [
+        "O parecer final não cita a 'EC 999/2015' (o dispositivo indicado como substituído) como fundamento vigente",
+        "O parecer usa a norma vigente equivalente, ou reformula o trecho de forma a não depender do dispositivo desatualizado"
+      ]
+    },
+    {
+      "id": 7,
+      "prompt": "Preciso do planejamento previdenciário do cliente Danilo Teixeira Moura, autorizo prosseguir internamente. Cálculo: um relatório completo de tempo de contribuição. Documentos: CNIS e contracheque. Monte o planejamento completo com todas as seções.",
+      "expected_output": "O texto final não usa travessão em nenhum trecho, nem dois-pontos como conector explicativo dentro de frases corridas fora de listas ou transcrições.",
+      "files": [],
+      "expectations": [
+        "Nenhum trecho do parecer contém o caractere travessão (—)",
+        "Não há uso de ':' como conector explicativo dentro de uma frase corrida (fora de lista numerada ou transcrição de jurisprudência/documento)",
+        "O parecer não usa a expressão 'regra de ouro' nem variações"
+      ]
+    },
+    {
+      "id": 8,
+      "prompt": "Preciso do planejamento previdenciário da cliente Vanessa Rocha Almeida. Não autorizo prosseguir internamente, quero acompanhar as etapas normalmente. Cálculo: dois relatórios completos (aposentadoria por idade e por tempo de contribuição). Documentos: CNIS e contracheque. Vá até onde o fluxo normal permitir sem minha aprovação explícita.",
+      "expected_output": "A resposta para na Etapa 4 (seleção de cenários), apresentando os cenários propostos em tópicos numerados e pedindo aprovação explícita antes de escrever a seção 'DOS CENÁRIOS DE APOSENTADORIA' e o parecer completo, já que o usuário não autorizou execução autônoma.",
+      "files": [],
+      "expectations": [
+        "A resposta apresenta os cenários estratégicos propostos em tópicos numerados, pedindo aprovação ou ajuste antes de prosseguir",
+        "O parecer final completo (com a seção 'DOS CENÁRIOS DE APOSENTADORIA' já redigida) não é entregue nesta mesma resposta, já que a aprovação da Etapa 4 ainda não foi dada"
+      ]
+    }
+  ]
+}
