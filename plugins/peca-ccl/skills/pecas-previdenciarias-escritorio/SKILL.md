@@ -143,17 +143,20 @@ anteriores, independentes da pasta do caso enviada pelo usuário nesta
 conversa. Eles têm naturezas diferentes e nunca devem ser confundidos:
 
 - **`referencias-escritorio/`** (dentro do repositório da skill, versionado
-  no GitHub): só timbre padrão e orientações gerais fixas — conteúdo de
-  configuração do escritório, que não muda caso a caso.
+  no GitHub): só orientações gerais fixas — conteúdo de configuração do
+  escritório, que não muda caso a caso.
 - **`C:\Users\Administrador\Desktop\CCL\Base de Referências\`** (pasta local
   neste computador, **fora do repositório da skill, nunca commitada nem
   enviada ao GitHub**): o banco de dados que cresce a cada peça —
   lei/jurisprudência por matéria, doutrina salva, modelos de peça, modelos
-  de parágrafos e endereços de citação. É compartilhada com a skill
-  `planejamento-previdenciario`.
+  de parágrafos, endereços de citação e o timbre padrão do escritório. É
+  compartilhada com a skill `planejamento-previdenciario`.
 
-**Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
-oficial de timbre/formatação do escritório.
+**Timbre padrão.** `C:\Users\Administrador\Desktop\CCL\Base de
+Referências\modelo-timbre\modelo-timbre-escritorio.docx` contém o modelo
+oficial de timbre/formatação do escritório (header, footer, logo e
+configuração de página do escritório, com o corpo do documento em branco,
+pronto para receber o texto de qualquer peça).
 - Se o usuário enviar um modelo próprio na categoria "d" (INSTRUÇÃO DE
   INÍCIO), use o modelo enviado — ele tem prioridade, pois pode refletir uma
   exigência específica daquele caso ou órgão.
@@ -163,9 +166,9 @@ oficial de timbre/formatação do escritório.
   usuário de que está usando o modelo salvo daquela matéria, permitindo que
   ele peça o timbre padrão genérico no lugar, se preferir. Se não existir,
   **não trate isso como bloqueio**: use o arquivo de
-  `referencias-escritorio/modelo-timbre/` como timbre padrão, avise o
-  usuário de que está usando o modelo padrão do escritório, e siga o fluxo
-  normalmente.
+  `Base de Referências\modelo-timbre\modelo-timbre-escritorio.docx` como
+  timbre padrão, avise o usuário de que está usando o modelo padrão do
+  escritório, e siga o fluxo normalmente.
 
 **Orientações gerais do escritório.** `referencias-escritorio/orientacoes-gerais.md`
 reúne regras de bastidor que valem para qualquer matéria, não amarradas a uma
@@ -576,13 +579,24 @@ ETAPA 9):
 2. **Caixa de prioridade, quando aplicável.** Se o caso tiver fundamento
    para tramitação prioritária (ex.: idoso, doença grave, pessoa com
    deficiência, gestante, nos termos da legislação aplicável), insira logo
-   abaixo do endereçamento uma caixa de texto com borda visível, contendo
+   abaixo do endereçamento uma caixa de texto (ferramenta de desenho "caixa
+   de texto" do Word, `w:txbxContent`, nunca uma tabela de uma célula só nem
+   um parágrafo com borda de página inteira), com borda visível, contendo
    "Prioridade - [motivo(s), ex.: "Estatuto do Idoso e Doença Grave"]", em
-   negrito. Liste todos os motivos aplicáveis ao caso concreto na mesma
-   caixa, separados por " e " ou vírgula. Se não houver fundamento para
-   prioridade, omita essa caixa inteiramente, sem deixar espaço reservado
-   vazio.
-3. **Qualificação do autor.** Parágrafo justificado, com recuo de 1,25 cm,
+   negrito. A caixa deve ser **compacta**, dimensionada para o tamanho do
+   próprio texto (ajuste automático de largura/altura ao conteúdo, sem
+   esticar até a margem direita da página) e alinhada à esquerda, replicando
+   exatamente o padrão visual do modelo do escritório — nunca uma caixa que
+   ocupe a largura inteira da página. Liste todos os motivos aplicáveis ao
+   caso concreto na mesma caixa, separados por " e " ou vírgula. Se não
+   houver fundamento para prioridade, omita essa caixa inteiramente, sem
+   deixar espaço reservado vazio.
+3. **Qualificação do autor.** Pule uma linha (espaço extra "antes" do
+   parágrafo, além do espaçamento padrão de 12pt) entre a caixa de
+   prioridade (ou, na ausência dela, o endereçamento) e o início deste
+   parágrafo — mesmo padrão de espaçamento aplicado entre tópicos maiores
+   (ver REGRAS DE FORMATAÇÃO DA MINUTA). Parágrafo justificado, com recuo de
+   1,25 cm,
    qualificando o autor (nome em negrito, nacionalidade, estado civil,
    profissão quando pertinente, CPF, RG, endereço com a citação de
    protocolo aplicável), encerrando com "vem, respeitosamente, por
@@ -848,15 +862,16 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   redundantes, para que ele decida sobre a exclusão. Nunca exclua um
   documento por conta própria sem confirmação.
 - **Formato de nomeação, obrigatório e único.** Todo documento numerado para
-  protocolo é nomeado como "N. NOME DO DOCUMENTO" — o número, seguido de
-  ponto, espaço, e o nome do documento em maiúsculas, sem o prefixo "Doc."
-  e sem outro separador (nunca "Doc. N", nunca "N -", nunca "N)"). Exemplos:
-  "1. PETIÇÃO INICIAL - [NOME DO CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE
-  IDENTIFICAÇÃO", "3. PROCURAÇÃO", "4. COMPROVANTE DE RESIDÊNCIA". Esse é o
-  nome do arquivo físico na pasta do caso, e também o formato usado em
-  qualquer lista de documentos apresentada ao usuário (rascunho da Etapa 8c,
-  confirmação final da Etapa 10). Aplique esse formato sem exceção a todas as
-  regras abaixo.
+  protocolo é nomeado como "N. Nome do Documento" — o número, seguido de
+  ponto, espaço, e o nome do documento em Título (primeira letra de cada
+  palavra relevante em maiúscula, artigos/preposições em minúscula, **nunca
+  o nome inteiro em caixa alta**), sem o prefixo "Doc." e sem outro
+  separador (nunca "Doc. N", nunca "N -", nunca "N)"). Exemplos:
+  "1. Petição Inicial - [Nome do Cliente]", "2. Identidade (CNH)",
+  "3. Procuração", "4. Comprovante de Residência". Esse é o nome do arquivo
+  físico na pasta do caso, e também o formato usado em qualquer lista de
+  documentos apresentada ao usuário (rascunho da Etapa 8c, confirmação final
+  da Etapa 10). Aplique esse formato sem exceção a todas as regras abaixo.
 - **Numeração sequencial para protocolo.** Renomeie e numere os documentos na
   ordem em que devem ser protocolados, seguindo o formato acima ("N. NOME DO
   DOCUMENTO"), seguindo a ordem preestabelecida por área definida em ORDEM
@@ -872,14 +887,13 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   antigo também na pasta. Ao final da organização, cada documento numerado
   deve existir na pasta do caso uma única vez, já com o nome definitivo; não
   pode haver, ao mesmo tempo, um "CNH - [nome do cliente].pdf" e um
-  "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO.pdf" referentes ao mesmo
-  documento.
+  "2. Identidade (CNH).pdf" referentes ao mesmo documento.
 - **A própria peça é sempre o item 1, como arquivo físico real.** Não basta
   a peça constar como item 1 na lista textual de documentos: depois que a
   minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
   arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
   diretamente na pasta do caso (ver "Entrega em arquivos individuais, nunca
-  em zip" abaixo), nomeado como "1. PETIÇÃO INICIAL - [NOME DO CLIENTE]" (ou
+  em zip" abaixo), nomeado como "1. Petição Inicial - [Nome do Cliente]" (ou
   o nome de peça equivalente ao tipo em elaboração), junto com os demais
   documentos numerados. A lista final de documentos (regra
   "Confirmação final" abaixo) só está completa quando o item 1 é esse
@@ -888,10 +902,10 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   arquivo precisar ocupar o espaço de uma mesma categoria (ex.: um documento
   grande demais dividido pelo limite de tamanho, ou múltiplos documentos que
   não fazem sentido consolidar em um único PDF), nunca nomeie os arquivos
-  com sufixos de letra (ex.: "2A. COMPROVANTE DE RESIDÊNCIA", "2B.
-  COMPROVANTE DE RESIDÊNCIA"). Cada arquivo recebe seu próprio número
-  inteiro e sequencial, no formato padrão (ex.: "2. COMPROVANTE DE
-  RESIDÊNCIA", "3. COMPROVANTE DE RESIDÊNCIA (CONT.)"), empurrando a
+  com sufixos de letra (ex.: "2A. Comprovante de Residência", "2B.
+  Comprovante de Residência"). Cada arquivo recebe seu próprio número
+  inteiro e sequencial, no formato padrão (ex.: "2. Comprovante de
+  Residência", "3. Comprovante de Residência (Cont.)"), empurrando a
   numeração dos documentos seguintes adiante. Ajuste todas as citações no
   texto da minuta de acordo, e informe ao usuário que a numeração de um
   documento específico foi desdobrada em mais de um número por esse motivo.
@@ -969,8 +983,8 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   feito.
 - **Entrega em arquivos individuais, nunca em zip.** A entrega dos
   documentos numerados é sempre feita como arquivos individuais, um por
-  número, nomeados no formato padrão ("1. PETIÇÃO INICIAL - [NOME DO
-  CLIENTE]", "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO" ...), renomeados
+  número, nomeados no formato padrão ("1. Petição Inicial - [Nome do
+  Cliente]", "2. Identidade (CNH)" ...), renomeados
   diretamente na própria pasta do caso (ver regra "Renomeie os arquivos que
   já existem na pasta do caso" acima) — não em uma subpasta de protocolo
   separada nem em cópias adicionais. Nunca compacte o conjunto em um único
@@ -995,11 +1009,10 @@ organização, pergunte ao usuário em vez de decidir sozinho.
 
 Cada item abaixo vira o nome do arquivo físico no formato padrão definido em
 "Formato de nomeação, obrigatório e único" (número, ponto, espaço, nome em
-maiúsculas) — ex.: o item 1 abaixo se torna "1. PETIÇÃO INICIAL - [NOME DO
-CLIENTE]" (ou "1. REQUERIMENTO ADMINISTRATIVO - [NOME DO CLIENTE]" /
-"1. RECURSO ADMINISTRATIVO - [NOME DO CLIENTE]", conforme o tipo de peça), o
-item 2 se torna "2. IDENTIDADE/CNH/DOCUMENTO DE IDENTIFICAÇÃO", e assim por
-diante.
+Título) — ex.: o item 1 abaixo se torna "1. Petição Inicial - [Nome do
+Cliente]" (ou "1. Requerimento Administrativo - [Nome do Cliente]" /
+"1. Recurso Administrativo - [Nome do Cliente]", conforme o tipo de peça), o
+item 2 se torna "2. Identidade (CNH)", e assim por diante.
 
 Área previdenciária:
 1. Petição inicial / requerimento administrativo / recurso (a própria peça

@@ -249,13 +249,15 @@ da pasta do caso enviada nesta conversa, compartilhados com a skill
 `pecas-previdenciarias-escritorio`:
 
 - **`referencias-escritorio/`** (dentro do repositório da skill, versionado
-  no GitHub): só timbre padrão e orientações gerais fixas.
+  no GitHub): só orientações gerais fixas.
 - **`C:\Users\Administrador\Desktop\CCL\Base de Referências\`** (pasta local
   neste computador, **fora do repositório da skill, nunca commitada nem
   enviada ao GitHub**): o banco de dados que cresce a cada peça/parecer —
-  lei/jurisprudência por matéria, doutrina salva, modelos, parágrafos.
+  lei/jurisprudência por matéria, doutrina salva, modelos, parágrafos e o
+  timbre padrão do escritório.
 
-**Timbre padrão.** `referencias-escritorio/modelo-timbre/` contém o modelo
+**Timbre padrão.** `C:\Users\Administrador\Desktop\CCL\Base de
+Referências\modelo-timbre\modelo-timbre-escritorio.docx` contém o modelo
 oficial de timbre/formatação do escritório. Se o usuário não enviar um
 modelo próprio do escritório para este planejamento, use esse arquivo como
 timbre padrão, avisando o usuário de que está usando o padrão do escritório,
