@@ -46,10 +46,19 @@ tópico numerado do corpo (ver "Ordem dos tópicos do corpo da peça" abaixo):
 5. **Qualificação da parte ré.** "em face de [RÉU]..." qualificando a parte
    ré (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS no SKILL.md), encerrando
    com "pelos fundamentos fáticos e jurídicos que passa a expor.".
-6. A partir daqui começa o corpo numerado da peça, sempre iniciando pelo
-   tópico "1. PRELIMINARMENTE" (ver "Ordem dos tópicos do corpo da peça"
-   abaixo), mesmo quando não houver preliminar propriamente dita a levantar
-   além da tramitação prioritária/justiça gratuita.
+6. A partir daqui começa o corpo numerado da peça. Se houver qualquer
+   preliminar a levantar (tramitação prioritária, justiça gratuita, ou
+   qualquer outra preliminar processual, como incompetência, ilegitimidade
+   ou prescrição), o corpo sempre inicia pelo tópico "1. PRELIMINARMENTE"
+   (ver "Ordem dos tópicos do corpo da peça" abaixo). **Pode não haver
+   nenhuma preliminar a arguir** (ex.: peça sem pedido de gratuidade nem
+   prioridade, sem questão processual prévia) — nesse caso, omita o tópico
+   "PRELIMINARMENTE" inteiramente, sem deixá-lo vazio como espaço reservado,
+   e comece o corpo direto por "1. DOS FATOS" (renumerando os tópicos
+   seguintes a partir daí). Antes de decidir omitir, confirme que não há
+   mesmo nenhuma preliminar aplicável: gratuidade da justiça, em particular,
+   é comum o bastante para passar despercebida se o material do caso não a
+   mencionar explicitamente — vale perguntar ao usuário se ficar em dúvida.
 
 Esse padrão vale para petição inicial e demais peças dirigidas a um juízo.
 Peças administrativas (requerimentos e recursos ao INSS) seguem o
@@ -122,15 +131,19 @@ nenhum trecho do documento em fonte diferente de Calibri.
 
 ## Ordem dos tópicos do corpo da peça
 
-Fixa, salvo peça administrativa sem preliminar aplicável.
+Fixa, salvo peça sem nenhuma preliminar aplicável (ver item 1 abaixo).
 
-1. **PRELIMINARMENTE.** Sempre o primeiro tópico do corpo, em peça judicial
-   (ver "Padrão de abertura da peça" acima). Reúne as preliminares
-   propriamente ditas do caso (ex.: tramitação prioritária, justiça
-   gratuita, e outras preliminares processuais aplicáveis, como
-   incompetência, ilegitimidade ou prescrição, quando arguidas), cada uma
-   em subtópico próprio (1.1, 1.2, ...). Não inclua aqui a tutela de
-   urgência (ver regra própria abaixo) nem o mérito da causa.
+1. **PRELIMINARMENTE, quando houver alguma preliminar a arguir.** O
+   primeiro tópico do corpo, em peça judicial, **se e somente se houver
+   alguma preliminar propriamente dita a levantar** (ex.: tramitação
+   prioritária, justiça gratuita, ou outra preliminar processual, como
+   incompetência, ilegitimidade ou prescrição), cada uma em subtópico
+   próprio (1.1, 1.2, ...). Não inclua aqui a tutela de urgência (ver regra
+   própria abaixo) nem o mérito da causa. **Pode não haver nenhuma
+   preliminar a arguir** — nesse caso, não force esse tópico a existir
+   vazio ou com conteúdo genérico só para preencher o número 1: omita-o
+   inteiramente e comece o corpo por "1. DOS FATOS", renumerando os tópicos
+   seguintes (ver "Padrão de abertura da peça" acima).
 2. **DOS FATOS.** Inicie com "Trata-se de ação visando o reconhecimento
    de...". Reconstrua o histórico fático com foco nas provas materiais,
    observando o mínimo de parágrafos do patamar aplicado
