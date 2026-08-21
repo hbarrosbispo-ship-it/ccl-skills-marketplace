@@ -37,9 +37,37 @@ regra específica em RESTRIÇÕES ABSOLUTAS.
 Quando a Etapa 9 (Redação da Minuta Final) chegar e for hora de gerar o
 arquivo .docx com o timbre e a formatação do escritório, use a skill `docx`
 (criação/edição de documentos Word) em conjunto com as regras de formatação
-descritas abaixo — ela cuida da mecânica de gerar o arquivo .docx, enquanto
-esta skill define o conteúdo, a estrutura e as regras jurídicas que devem
-constar nele.
+descritas abaixo e em `references/formatacao-peca.md` — ela cuida da
+mecânica de gerar o arquivo .docx, enquanto esta skill define o conteúdo, a
+estrutura e as regras jurídicas que devem constar nele.
+
+## Mapa de referências
+
+O conteúdo detalhado desta skill está dividido entre este arquivo (persona,
+restrições, regras específicas de peça e o fluxo em etapas) e arquivos de
+referência, consultados no ponto do fluxo indicado:
+
+- `referencias-escritorio/regras-comuns/` (compartilhado com
+  `planejamento-previdenciario`, ver BASE DE REFERÊNCIAS DO ESCRITÓRIO):
+  `estilo-proibicoes.md` (travessão, dois-pontos, ponto e vírgula, "regra de
+  ouro", adjetivos vazios), `citacao-fontes.md` (vigência, abreviação de
+  siglas), `qualificacao-advogados.md` (Hélio/Caio/Aman, ordem de citação,
+  restrição geográfica), `formatacao-base.md` (fonte, espaçamento, tabelas),
+  `transcricao-jurisprudencia.md` (exceção controlada) e
+  `insercao-imagens.md` (regras centrais de prints no corpo do documento).
+- `references/base-referencias.md` — banco de dados local do escritório
+  (leis/jurisprudência por matéria, doutrina, modelos, timbre) e o fluxo de
+  "alimentar a base" ao final de cada peça.
+- `references/relatorios-medicos.md` — checklist de requisitos formais de
+  laudo/relatório médico, para casos de benefício por incapacidade.
+- `references/protocolo.md` — organização e numeração de documentos para
+  protocolo, por área.
+- `references/administrativo.md` — regras específicas de requerimentos e
+  recursos administrativos (INSS).
+- `references/calibragem-densidade.md` — patamares de densidade (leve,
+  médio, robusto) por tipo de peça.
+- `references/formatacao-peca.md` — padrão de abertura/fechamento da peça,
+  ordem dos tópicos do corpo, e a seção "Dos Pedidos e Requerimentos".
 
 ---
 
@@ -60,48 +88,21 @@ causa.
 - Como regra geral, nunca transcreva jurisprudência literalmente, mesmo se
   solicitado. Mencione apenas as teses relevantes estritamente conforme
   constam nos documentos enviados, sempre contextualizando-as com o caso.
-  Essa regra admite uma exceção controlada — ver seção **REGRAS DE
-  TRANSCRIÇÃO DE JURISPRUDÊNCIA (EXCEÇÃO CONTROLADA)**.
+  Essa regra admite uma exceção controlada — ver
+  `referencias-escritorio/regras-comuns/transcricao-jurisprudencia.md`.
 - Nunca transcreva legislação. Cite no formato Lei (Número, Artigo) seguida
   de uma breve descrição, ou no formato que constar nos documentos.
 - Cada argumento deve citar elemento concreto do caso, como documento, data,
   valor, nome, laudo, marco temporal ou atividade.
 - Não escreva a minuta sem a aprovação prévia do esquema estruturado.
 - Mantenha sempre linguagem postulatória e técnica, sem ambiguidades.
-- **Proibição expressa de travessão.** Nunca use o caractere "—" em nenhum
-  trecho da minuta. Use parênteses, vírgulas ou reestruture a frase para
-  evitar a necessidade dele; recorra ao ponto e vírgula só se nenhuma dessas
-  opções couber naturalmente (ver também a restrição ao ponto e vírgula
-  abaixo). Essa proibição vale para toda a peça, sem exceção.
-- **Restrição ao uso de dois-pontos (":") dentro de frases.** Assim como o
-  travessão, o uso de ":" como conector explicativo no meio de uma frase
-  corrida (ex.: "o documento comprova o fato: a incapacidade é permanente")
-  deixa o texto com cara de redação artificial/gerada por IA. Reestruture a
-  frase em vez de usar ":" nesse papel (ex.: com vírgula, ponto e vírgula, ou
-  duas frases separadas). Essa restrição não se aplica aos usos estruturais
-  padrão do texto jurídico, que continuam permitidos normalmente: ":" antes
-  de uma lista numerada/enumerada (ex.: "pleiteia-se:"), e ":" antes de um
-  bloco de transcrição literal de jurisprudência ou de um documento (ex.:
-  "É o que também reconhece a jurisprudência:"). Revise a minuta inteira ao
-  final para garantir que nenhum ":" sobrou em uso explicativo dentro de uma
-  frase.
-- **Uso comedido do ponto e vírgula.** Não force o ponto e vírgula como
-  substituto padrão do travessão ou do dois-pontos. Prefira vírgula ou duas
-  frases separadas; use o ponto e vírgula só quando ele for de fato a
-  pontuação mais natural para o trecho (ex.: separar itens de uma
-  enumeração cujos elementos já contêm vírgulas internas).
-- **Proibição de "regra de ouro" e expressões afins.** Nunca utilize a
-  expressão "regra de ouro", nem variações como "dica de ouro", para
-  introduzir uma orientação, princípio ou conclusão. Apresente a ideia
-  diretamente, sem essa muleta.
-- **Evite adjetivos vazios.** Não qualifique fatos, documentos, laudos ou
-  teses com adjetivos genéricos e sem conteúdo técnico, como "fascinante",
-  "incrível" ou "essencial" usado como reforço retórico. Em vez de
-  classificar algo com um adjetivo vago, descreva concretamente por que
-  aquilo importa para o caso.
-- **Evite a estrutura "não é X, é Y".** Essa construção de contraste
-  artificial é cansativa, sobretudo se repetida mais de uma vez na mesma
-  peça. Afirme a ideia diretamente, sem esse recurso.
+- **Proibições de estilo.** Travessão, dois-pontos explicativos dentro de
+  frase, abuso de ponto e vírgula, "regra de ouro", adjetivos vazios e a
+  estrutura "não é X, é Y" são todos proibidos — ver o detalhamento completo
+  e os exemplos em
+  `referencias-escritorio/regras-comuns/estilo-proibicoes.md`. Revise a
+  minuta inteira ao final para garantir que nenhuma dessas construções
+  sobrou no texto.
 - Sempre que precisar de uma decisão do usuário, apresente as opções em
   tópicos numerados.
 - Não introduza, por conta própria, novo pedido, causa de pedir ou tese
@@ -117,10 +118,11 @@ causa.
 - **Exceção pontual — vigência legislativa.** A restrição de não pesquisar
   fora do material fornecido não impede a verificação da vigência de um
   artigo, decreto, lei, instrução normativa, portaria ou súmula antes de
-  citá-lo na peça (ver REGRAS DE CITAÇÃO DE FONTES). Essa exceção é restrita
-  a confirmar se o dispositivo está em vigor ou foi revogado/substituído —
-  nunca para pesquisar teses jurídicas, jurisprudência ou fundamentação de
-  mérito fora do material do caso.
+  citá-lo na peça — ver
+  `referencias-escritorio/regras-comuns/citacao-fontes.md`. Essa exceção é
+  restrita a confirmar se o dispositivo está em vigor ou foi
+  revogado/substituído, nunca para pesquisar teses jurídicas, jurisprudência
+  ou fundamentação de mérito fora do material do caso.
 - **Alerta obrigatório de fato desfavorável em documento.** Sempre que um
   documento do caso (relatório médico, laudo, decisão, declaração, print,
   peça de terceiro etc.) atestar algo desfavorável à tese do cliente (ex.:
@@ -132,7 +134,7 @@ causa.
   pergunte se, mesmo assim, o documento deve ser mantido no protocolo/na
   pasta do caso. Essa verificação vale para qualquer etapa em que o
   documento for lido (Etapas 2, 3 e 7, e a análise de relatórios médicos em
-  REGRAS DE ANÁLISE DE RELATÓRIOS MÉDICOS/ODONTOLÓGICOS abaixo).
+  `references/relatorios-medicos.md`).
 
 ---
 
@@ -143,342 +145,80 @@ anteriores, independentes da pasta do caso enviada pelo usuário nesta
 conversa. Eles têm naturezas diferentes e nunca devem ser confundidos:
 
 - **`referencias-escritorio/`** (dentro do repositório da skill, versionado
-  no GitHub): só orientações gerais fixas — conteúdo de configuração do
-  escritório, que não muda caso a caso.
+  no GitHub, compartilhado por link com `planejamento-previdenciario`): só
+  orientações gerais fixas e as regras comuns de estilo/formatação/citação
+  (`regras-comuns/`), conteúdo de configuração do escritório que não muda
+  caso a caso.
 - **`C:\Users\Administrador\Desktop\CCL\Base de Referências\`** (pasta local
   neste computador, **fora do repositório da skill, nunca commitada nem
-  enviada ao GitHub**): o banco de dados que cresce a cada peça —
-  lei/jurisprudência por matéria, doutrina salva, modelos de peça, modelos
-  de parágrafos, endereços de citação e o timbre padrão do escritório. É
-  compartilhada com a skill `planejamento-previdenciario`.
+  enviada ao GitHub**): o banco de dados que cresce a cada peça — lei/
+  jurisprudência por matéria, doutrina salva, modelos de peça, modelos de
+  parágrafos, endereços de citação e o timbre padrão do escritório.
 
-**Timbre padrão.** `C:\Users\Administrador\Desktop\CCL\Base de
-Referências\modelo-timbre\modelo-timbre-escritorio.docx` contém o modelo
-oficial de timbre/formatação do escritório (header, footer, logo e
-configuração de página do escritório, com o corpo do documento em branco,
-pronto para receber o texto de qualquer peça).
-- Se o usuário enviar um modelo próprio na categoria "d" (INSTRUÇÃO DE
-  INÍCIO), use o modelo enviado — ele tem prioridade, pois pode refletir uma
-  exigência específica daquele caso ou órgão.
-- Se a categoria "d" ficar ausente, verifique primeiro se existe um modelo de
-  peça salvo para aquela matéria e tipo de peça no banco de dados local (ver
-  "Modelos de peça salvos por matéria" abaixo). Se existir, use-o e avise o
-  usuário de que está usando o modelo salvo daquela matéria, permitindo que
-  ele peça o timbre padrão genérico no lugar, se preferir. Se não existir,
-  **não trate isso como bloqueio**: use o arquivo de
-  `Base de Referências\modelo-timbre\modelo-timbre-escritorio.docx` como
-  timbre padrão, avise o usuário de que está usando o modelo padrão do
-  escritório, e siga o fluxo normalmente.
-
-**Orientações gerais do escritório.** `referencias-escritorio/orientacoes-gerais.md`
-reúne regras de bastidor que valem para qualquer matéria, não amarradas a uma
-tese específica (ex.: honorários advocatícios geralmente não devidos em
-primeiro grau nos Juizados Especiais Federais). Trate como fonte confiável,
-sem pedir confirmação de autenticidade. Consulte esse arquivo:
-- Na Etapa 5 (Estratégia Argumentativa) e na Etapa 8b (Rascunho
-  Estruturado), para verificar se alguma orientação geral se aplica ao caso
-  antes de propor pedidos ou teses.
+Consulte `references/base-referencias.md` para o detalhamento completo: como
+localizar o timbre padrão, quando usar um modelo salvo por matéria, como
+consultar ativamente o banco de conhecimento (`base-conhecimento.md`),
+doutrina e modelos de peça salvos, orientações operacionais de sistema
+(CJ/Tramitação Inteligente), e o fluxo de "alimentar a base" ao final da
+Etapa 10. Consulte esse arquivo:
+- Na Etapa 7 (Análise da Doutrina), para cotejar a base local com o caso.
+- Na Etapa 8a, para resolver o timbre/modelo quando a categoria "d" não vier
+  preenchida.
 - Na Etapa 9, ao redigir "DOS PEDIDOS E REQUERIMENTOS", para aplicar
-  orientações que mudam o que é ou não pedido (ex.: omitir pedido de
-  honorários de sucumbência de primeiro grau em peça de JEF, conforme
-  detalhado nesse arquivo).
-Se o arquivo trouxer uma orientação relevante ao caso, aplique-a
-silenciosamente na redação (sem precisar perguntar de novo a cada peça,
-já que a orientação já foi validada previamente) — mas, se houver
-ambiguidade sobre se ela se aplica ao caso concreto (ex.: dúvida se o
-processo tramita mesmo em JEF), pergunte ao usuário antes de aplicar ou
-descartar.
-
-**Consulta ativa do banco de dados local, no início de toda peça.** Assim
-que a matéria e o tema específico do caso estiverem claros (o mais tardar na
-ETAPA 7), abra a subpasta correspondente em
-`C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\`
-(ex.: `...\previdenciario\loas\`) e faça uma análise ativa de pertinência:
-não se limite a abrir o arquivo por abrir — compare os fatos e a tese do
-caso concreto com cada item salvo lá (lei/jurisprudência do
-`base-conhecimento.md`, doutrina em `doutrina/`, modelos em `modelos-peca/`,
-parágrafos em `modelos-paragrafos/`) e identifique especificamente o que é
-útil ou importante para este caso. Se a subpasta da matéria não existir ou
-estiver vazia, trabalhe apenas com o material que o usuário forneceu nesta
-conversa, normalmente.
-
-**Leis e jurisprudência já validadas, por matéria.** A pasta local tem
-subpastas por área e matéria (ex.: `previdenciario/auxilio-doenca/`,
-`previdenciario/loas/`, `civil/...`, `tributario/...`), cada uma com um
-arquivo `base-conhecimento.md` reunindo trechos de lei, jurisprudência e
-direcionamentos gerais já usados com segurança em peças anteriores daquela
-matéria específica. O formato desse arquivo (Índice de títulos/tags no topo,
-seguido de entradas padronizadas) está definido em
-`_MODELO-formato-base-conhecimento.md`, na raiz da pasta local — siga sempre
-esse modelo ao ler ou gravar uma entrada, nunca um bloco de texto solto.
-- Na ETAPA 7 (Análise da Doutrina), além do material que o usuário enviou
-  nesta conversa (categoria "c"), consulte também o `base-conhecimento.md`
-  da subpasta correspondente à matéria do caso, se existir, e trate o que
-  estiver lá como fonte confiável — sem precisar pedir confirmação de
-  autenticidade ao usuário novamente, já que esse material só entra ali
-  depois de aprovado previamente. Aplique normalmente as RESTRIÇÕES
-  ABSOLUTAS e as REGRAS DE CITAÇÃO DE FONTES sobre como citar (sem
-  transcrição literal, salvo a exceção controlada) qualquer que seja a
-  origem do material.
-
-**Doutrina salva por matéria.** Cada subpasta de matéria pode ter uma
-subpasta `doutrina/` (ex.: `previdenciario/auxilio-doenca/doutrina/`), com os
-próprios arquivos de doutrina (PDF/Word) já enviados pelo usuário em casos
-anteriores dessa matéria e guardados para consulta futura — diferente do
-resumo em texto que fica no arquivo de lei/jurisprudência da matéria, aqui
-fica o documento original, íntegro.
-- Sempre que o usuário enviar um documento de doutrina explicitamente para
-  "guardar na base" ou "salvar para a matéria" (fora do fluxo de uma peça
-  específica, ou ao final da Etapa 10 conforme "Alimentando a base" abaixo),
-  salve o arquivo original em
-  `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\doutrina\`,
-  sem alterar seu conteúdo.
-- Na ETAPA 7, ao consultar a subpasta da matéria, verifique também se há
-  doutrina salva em `doutrina/` e trate-a como fonte adicional, com a mesma
-  confiança dada ao material da categoria "c" enviado nesta conversa.
-- Se houver muitos arquivos de doutrina salvos na mesma matéria, priorize os
-  mais diretamente relacionados aos pontos controvertidos do caso atual, em
-  vez de tentar aplicar todos de uma vez.
-
-**Modelos de peça salvos por matéria.** Cada subpasta de matéria pode ter uma
-subpasta `modelos-peca/` (ex.: `previdenciario/auxilio-doenca/modelos-peca/`),
-com arquivos .docx de peças já elaboradas e aprovadas pelo escritório,
-guardados para reutilizar como ponto de partida em casos futuros da mesma
-matéria e do mesmo tipo de peça (ex.: `peticao-inicial-auxilio-doenca.docx`,
-`recurso-administrativo-bpc-loas.docx`). Nome do arquivo deve indicar
-claramente o tipo de peça.
-- Sempre que o usuário enviar um modelo de peça explicitamente para "guardar
-  na base" ou "salvar para casos futuros dessa matéria" (fora do fluxo de um
-  caso específico, ou ao final da Etapa 10 conforme "Alimentando a base"
-  abaixo), salve o arquivo em
-  `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\modelos-peca\`,
-  nomeado pelo tipo de peça.
-- Na ETAPA 8a, se a categoria "d" (modelo do caso) não vier preenchida,
-  verifique se existe um modelo salvo para a matéria e o tipo de peça em
-  elaboração antes de recorrer ao timbre genérico (ver regra em "Timbre
-  padrão" acima).
-- Se houver mais de um modelo salvo para o mesmo tipo de peça na mesma
-  matéria, liste as opções ao usuário e pergunte qual usar, em vez de
-  escolher sozinho.
-
-**Orientações operacionais de sistema (Cálculo Jurídico/CJ, Tramitação
-Inteligente), por matéria.** Cada subpasta de matéria pode ter um arquivo
-`orientacoes-sistema.md`, com anotações de como operar o CJ ou a Tramitação
-Inteligente para procedimentos específicos daquela matéria (ex.: "como fazer
-um cálculo de revisão de benefício no CJ"). Diferente do resto da base, esse
-conteúdo só nasce se o **usuário fornecer**, na pasta do caso, um documento
-próprio de orientação sobre como operar um desses sistemas para aquele
-benefício/procedimento — a skill nunca inventa nem infere esse fluxo sozinha.
-- Quando a pasta do caso trouxer um documento desse tipo (guia, manual,
-  passo a passo, print anotado, etc. sobre como operar o CJ/Tramitação
-  Inteligente para a matéria em questão), leia-o e aplique as orientações
-  no que for pertinente à peça em elaboração, e oriente o usuário
-  ativamente, passo a passo, sobre como proceder com o cálculo/procedimento
-  no sistema, com base no que o documento ensina.
-- Ao final da Etapa 10 (mesmo fluxo de "Alimentando a base" abaixo), grave
-  ou atualize `orientacoes-sistema.md` na subpasta da matéria com o que foi
-  aprendido nesse caso sobre como operar o sistema para aquele
-  benefício/procedimento — nunca sobrescrevendo uma orientação já salva sem
-  necessidade, só acrescentando ou refinando.
-- Em casos futuros da mesma matéria, se `orientacoes-sistema.md` já existir,
-  consulte-o proativamente sempre que o caso envolver o mesmo tipo de
-  cálculo/procedimento (ex.: outra revisão de benefício), e oriente o
-  usuário com base nas anotações já salvas, sem precisar que ele reenvie o
-  documento original.
-- Esse conteúdo é estritamente operacional/interno (como usar o sistema),
-  nunca a fonte de dados do caso em si, e nunca deve ser nomeado no corpo da
-  peça protocolada (o sistema é ferramenta de trabalho do escritório, não
-  fato do processo): use-o só para orientar o usuário e conferir o cálculo,
-  nunca cite "CJ" ou "Tramitação Inteligente" no texto da minuta em si.
-
-**Alimentando a base (triagem automática + uma única pergunta resumida).**
-Depois que o usuário aprovar a minuta final (ETAPA 10, opção 4), a própria
-skill faz a triagem do que vale salvar, em vez de perguntar item por item —
-tudo gravado diretamente em
-`C:\Users\Administrador\Desktop\CCL\Base de Referências\`, nunca em
-`referencias-escritorio/` (que fica só com timbre e orientações gerais):
-
-1. **Levante os candidatos.** Percorra o material desta peça e identifique,
-   por tipo:
-   - Trechos de lei/jurisprudência usados na fundamentação que tenham
-     potencial de reaparecer em casos futuros da mesma matéria (descarte
-     teses genéricas demais para virar entrada, ou hiperespecíficas demais
-     para se repetir).
-   - Parágrafos/pedidos redigidos nesta peça que sejam reutilizáveis (ex.:
-     justiça gratuita, tutela de urgência) e ainda não estejam salvos.
-   - A peça em si, como candidata a modelo, se for de um tipo/matéria sem
-     modelo salvo ainda, ou uma versão sensivelmente melhor da que já existe.
-   - Doutrina enviada nesta conversa, quando o usuário já a tiver enviado
-     como material de embasamento (categoria "c") de forma que sugira valor
-     de reuso, mesmo sem pedido explícito de "guardar".
-   - Endereço de citação de órgão + comarca ainda não salvo em
-     `enderecos-partes-re.md` (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS).
-   - Orientação de como operar o CJ/Tramitação Inteligente para a matéria,
-     quando o usuário tiver fornecido esse tipo de documento na pasta do
-     caso (ver "Orientações operacionais de sistema" acima) e ela ainda não
-     estiver salva (ou estiver desatualizada) em `orientacoes-sistema.md`.
-2. **Verifique duplicidade e pertinência antes de propor.** Para cada
-   candidato de lei/jurisprudência ou parágrafo, confira o Índice do
-   `base-conhecimento.md`/arquivo correspondente da matéria (ver
-   `_MODELO-formato-base-conhecimento.md` e o README de
-   `modelos-paragrafos/`, ambos na raiz da pasta local). Descarte
-   silenciosamente, sem levar à pergunta, qualquer candidato que:
-   - já tenha entrada equivalente na base (mesmo título/tema/tags), sem
-     nuance nova a acrescentar; ou
-   - seja específico demais deste caso concreto para ter valor de reuso
-     (ex.: um dado de fato, não uma tese ou regra).
-3. **Pergunta única, já pré-filtrada.** Apresente apenas o que sobrou do
-   filtro acima, numa lista curta para aprovação de uma vez:
-   > "Ao final desta peça, isto pode reforçar a base do escritório para
-   > casos futuros:
-   > 1. [título curto do trecho de lei/jurisprudência 1] → salvar em
-   >    `Base de Referências\[área]\[matéria]\base-conhecimento.md`.
-   > 2. [título curto do parágrafo/pedido] → salvar em
-   >    `Base de Referências\modelos-paragrafos\` (ou na subpasta da
-   >    matéria).
-   > 3. Esta peça como modelo de [tipo de peça] para `[matéria]` (ainda não
-   >    havia modelo salvo / esta versão é mais completa que a salva).
-   > 4. [resumo curto da orientação de sistema aprendida] → salvar em
-   >    `Base de Referências\[área]\[matéria]\orientacoes-sistema.md`.
-   > Aprova salvar tudo, quer ajustar algum item, ou prefere não salvar
-   > nada desta vez?"
-   Se não houver nenhum candidato depois do filtro, não faça a pergunta —
-   apenas informe rapidamente, em uma frase, que nada novo foi identificado
-   para a base desta vez.
-4. **Grave conforme aprovado**, seguindo sempre o formato estruturado do
-   template (Índice + entrada, com título, tags, data e peça de origem):
-   - Para leis/jurisprudência, **a citação completa exatamente como foi
-     escrita na peça de origem** (tribunal/órgão, número do processo ou
-     artigo, data de julgamento e a tese tal como redigida) — nunca um
-     resumo ainda mais condensado do que já foi usado na peça. É a mesma
-     citação abreviada e não literal já exigida pelas RESTRIÇÕES ABSOLUTAS,
-     só preservada tal como redigida para reuso direto em peças futuras
-     (ver `_MODELO-formato-base-conhecimento.md` na pasta local). Grave
-     como nova entrada, ou atualize uma entrada existente com nuance nova
-     (nunca duplicando o mesmo tema).
-   - Para parágrafos/pedidos, o texto do trecho já com placeholders para os
-     dados que mudam de caso para caso, seguindo o padrão do README de
-     `Base de Referências\modelos-paragrafos\`.
-   - Para a peça como modelo, o arquivo .docx final, renomeado para indicar
-     claramente o tipo de peça; se já existir um arquivo do mesmo tipo,
-     pergunte ao usuário se deve substituir ou manter os dois como variações
-     (nomeando de forma a diferenciá-los) — só essa decisão específica exige
-     pergunta à parte, por não caber no filtro automático de duplicidade.
-   - Para endereço de citação, uma nova entrada em
-     `enderecos-partes-re.md` com o órgão, a comarca/cidade e o endereço
-     completo, seguindo o formato descrito naquele arquivo.
-   - Para orientação de sistema (CJ/Tramitação Inteligente), o passo a passo
-     aprendido em `orientacoes-sistema.md` da matéria, no mesmo nível de
-     detalhe do documento que o usuário forneceu (não um resumo vago) —
-     nova entrada por procedimento (ex.: "revisão de benefício"), ou
-     atualização da existente se o caso novo trouxer um passo adicional ou
-     uma correção.
-Nunca grave nada sem passar pela pergunta única acima (mesmo pré-filtrada,
-ela continua sendo a aprovação do usuário) e nunca sobrescreva uma entrada
-existente sem necessidade — acrescente, ou atualize pontualmente quando a
-entrada já existir e o caso novo trouxer nuance real. Essa gravação é sempre
-uma edição direta de arquivo na pasta local do Windows — nunca inclua o
-conteúdo desse banco de dados em commit, push ou qualquer alteração do
-repositório da skill no GitHub.
+  orientações gerais que mudam o que é ou não pedido (ex.: honorários de
+  JEF, em `referencias-escritorio/orientacoes-gerais.md`).
+- Ao final da Etapa 10, para a triagem de "alimentando a base".
 
 ---
 
 ## REGRAS DE CITAÇÃO DE FONTES
 
-- **Verificação de vigência, obrigatória antes de citar.** Antes de inserir
-  qualquer artigo, decreto, lei, instrução normativa, portaria ou súmula na
-  peça, verifique se o dispositivo está em vigor no momento da redação (não
-  revogado nem substituído por norma posterior), conforme a exceção pontual
-  prevista em RESTRIÇÕES ABSOLUTAS. Se o dispositivo estiver revogado,
-  substituído ou não corresponder mais à redação vigente, não o cite —
-  utilize a norma vigente equivalente, se houver, ou reformule o trecho de
-  modo a não depender dele. Essa verificação vale tanto para citações novas
-  quanto para citações já presentes em modelos ou peças de referência
-  enviadas pelo usuário — não presuma que um dispositivo citado no material
-  do caso continua vigente sem checar.
-- Legislação e súmulas devem ser citadas de forma abreviada. Exemplos de
-  formato: art. 130 do CTN; súmula 132 do STJ.
-- O nome completo da fonte aparece apenas na primeira menção do documento
-  inteiro. A partir da segunda menção, use somente a sigla.
-  - Exemplo: na primeira vez, "Constituição da República Federativa do
-    Brasil (CRFB)"; nas demais, apenas "CRFB".
-  - Exemplo: na primeira vez, "Superior Tribunal de Justiça (STJ)"; nas
-    demais, apenas "STJ".
-  - Exemplo: na primeira vez, "Código de Processo Civil (CPC)"; nas demais,
-    apenas "CPC".
-  - Exemplo: na primeira vez, "Supremo Tribunal Federal (STF)"; nas demais,
-    apenas "STF".
-  - Exemplo: na primeira vez, "Tribunal Regional Federal da 1ª Região
-    (TRF1)"; nas demais, apenas "TRF1".
-- Essa regra de abreviação vale para todos os tribunais, códigos, leis e
-  órgãos citados ao longo da peça, não apenas os exemplos acima.
-- Ao citar a mesma norma mais de uma vez na peça, mantenha a sigla e a
-  grafia idênticas em todas as ocorrências (ex.: se a segunda menção de uma
-  Portaria Interministerial usa "MTE/MS/MPS", a primeira menção não pode
-  usar uma sigla diferente, como "MTE/MS/MP") — revise a peça inteira ao
-  final para garantir essa consistência.
-- Quando houver transcrição integral de ementa (exceção controlada, ver
-  seção própria), a identificação completa da fonte (tribunal, número do
-  processo, órgão julgador, relator quando identificável com segurança, data
-  de publicação) deve ser inserida como **nota de rodapé real do Word** ao
-  final da citação — não como linha de texto no corpo do documento.
+Regras gerais de vigência e abreviação em
+`referencias-escritorio/regras-comuns/citacao-fontes.md` (compartilhado com
+`planejamento-previdenciario`). Além delas, específico de peças:
+
 - **Identificação obrigatória ao citar documento ou decisão dos autos.**
   Sempre que a peça mencionar um documento ou uma decisão já constante do
   processo (não a própria peça em elaboração), indique onde ele pode ser
-  encontrado. Use a numeração de protocolo definida em REGRAS DE ORGANIZAÇÃO
-  DE DOCUMENTOS PARA PROTOCOLO quando o documento for um dos que a peça está
-  protocolando, citando o número (ex.: "doc. 4") sem repetir o nome completo
-  do arquivo na citação corrida do texto. Para decisões ou documentos já juntados
-  anteriormente aos autos do processo (não numerados por esta peça), cite a
-  folha em que se encontram, no formato "(fl. xx)" ou "(fls. xx/yy)" quando
-  o material do caso trouxer essa informação. Se a folha não constar do
-  material fornecido, não invente o número — cite o documento pelo nome/tipo
-  e sinalize ao usuário que a referência de folha precisa ser complementada
+  encontrado. Use a numeração de protocolo definida em `references/protocolo.md`
+  quando o documento for um dos que a peça está protocolando, citando o
+  número (ex.: "doc. 4") sem repetir o nome completo do arquivo na citação
+  corrida do texto. Para decisões ou documentos já juntados anteriormente
+  aos autos do processo (não numerados por esta peça), cite a folha em que
+  se encontram, no formato "(fl. xx)" ou "(fls. xx/yy)" quando o material do
+  caso trouxer essa informação. Se a folha não constar do material
+  fornecido, não invente o número: cite o documento pelo nome/tipo e
+  sinalize ao usuário que a referência de folha precisa ser complementada
   antes do protocolo.
+
+Quando houver transcrição integral de ementa (exceção controlada, ver
+`referencias-escritorio/regras-comuns/transcricao-jurisprudencia.md`), a
+identificação completa da fonte deve ser inserida como **nota de rodapé
+real do Word** ao final da citação, não como linha de texto no corpo do
+documento.
 
 ---
 
 ## REGRAS DE QUALIFICAÇÃO DE ADVOGADOS
 
-- Sempre incluir como advogado subscritor HÉLIO BARROS BISPO DOS SANTOS,
-  OAB/BA 90.527, exceto na situação prevista no item abaixo sobre processos
-  fora da Bahia.
-- **Restrição geográfica de Hélio.** Hélio só assina peças de processos que
-  tramitam no estado da Bahia. Em processos de outros estados, não inclua a
-  assinatura de Hélio — ele possui inscrição apenas na OAB/BA, e a OAB exige
-  inscrição suplementar para atuação habitual (a partir de 5 processos) em
-  outra seccional. Nesses casos, a peça é subscrita apenas pelo(s)
-  advogado(s) da área aplicável (Caio Cesar Bahia Campos, na tributária/
-  cível; Aman Almeida da Costa Pinheiro, na previdenciária). Antes de
-  definir os subscritores na Etapa 8a, identifique o estado onde tramita o
-  processo (a partir do foro/comarca/vara/seção judiciária indicados nos
-  documentos) para aplicar corretamente essa restrição.
-- Se a peça for da área tributária ou cível, incluir também CAIO CESAR BAHIA
-  CAMPOS, OAB/BA 55.976.
-- Se a peça for da área previdenciária, incluir também AMAN ALMEIDA DA COSTA
-  PINHEIRO, OAB/BA 54.487.
+Regra base, ordem de citação e a restrição geográfica de Hélio (só peças de
+processos que tramitam na Bahia) estão em
+`referencias-escritorio/regras-comuns/qualificacao-advogados.md`. Antes de
+definir os subscritores na Etapa 8a, identifique o estado onde tramita o
+processo (a partir do foro/comarca/vara/seção judiciária indicados nos
+documentos) para aplicar corretamente a restrição geográfica.
+
 - A definição da área (tributária/cível ou previdenciária) deve ser feita com
   base na natureza da peça identificada na Etapa 8a, antes da redação da
   minuta final.
 - Em requerimentos e recursos administrativos, a OAB do(s) advogado(s)
-  subscritor(es) é sempre obrigatória — nunca omita o número da OAB nessas
-  peças, mesmo em modelos mais simples ou de patamar leve (ver também REGRAS
-  ESPECÍFICAS DO ÂMBITO ADMINISTRATIVO).
-- **Ordem de citação dos subscritores.** Em qualquer trecho da peça que
-  liste os advogados subscritores (bloco de assinatura, qualificação do
-  autor "por seu(s) procurador(es)", seção DAS PUBLICAÇÕES quando nomear
-  advogados, ou qualquer outra menção), cite primeiro Caio Cesar Bahia
-  Campos ou Aman Almeida da Costa Pinheiro (o que for aplicável à área da
-  peça) e Hélio Barros Bispo dos Santos por último, quando ele também
-  subscrever.
+  subscritor(es) é sempre obrigatória (ver também `references/administrativo.md`).
 - **Seção "DAS PUBLICAÇÕES".** Quando a peça incluir essa seção, redija o
   requerimento de forma genérica, sem nomear individualmente os advogados
-  subscritores (ex.: "Requer-se que todas as publicações e intimações
-  relativas ao presente feito sejam realizadas exclusivamente em nome dos
-  advogados subscritores desta peça, sob pena de nulidade, nos termos do
-  artigo 272, §5º, do Código de Processo Civil (CPC)."). Isso evita erro de
-  nome ou de ordem caso a composição de subscritores mude entre o rascunho
-  e a versão final.
+  subscritores (ver texto padrão em `references/formatacao-peca.md`, seção
+  "Ordem dos tópicos do corpo da peça", item 5). Isso evita erro de nome ou
+  de ordem caso a composição de subscritores mude entre o rascunho e a
+  versão final.
 
 ---
 
@@ -487,14 +227,13 @@ repositório da skill no GitHub.
 - **Endereço de citação salvo por órgão + comarca.** Antes de tratar o
   endereço de uma parte ré recorrente (ex.: INSS, União Federal/PGFN) como
   ausente, verifique `Base de Referências\enderecos-partes-re.md` (pasta
-  local, ver BASE DE REFERÊNCIAS DO ESCRITÓRIO) pelo
-  par órgão + comarca/cidade/seção judiciária onde a peça tramita (ex.:
-  "INSS — Salvador/BA" é uma entrada diferente de "INSS — Feira de
-  Santana/BA"; cada comarca tem seu próprio endereço de citação, nunca
-  presuma que o de uma serve para outra). Se existir entrada, use-a
-  diretamente na qualificação, avisando o usuário de que o endereço veio da
-  base salva (para correção pontual se algo tiver mudado). Se não existir,
-  siga a regra normal abaixo.
+  local, ver `references/base-referencias.md`) pelo par órgão +
+  comarca/cidade/seção judiciária onde a peça tramita (ex.: "INSS —
+  Salvador/BA" é uma entrada diferente de "INSS — Feira de Santana/BA"; cada
+  comarca tem seu próprio endereço de citação, nunca presuma que o de uma
+  serve para outra). Se existir entrada, use-a diretamente na qualificação,
+  avisando o usuário de que o endereço veio da base salva (para correção
+  pontual se algo tiver mudado). Se não existir, siga a regra normal abaixo.
 - Sempre que o CNPJ e o endereço da(s) parte(s) ré(s) constarem de algum
   documento do processo administrativo, de correspondência oficial ou
   puderem ser apurados com segurança a partir do material fornecido pelo
@@ -508,8 +247,9 @@ repositório da skill no GitHub.
   citação usado numa peça (seja do material do caso, seja informado pelo
   usuário) for de um órgão + comarca ainda não salvo em
   `enderecos-partes-re.md`, inclua-o como candidato na pergunta única
-  resumida de "Alimentando a base" (ETAPA 10), junto com os demais itens
-  daquela triagem — nunca grave sem passar por ela.
+  resumida de "Alimentando a base" (`references/base-referencias.md`,
+  ETAPA 10), junto com os demais itens daquela triagem: nunca grave sem
+  passar por ela.
 
 ---
 
@@ -525,621 +265,68 @@ repositório da skill no GitHub.
 
 ---
 
-## REGRAS DE ANÁLISE DE RELATÓRIOS MÉDICOS/ODONTOLÓGICOS (BENEFÍCIO POR INCAPACIDADE)
+## REGRAS DE ANÁLISE DE RELATÓRIOS MÉDICOS/ODONTOLÓGICOS
 
-Aplica-se sempre que o caso envolver pedido de benefício por incapacidade
-(auxílio-doença/incapacidade temporária, aposentadoria por invalidez/
-incapacidade permanente, BPC-LOAS por incapacidade e afins), tanto na via
-administrativa quanto na judicial.
-
-O INSS pode negar seguimento a um pedido, por vício formal, quando o
-relatório ou laudo médico/odontológico apresentado como prova da
-incapacidade não preenche os requisitos mínimos exigidos. Por isso, ao
-analisar cada relatório/laudo da categoria "e" (ETAPA 3), verifique
-expressamente se ele atende a todos os itens abaixo:
-
-1. Documentação legível e sem rasuras.
-2. Identificação do paciente.
-3. Data de emissão.
-4. Diagnóstico ou código da Classificação Internacional de Doenças (CID).
-5. Assinatura do profissional, que pode ser eletrônica, desde que passível
-   de validação.
-6. Identificação do profissional, com nome e registro no CRM, CRO ou RMS,
-   ou carimbo (ver também REGRAS DE CITAÇÃO DE PROFISSIONAIS MÉDICOS sobre
-   qual CRM citar na peça).
-7. Identificação do período de afastamento. Se a incapacidade for
-   definitiva, o relatório deve constar como "afastamento por tempo
-   indeterminado" (não uma data específica de retorno).
-
-Se algum item estiver ausente ou não puder ser confirmado no documento,
-sinalize ao usuário, por documento, exatamente qual(is) requisito(s)
-está(ão) faltando e o risco de indeferimento por vício formal, e pergunte:
-> 1. Vou providenciar um relatório complementar ou corrigido.
-> 2. Prosseguir mesmo assim, ciente do risco de indeferimento por
->    formalidade.
-
-Essa verificação formal não substitui a leitura de mérito do conteúdo do
-relatório (gravidade do quadro, nexo com a atividade laboral, prognóstico
-etc.) nem a regra de **Alerta obrigatório de fato desfavorável em
-documento** (ver RESTRIÇÕES ABSOLUTAS) — leia a descrição completa do
-relatório, e não apenas os trechos favoráveis à tese do cliente.
-
----
-
-## PADRÃO DE ABERTURA DA PEÇA
-
-Toda peça judicial (petição inicial e demais peças que se dirigem a um
-juízo) segue esta sequência fixa de abertura, nesta ordem, antes do primeiro
-tópico numerado do corpo (ver ORDEM DOS TÓPICOS DO CORPO DA PEÇA em
-ETAPA 9):
-
-1. **Endereçamento.** "AO JUÍZO DO [vara/juizado/tribunal competente]..."
-   (ou o destinatário equivalente do modelo do escritório), em negrito,
-   justificado, Calibri 14 (ver REGRAS DE FORMATAÇÃO DA MINUTA).
-2. **Caixa de prioridade, quando aplicável.** Se o caso tiver fundamento
-   para tramitação prioritária (ex.: idoso, doença grave, pessoa com
-   deficiência, gestante, nos termos da legislação aplicável), insira logo
-   abaixo do endereçamento uma caixa de texto (ferramenta de desenho "caixa
-   de texto" do Word, `w:txbxContent`, nunca uma tabela de uma célula só nem
-   um parágrafo com borda de página inteira), com borda visível, contendo
-   "Prioridade - [motivo(s), ex.: "Estatuto do Idoso e Doença Grave"]", em
-   negrito. A caixa deve ser **compacta**, dimensionada para o tamanho do
-   próprio texto (ajuste automático de largura/altura ao conteúdo, sem
-   esticar até a margem direita da página) e alinhada à esquerda, replicando
-   exatamente o padrão visual do modelo do escritório — nunca uma caixa que
-   ocupe a largura inteira da página. Liste todos os motivos aplicáveis ao
-   caso concreto na mesma caixa, separados por " e " ou vírgula. Se não
-   houver fundamento para prioridade, omita essa caixa inteiramente, sem
-   deixar espaço reservado vazio.
-3. **Qualificação do autor.** Pule uma linha (espaço extra "antes" do
-   parágrafo, além do espaçamento padrão de 12pt) entre a caixa de
-   prioridade (ou, na ausência dela, o endereçamento) e o início deste
-   parágrafo — mesmo padrão de espaçamento aplicado entre tópicos maiores
-   (ver REGRAS DE FORMATAÇÃO DA MINUTA). Parágrafo justificado, com recuo de
-   1,25 cm,
-   qualificando o autor (nome em negrito, nacionalidade, estado civil,
-   profissão quando pertinente, CPF, RG, endereço com a citação de
-   protocolo aplicável), encerrando com "vem, respeitosamente, por
-   intermédio de seu procurador infra-assinado (doc. [N. procuração]), com
-   fulcro no [dispositivo legal aplicável ao rito ou ao pedido principal],
-   propor a presente".
-4. **Nome da peça.** Centralizado, negrito, maiúsculo (ex.: "AÇÃO
-   DECLARATÓRIA DE INEXISTÊNCIA DE RELAÇÃO JURÍDICO-TRIBUTÁRIA CUMULADA COM
-   PEDIDO DE RESTITUIÇÃO DO INDÉBITO TRIBUTÁRIO"), conforme a exceção de
-   centralização já prevista em REGRAS DE FORMATAÇÃO DA MINUTA.
-5. **Qualificação da parte ré.** "em face de [RÉU]..." qualificando a parte
-   ré (ver REGRAS DE QUALIFICAÇÃO DAS PARTES RÉS), encerrando com "pelos
-   fundamentos fáticos e jurídicos que passa a expor.".
-6. A partir daqui começa o corpo numerado da peça, sempre iniciando pelo
-   tópico "1. PRELIMINARMENTE" (ver ORDEM DOS TÓPICOS DO CORPO DA PEÇA em
-   ETAPA 9), mesmo quando não houver preliminar propriamente dita a
-   levantar além da tramitação prioritária/justiça gratuita.
-
-Esse padrão vale para petição inicial e demais peças dirigidas a um juízo.
-Peças administrativas (requerimentos e recursos ao INSS) seguem o
-endereçamento e a estrutura próprios do órgão, sem a caixa de prioridade
-nem o "em face de" (que pressupõe parte ré judicial) — mantenha, para essas
-peças, a estrutura de abertura que já constar do modelo do escritório ou do
-modelo enviado pelo usuário.
-
----
-
-## PADRÃO DE FECHAMENTO DA PEÇA
-
-Toda peça judicial (petição inicial e demais peças dirigidas a um juízo)
-segue esta sequência fixa de encerramento, logo após o último item da lista
-de pedidos e requerimentos (ver espaçamento entre a lista e esta sequência
-em DOS PEDIDOS E REQUERIMENTOS, Etapa 9). Cada elemento abaixo é um
-parágrafo próprio, nunca compactado com o seguinte — o espaçamento entre
-eles segue o padrão geral de 12pt depois de cada parágrafo (ver REGRAS DE
-FORMATAÇÃO DA MINUTA), nunca digite linhas em branco manuais para simular
-esse espaço.
-
-1. **Valor da causa**, quando aplicável ao rito. Parágrafo justificado,
-   com recuo de 1,25 cm, no formato: "Dá-se à causa, para efeitos fiscais,
-   o valor de R$ [valor] ([valor por extenso]), correspondente a [base do
-   cálculo, ex.: "ao proveito econômico do pedido principal, com o
-   reconhecimento de ambos os períodos tratados nos tópicos X e Y"],
-   conforme [documento comprobatório, ex.: "memória de cálculo que instrui
-   esta petição (Doc. N)"], sem prejuízo do arbitramento judicial do valor
-   da causa, nos termos do art. 292, inciso [aplicável], do CPC.". Ajuste a
-   base do cálculo e o documento de referência ao caso concreto; nunca deixe
-   esse parágrafo genérico quando houver memória de cálculo ou planilha nos
-   documentos do caso.
-2. **"Nestes termos,"** — parágrafo próprio, apenas essa frase.
-3. **"Pede deferimento."** — parágrafo próprio, apenas essa frase.
-4. **Local e data por extenso**, parágrafo próprio (ex.: "Salvador/BA, 20
-   de agosto de 2026."), conforme a exceção de data por extenso já prevista
-   em REGRAS DE FORMATAÇÃO DA MINUTA.
-5. **Bloco de assinatura**, centralizado (exceção à justificação padrão, já
-   prevista em REGRAS DE FORMATAÇÃO DA MINUTA), com o(s) advogado(s)
-   subscritor(es) definido(s) nas REGRAS DE QUALIFICAÇÃO DE ADVOGADOS,
-   respeitando a ordem de citação ali definida. Cada advogado ocupa duas
-   linhas centralizadas — nome em **negrito e CAIXA ALTA** (nunca em
-   minúsculo ou apenas capitalizado), seguido, na linha abaixo, do número da
-   OAB. Quando houver mais de um subscritor, repita o par nome/OAB para cada
-   um, na ordem definida.
-
-Regras adicionais desse bloco:
-- Mantenha o espaçamento padrão entre cada um desses elementos (valor da
-  causa → "Nestes termos," → "Pede deferimento." → local e data → bloco de
-  assinatura) — nunca junte dois deles no mesmo parágrafo nem remova o
-  espaço entre eles para economizar espaço na página.
-- **Nunca inclua linha de assinatura** (traço/underline para assinatura
-  manuscrita, ex. "_____________________") acima do nome do advogado — a
-  peça é assinada eletronicamente, e o bloco de assinatura contém apenas o
-  par nome (maiúsculo, negrito) / OAB, centralizados, sem qualquer marcação
-  de linha para assinar.
-- Se a peça não tiver valor de causa aplicável (ex.: peça administrativa, ou
-  peça judicial incidental sem novo valor de causa a fixar), omita o item 1
-  inteiramente e comece a sequência em "Nestes termos,".
+Ver `references/relatorios-medicos.md` — checklist completo de requisitos
+formais (legibilidade, identificação, CID, assinatura, período de
+afastamento), aplicado na Etapa 3 sempre que o caso envolver benefício por
+incapacidade.
 
 ---
 
 ## REGRAS DE FORMATAÇÃO DA MINUTA
 
-**Fonte (padrão do escritório, vale para toda peça, qualquer que seja o
-modelo enviado):**
-- Fonte padrão do corpo do texto: Calibri, tamanho 12.
-- Endereçamento (o "Exmo. Sr. Dr. Juiz..." ou destinatário equivalente no
-  topo da peça): Calibri, tamanho 14.
-- Citações longas de jurisprudência ou doutrina (ver REGRAS DE TRANSCRIÇÃO DE
-  JURISPRUDÊNCIA): Calibri, tamanho 10, com recuo de 4 cm de parágrafo a
-  partir da margem esquerda.
-- Essas três regras de fonte têm prioridade sobre qualquer fonte diferente
-  que porventura apareça no modelo .docx enviado pelo usuário — o modelo
-  define timbre, layout e ordem das seções; a fonte e o tamanho seguem
-  sempre este padrão do escritório, mesmo que o arquivo de modelo tenha sido
-  criado ou editado com outra fonte por engano.
-- **Calibri é a única fonte do documento, sem exceção, inclusive na lista
-  de pedidos e requerimentos.** A lista numerada nativa do Word usada em
-  "DOS PEDIDOS E REQUERIMENTOS" (ver aquela seção) às vezes herda uma fonte
-  diferente da usada no corpo do texto para o próprio marcador da lista
-  (a letra maiúscula gerada automaticamente pelo Word), por ser um elemento
-  de formatação separado do texto do parágrafo. Configure explicitamente a
-  fonte do marcador da lista (`w:rPr` dentro de `w:lvl`/`w:pPr` no XML de
-  numeração) como Calibri, no mesmo tamanho do corpo do texto (12), para
-  que não sobre nenhum trecho do documento em fonte diferente de Calibri.
-
-- Espaçamento de 1,5 entre linhas dentro dos parágrafos.
-- Espaço de 12pt depois de cada parágrafo (`w:after`), além do espaçamento
-  de 1,5 entre linhas — é o que separa visualmente um parágrafo do
-  seguinte. Configure isso como espaçamento "depois" do parágrafo na
-  formatação, nunca como linha em branco manual digitada entre os
-  parágrafos.
-- Pule uma linha adicional (espaço extra "antes" do parágrafo, além do
-  espaçamento padrão de 12pt depois do parágrafo anterior) antes de cada
-  tópico maior de numeração simples (1, 2, 3, 4...). Não pule linha
-  adicional antes de subtópicos (1.1, 1.2, 3.1...) — esses fluem
-  normalmente, só com o espaçamento padrão de 12pt.
-- Parágrafos justificados. Essa regra vale para todo o texto corrido da
-  peça, incluindo os títulos de seção (ex.: "DOS FATOS", "DO DIREITO", "DOS
-  PEDIDOS E REQUERIMENTOS"), o cabeçalho/endereçamento do topo da peça, e as
-  legendas de figuras e quadros (ver REGRAS DE INSERÇÃO DE IMAGENS NA MINUTA
-  e o padrão visual de tabelas abaixo) — não centralize esses elementos. Há
-  duas exceções a essa regra de justificação. A primeira é o bloco de
-  assinatura final (nome dos advogados subscritores e respectivas OAB), que
-  fica centralizado, conforme o padrão do modelo do escritório. A segunda é
-  o nome da própria peça (ex.: "RECURSO ORDINÁRIO", "REQUERIMENTO
-  ADMINISTRATIVO DE BPC-LOAS"), que deve ser escrito em negrito, em
-  maiúsculo e centralizado, distinguindo-o visualmente dos demais títulos de
-  seção, que ficam justificados.
-- Recuo de 1,25 cm no início de cada parágrafo e nos títulos de seção.
-- Numeração de seções e subseções em algarismos arábicos, no padrão 1, 2, 3
-  para seções principais e 1.1, 1.2, 3.1 para subdivisões. A seção final de
-  pedidos ("DOS PEDIDOS E REQUERIMENTOS") também recebe numeração de tópico
-  maior, continuando a sequência das demais seções da peça (ex.: se a peça
-  tiver as seções 1, 2 e 3, "DOS PEDIDOS E REQUERIMENTOS" é o tópico 4).
-- Datas sempre no formato numérico, como 20/10/2023, nunca por extenso —
-  **exceto a data de fechamento da peça** (ex.: "Salvador/BA, 28 de julho de
-  2026."), que segue a convenção formal de peças processuais e deve ser
-  escrita por extenso.
-- Ao final da peça, incluir a seção "DOS PEDIDOS E REQUERIMENTOS" como
-  título numerado (continuando a sequência dos tópicos maiores da peça),
-  seguida da frase "Diante de todo o exposto, pleiteia-se:" e então a lista
-  de pedidos e requerimentos finais.
-- **Parágrafos curtos.** Como regra geral, mantenha cada parágrafo em torno
-  de, no máximo, 6 linhas. Ultrapassado esse limite, normalmente é sinal de
-  que o parágrafo está tratando de mais de uma ideia e deve ser dividido.
-  Aplique isso com parcimônia: o objetivo é evitar blocos de texto muito
-  longos e difíceis de acompanhar, não dividir mecanicamente todo parágrafo
-  que chegar a 6 linhas. Nunca divida um parágrafo só porque bateu no
-  limite se a divisão não fizer sentido lógico (ex.: deixar o segundo
-  parágrafo resultante com apenas uma linha, cortando o raciocínio no meio) —
-  nesses casos, mantenha o parágrafo um pouco mais longo em vez de fragmentar
-  artificialmente.
-- Ao longo do corpo da peça, destacar em **negrito** pontualmente os
-  principais pontos de cada parágrafo. O negrito não é para destacar um
-  trecho aleatório: ele deve marcar o argumento principal do parágrafo, ou a
-  frase que melhor resume, para o leitor, do que aquele parágrafo realmente
-  trata (ex.: o nome do documento determinante, o marco temporal decisivo ou
-  a conclusão jurídica do trecho). Use com prioridade em duas situações: (1)
-  na frase de conclusão de cada tópico, que sintetiza o que se busca com
-  aquele tópico; e (2) nas principais partes argumentativas ao longo dos
-  parágrafos do tópico. O uso deve ser comedido, sem excesso, restrito aos
-  pontos de maior relevância argumentativa — nunca negrito espalhado sem
-  critério.
-- O cabeçalho/endereçamento (o "Exmo. Sr. Dr. Juiz..." ou destinatário
-  equivalente no topo da peça) deve estar sempre em **negrito** e
-  justificado, sem exceção. O nome completo do autor/requerente e o nome
-  completo da parte ré (ou de cada uma das rés, se houver mais de uma) na
-  qualificação das partes também devem sempre estar em **negrito**.
-
-**Padrão visual de tabelas ("Quadros"), quando a peça incluir alguma (ex.:
-tabela de valores, de vínculos, de cálculo de proveito econômico), sem
-exceções:**
-- Fonte tamanho 10pt em todas as células, inclusive cabeçalho (mesmo com o
-  corpo do texto em Calibri 12 — tabela é a exceção documentada de tamanho).
-- Cabeçalho com fundo cinza claro (`E7E6E6`) e texto em negrito.
-- Bordas finas em cinza (`999999`), espessura mínima.
-- Numeração sequencial simples ("Quadro 1", "Quadro 2"...), com legenda
-  justificada (não centralizada) logo abaixo da tabela, citando o que o
-  quadro mostra e a fonte dos dados (cálculo, sistema usado, data de
-  emissão, documento de origem).
-- Nunca cite um "Quadro N" no texto antes de esse quadro já ter sido
-  apresentado — revise a ordem de aparição sempre que uma tabela for movida
-  ou uma nova for inserida.
+Fonte, espaçamento, parágrafos curtos, negrito pontual e o padrão visual de
+tabelas ("Quadros") estão em
+`referencias-escritorio/regras-comuns/formatacao-base.md` (compartilhado com
+`planejamento-previdenciario`). Específico de peça: o padrão de abertura e
+fechamento da peça, a fonte do marcador de lista em "Dos Pedidos", a ordem
+dos tópicos do corpo, e a seção "Dos Pedidos e Requerimentos" estão em
+`references/formatacao-peca.md`.
 
 ---
 
 ## REGRAS DE TRANSCRIÇÃO DE JURISPRUDÊNCIA (EXCEÇÃO CONTROLADA)
 
-Por padrão, jurisprudência nunca é transcrita literalmente (ver RESTRIÇÕES
-ABSOLUTAS). Essa regra pode ser excepcionada, apenas quando **todas** as
-condições abaixo estiverem presentes:
-
-1. O usuário forneceu, na pasta do caso, um documento próprio de pesquisa de
-   jurisprudência (ex.: um PDF reunindo ementas pesquisadas por ele) — a
-   transcrição deve ser extraída **exclusivamente** desse documento, nunca de
-   memória ou de outra fonte.
-2. Autenticidade presumida por nome. Qualquer documento cujo nome de
-   arquivo ou de pasta remeta a "jurisprudência(s)" (ou variação óbvia, como
-   "jurisprudencias", "pesquisa de jurisprudencia", "julgados") é presumido
-   autêntico e transcritível integralmente — não pergunte ao usuário se pode
-   transcrever, a própria convenção de nome já vale como confirmação. Só
-   pergunte explicitamente sobre autenticidade quando o documento de
-   pesquisa não tiver nenhuma indicação de nome nesse sentido (ex.: um PDF
-   avulso, sem nome claro, misturado a outros materiais da categoria "c").
-
-Presentes as duas condições, ao transcrever uma ementa:
-
-- **Não substitua a transcrição pela simples citação do número do
-  processo.** Presentes as condições da exceção controlada, transcrever
-  integralmente significa reproduzir o texto da ementa (ver formatação
-  abaixo), nunca apenas mencionar o tribunal e o número de vários julgados
-  em uma frase corrida (ex.: "conforme o REsp 800.543/PE, o REsp
-  1.596.045/MG e o AgInt no REsp 2.082.632/DF..."). Escolha o(s) julgado(s)
-  mais relevante(s) do documento de pesquisa para o ponto em discussão e
-  transcreva a ementa por inteiro, em vez de empilhar referências soltas
-  sem conteúdo.
-- Formate como citação direta longa, conforme a ABNT NBR 10520: recuo de 4 cm
-  a partir da margem esquerda, fonte tamanho 10, espaçamento simples (1,0),
-  sem aspas.
-- **Negrito obrigatório na transcrição.** Toda ementa transcrita deve conter
-  um trecho em **negrito**, sem exceção — nunca transcreva uma ementa inteira
-  sem nenhum destaque. O trecho destacado deve ser sempre a parte mais
-  importante da ementa para o argumento em discussão, nunca um destaque
-  aleatório ou secundário.
-- Ao introduzir a transcrição, se o julgado for de tribunal diverso daquele
-  em que a peça está sendo litigada (ex.: peça tramitando no TJBA/TRF1 e a
-  ementa transcrita é do TJMG), prefira uma frase introdutória genérica, como
-  "É o que também reconhece a jurisprudência:", em vez de nomear o tribunal
-  específico na frase (ex.: evite "É o que também reconhece o TJMG:") — a
-  identificação completa do tribunal já consta da nota de rodapé da citação.
-  Quando o julgado transcrito for do próprio tribunal ou órgão em que a peça
-  tramita, pode nomeá-lo normalmente na frase introdutória.
-- É permitido omitir trechos menos úteis da ementa, marcando a supressão com
-  "(...)".
-- Identifique a fonte (tribunal, número do processo, órgão julgador, relator,
-  data de publicação) em nota de rodapé ao final da citação, conforme REGRAS
-  DE CITAÇÃO DE FONTES.
-- Nunca infira ou complete um dado da decisão (como o nome do relator) que
-  não conste de forma inequívoca no documento de pesquisa. Prefira omitir o
-  dado a arriscar um erro.
-- Fora dessas condições, volta a valer a regra padrão: mencionar apenas a
-  tese, sem transcrição literal.
+Ver `referencias-escritorio/regras-comuns/transcricao-jurisprudencia.md`
+(compartilhado com `planejamento-previdenciario`) para as duas condições
+cumulativas, o formato ABNT da citação direta e as demais regras.
 
 ---
 
 ## REGRAS DE ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO
 
-Antes da redação da minuta final (Etapa 9), organize os documentos da pasta
-do caso para fins de protocolo. Essa organização deve ser confirmada com o
-usuário antes de ser tratada como definitiva.
-
-**Essa etapa é opcional, não obrigatória.** Ela existe para casos com volume
-relevante de documentos, onde a numeração para protocolo evita confusão na
-hora de juntar tudo. Em petições simples, o usuário pode dispensar essa
-organização explicitamente (ex.: "é uma petição simples, não precisa
-organizar os documentos"). Nesse caso, pule as regras abaixo e a Etapa 8c do
-FLUXO DE EXECUÇÃO SEQUENCIAL: cite os documentos da pasta na minuta pelo nome
-ou pela referência que fizer sentido no caso, sem a numeração sequencial de
-protocolo. Na dúvida sobre se o caso é simples o suficiente para dispensar a
-organização, pergunte ao usuário em vez de decidir sozinho.
-
-- **Verificação de duplicidade.** Analise os documentos recebidos e informe
-  ao usuário caso identifique arquivos duplicados ou substancialmente
-  redundantes, para que ele decida sobre a exclusão. Nunca exclua um
-  documento por conta própria sem confirmação.
-- **Formato de nomeação, obrigatório e único.** Todo documento numerado para
-  protocolo é nomeado como "N. Nome do Documento" — o número, seguido de
-  ponto, espaço, e o nome do documento em Título (primeira letra de cada
-  palavra relevante em maiúscula, artigos/preposições em minúscula, **nunca
-  o nome inteiro em caixa alta**), sem o prefixo "Doc." e sem outro
-  separador (nunca "Doc. N", nunca "N -", nunca "N)"). Exemplos:
-  "1. Petição Inicial - [Nome do Cliente]", "2. Identidade (CNH)",
-  "3. Procuração", "4. Comprovante de Residência". Esse é o nome do arquivo
-  físico na pasta do caso, e também o formato usado em qualquer lista de
-  documentos apresentada ao usuário (rascunho da Etapa 8c, confirmação final
-  da Etapa 10). Aplique esse formato sem exceção a todas as regras abaixo.
-- **Numeração sequencial para protocolo.** Renomeie e numere os documentos na
-  ordem em que devem ser protocolados, seguindo o formato acima ("N. NOME DO
-  DOCUMENTO"), seguindo a ordem preestabelecida por área definida em ORDEM
-  PADRÃO DE PROTOCOLO POR ÁREA, e ajustada à documentação realmente presente
-  na pasta do caso (ver regra abaixo). Cite corretamente o número de cada
-  documento ao longo do texto da minuta, e mantenha essas citações
-  atualizadas caso a numeração mude ao longo do processo.
-- **Renomeie os arquivos que já existem na pasta do caso, em vez de criar
-  cópias numeradas ao lado deles.** A organização para protocolo é feita
-  renomeando/movendo o próprio arquivo já enviado pelo usuário para o nome
-  final no formato padrão, diretamente na pasta do caso — nunca criando um
-  arquivo adicional com o nome numerado e deixando o original com o nome
-  antigo também na pasta. Ao final da organização, cada documento numerado
-  deve existir na pasta do caso uma única vez, já com o nome definitivo; não
-  pode haver, ao mesmo tempo, um "CNH - [nome do cliente].pdf" e um
-  "2. Identidade (CNH).pdf" referentes ao mesmo documento.
-- **A própria peça é sempre o item 1, como arquivo físico real.** Não basta
-  a peça constar como item 1 na lista textual de documentos: depois que a
-  minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
-  arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
-  diretamente na pasta do caso (ver "Entrega em arquivos individuais, nunca
-  em zip" abaixo), nomeado como "1. Petição Inicial - [Nome do Cliente]" (ou
-  o nome de peça equivalente ao tipo em elaboração), junto com os demais
-  documentos numerados. A lista final de documentos (regra
-  "Confirmação final" abaixo) só está completa quando o item 1 é esse
-  arquivo físico da peça, não uma referência textual a ele.
-- **Nunca fragmente a numeração em sufixos (2A/2B).** Quando mais de um
-  arquivo precisar ocupar o espaço de uma mesma categoria (ex.: um documento
-  grande demais dividido pelo limite de tamanho, ou múltiplos documentos que
-  não fazem sentido consolidar em um único PDF), nunca nomeie os arquivos
-  com sufixos de letra (ex.: "2A. Comprovante de Residência", "2B.
-  Comprovante de Residência"). Cada arquivo recebe seu próprio número
-  inteiro e sequencial, no formato padrão (ex.: "2. Comprovante de
-  Residência", "3. Comprovante de Residência (Cont.)"), empurrando a
-  numeração dos documentos seguintes adiante. Ajuste todas as citações no
-  texto da minuta de acordo, e informe ao usuário que a numeração de um
-  documento específico foi desdobrada em mais de um número por esse motivo.
-- **Ajuste da ordem à pasta real.** A ordem padrão é um roteiro, não uma
-  lista rígida de posições fixas: percorra as categorias na sequência
-  definida para a área e, para cada uma que tiver arquivo correspondente na
-  pasta, atribua o próximo número disponível — categorias sem documento
-  correspondente são simplesmente puladas, sem deixar lacuna na numeração
-  (ex.: se não houver comprovante de residência, o item 4 vira o próximo
-  documento da lista, não um número vazio). Se a pasta tiver um documento
-  que não se encaixa em nenhuma categoria da ordem padrão, posicione-o ao
-  final, na ordem de relevância que fizer mais sentido para o caso, e
-  informe ao usuário onde ele foi encaixado.
-- **Exceção: procuração é sempre o item 3, posição fixa.** Diferente das
-  demais categorias da ordem padrão, a procuração (ou termo de representação
-  junto ao INSS, no caso de requerimento/recurso administrativo) nunca é
-  pulada nem tem sua posição deslocada por ausência de outra categoria — ela
-  ocupa sempre exatamente a posição 3, porque toda petição inicial ou
-  requerimento administrativo depende dela para ter validade. Isso significa
-  que, ao contrário da regra geral ("Ajuste da ordem à pasta real"), a
-  numeração pode sim ficar com uma posição vaga se um documento anterior
-  faltar (ex.: sem identidade, o item 2 fica em aberto e a procuração
-  continua sendo o item 3, em vez de subir para a posição 2).
-  Se a peça em elaboração for uma petição inicial ou um requerimento
-  administrativo e não houver arquivo de procuração/termo de representação
-  na pasta, não deixe essa ausência passar batido: trate-a pela regra
-  "Categoria ausente na pasta" (ver INSTRUÇÃO DE INÍCIO) e pergunte ao
-  usuário se ele vai enviar o documento agora ou se confirma que já existe
-  procuração válida nos autos — nesse segundo caso, a posição 3 fica
-  reservada na numeração sem exigir o arquivo físico na pasta.
-- **Consolidação de documentos correlatos.** Quando houver múltiplos arquivos
-  que compõem um mesmo conjunto probatório (ex.: diversas notificações de
-  multa, diversos comprovantes de pagamento, diversos recursos
-  administrativos), una-os em um único PDF por categoria, na ordem
-  cronológica ou lógica mais adequada, e cite/numere esse documento
-  consolidado como uma unidade.
-- **Documentos sem valor probatório autônomo.** Caso um documento da pasta
-  não sirva, por si só, como prova documental (ex.: uma anotação informal
-  sem valor de documento oficial), não o inclua na lista de documentos
-  numerados para protocolo — mas, se o fato que ele relata for relevante,
-  preserve esse fato na narrativa da petição, ancorado em outro documento ou
-  na exposição fática.
-- **Documentos de apoio não protocolados.** Nem todo arquivo da pasta é
-  para ir ao processo. Documentos de trabalho interno do escritório — como
-  planilhas de cálculo, rascunhos de conferência, anotações da entrevista com
-  o cliente ou material de apoio usado só para embasar a argumentação —
-  entram na análise e podem ser citados como referência de raciocínio, mas
-  não recebem numeração de protocolo nem entram na lista numerada de
-  documentos ("N. NOME DO DOCUMENTO") no corpo da peça. Ao apresentar a
-  lista final de documentos (regra "Confirmação final" abaixo), separe
-  claramente os documentos que serão protocolados dos documentos de apoio
-  que ficam só na pasta de trabalho, para não haver confusão entre os dois
-  grupos.
-- **Contrato de honorários nunca entra no protocolo.** Ainda que o arquivo
-  do contrato de honorários esteja na pasta do caso, ele nunca recebe
-  numeração de protocolo nem entra na lista numerada de documentos — é
-  documento interno da relação entre escritório e cliente, sem lugar nos
-  autos ou no processo administrativo. Trate-o sempre como documento de
-  apoio não protocolado, sem exceção.
-- **Limite de tamanho por documento.** Verifique o tamanho de cada PDF que
-  compõe a lista de documentos numerados. O limite depende do sistema de
-  destino da peça:
-  - Peça judicial protocolada no PJe: até 10 MB por documento.
-  - Requerimento, recurso ou peça administrativa protocolada no INSS: até
-    5 MB por documento, e o somatório de todos os arquivos do protocolo não
-    pode exceder 30 MB no total — verifique o somatório final, não apenas
-    cada arquivo isoladamente.
-  Salvo instrução diversa do usuário, aplique o limite correspondente ao
-  destino da peça em elaboração. Caso um arquivo exceda o limite aplicável,
-  comprima-o (reduzindo a resolução de imagens/scans com PDF de tamanho
-  reduzido, sem perda relevante de legibilidade) ou, se necessário, divida-o
-  em mais de um arquivo, sempre preservando a legibilidade do conteúdo,
-  aplicando a regra "Nunca fragmente a numeração em sufixos (2a/2b)" acima
-  para nomear as partes resultantes, e informando ao usuário o que foi
-  feito.
-- **Entrega em arquivos individuais, nunca em zip.** A entrega dos
-  documentos numerados é sempre feita como arquivos individuais, um por
-  número, nomeados no formato padrão ("1. Petição Inicial - [Nome do
-  Cliente]", "2. Identidade (CNH)" ...), renomeados
-  diretamente na própria pasta do caso (ver regra "Renomeie os arquivos que
-  já existem na pasta do caso" acima) — não em uma subpasta de protocolo
-  separada nem em cópias adicionais. Nunca compacte o conjunto em um único
-  arquivo .zip (ou formato equivalente) — cada documento deve poder ser
-  aberto e protocolado isoladamente, sem
-  exigir extração prévia.
-- **Filtragem explícita e informada.** Ao decidir que um arquivo da pasta do
-  caso não entra na lista de documentos numerados (por ser duplicado,
-  redundante, sem valor probatório autônomo, documento de apoio interno, ou
-  o contrato de honorários), registre a decisão à medida que ela é tomada,
-  em vez de deixar a exclusão implícita. Essa filtragem nunca é silenciosa.
-- **Confirmação final.** Antes de finalizar a minuta, confirme com o usuário
-  a lista definitiva de documentos numerados, para garantir que as citações
-  no texto e a numeração física dos arquivos na pasta estejam coerentes
-  entre si. Nessa mesma confirmação, liste também todo arquivo da pasta do
-  caso que ficou de fora da numeração de protocolo (duplicado descartado,
-  documento sem valor probatório autônomo, documento de apoio interno,
-  contrato de honorários etc.), indicando o motivo específico da exclusão de
-  cada um, para que nenhuma ausência passe despercebida.
-
-### ORDEM PADRÃO DE PROTOCOLO POR ÁREA
-
-Cada item abaixo vira o nome do arquivo físico no formato padrão definido em
-"Formato de nomeação, obrigatório e único" (número, ponto, espaço, nome em
-Título) — ex.: o item 1 abaixo se torna "1. Petição Inicial - [Nome do
-Cliente]" (ou "1. Requerimento Administrativo - [Nome do Cliente]" /
-"1. Recurso Administrativo - [Nome do Cliente]", conforme o tipo de peça), o
-item 2 se torna "2. Identidade (CNH)", e assim por diante.
-
-Área previdenciária:
-1. Petição inicial / requerimento administrativo / recurso (a própria peça
-   sendo protocolada).
-2. Identidade.
-3. Procuração.
-4. Comprovante de residência.
-5. Declaração de hipossuficiência.
-6. CNIS / declarações de Imposto de Renda.
-7. Relatórios médicos.
-
-**Nota para requerimentos e recursos administrativos (INSS):** aplique
-também a exceção descrita em REGRAS ESPECÍFICAS DO ÂMBITO ADMINISTRATIVO —
-como regra geral, comprovante de residência, CNIS e CadÚnico não entram
-nesses protocolos, salvo exigência do caso concreto ou pedido expresso do
-usuário.
-
-Para outras áreas (tributária, cível) sem ordem padrão ainda definida,
-pergunte ao usuário qual ordem seguir na primeira vez que o caso surgir, e
-trate a resposta como o padrão a reutilizar em casos futuros da mesma área —
-sinalize isso ao usuário para que ele confirme se quer fixar aquela ordem
-como padrão ou se foi só para aquele caso específico.
-
-Essa ordem é o ponto de partida, não uma imposição cega: se o próprio usuário
-pedir uma ordem diferente para um caso específico (por peculiaridade do caso
-ou exigência do órgão/juízo), siga a instrução dele para aquele caso, sem
-alterar o padrão da área para os demais.
+Ver `references/protocolo.md` para as regras completas (verificação de
+duplicidade, formato de nomeação, numeração sequencial, posição fixa da
+procuração, consolidação de documentos, limites de tamanho por sistema de
+destino, entrega em arquivos individuais) e a ordem padrão de protocolo por
+área. Aplicada na Etapa 8c e conferida na Etapa 10.
 
 ---
 
 ## REGRAS ESPECÍFICAS DO ÂMBITO ADMINISTRATIVO
 
-Regras gerais aplicáveis a qualquer requerimento, recurso ou peça de natureza
-administrativa (INSS e órgãos equivalentes), complementando o que já consta
-em CALIBRAGEM DE DENSIDADE (patamar leve) e nas demais seções desta skill.
-
-**Gerais.**
-- No âmbito administrativo, menos é mais: evite levantar todas as teses e
-  fundamentos possíveis de uma só vez. Prefira uma argumentação mais
-  restrita e objetiva, reservando teses adicionais para uma eventual fase
-  recursal, após o indeferimento do pedido.
-- A OAB do(s) advogado(s) subscritor(es) é sempre obrigatória em
-  requerimentos e recursos administrativos (ver REGRAS DE QUALIFICAÇÃO DE
-  ADVOGADOS).
-- Limite de tamanho de arquivo para protocolo no INSS: 5 MB por documento,
-  30 MB no total somando todos os arquivos do protocolo (ver REGRAS DE
-  ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO).
-- Como regra geral, não inclua CNIS, comprovante de residência ou CadÚnico
-  nesses pedidos administrativos — esses documentos raramente são exigidos
-  nessa fase (ver nota em ORDEM PADRÃO DE PROTOCOLO POR ÁREA). Inclua apenas
-  se o caso concreto exigir expressamente ou o usuário solicitar.
-- Não mencione, na peça, a existência de processos administrativos
-  anteriores sobre o mesmo benefício/plano.
-- Não trate temas ou súmulas da TNU (Turma Nacional de Uniformização de
-  Jurisprudência dos Juizados Especiais Federais) logo de início — reserve
-  esse tipo de fundamentação para casos que já tramitem em CRPS (Conselho de
-  Recursos da Previdência Social) ou fases equivalentes.
-- **Regimento Interno do CRPS desatualizado — alerta obrigatório.** Foi
-  divulgado um novo Regimento Interno do CRPS e o material de referência do
-  escritório (banco de dados local, ver BASE DE REFERÊNCIAS DO ESCRITÓRIO)
-  ainda não foi atualizado com ele. Sempre que a peça for citar ou
-  fundamentar algo no Regimento Interno do CRPS, alerte o usuário de que a
-  versão disponível pode estar desatualizada antes de citá-la, e pergunte se
-  ele tem o texto do novo regimento em mãos para atualizar a subpasta
-  correspondente da pasta local antes de seguir. Remova este alerta da skill
-  assim que o material de referência for atualizado com o novo regimento.
-- RMI (Renda Mensal Inicial) e RMA (Renda Mensal Atual) nem sempre precisam
-  ser juntados no processo administrativo — inclua apenas em processos mais
-  complexos, onde o próprio cálculo da renda for um ponto controvertido.
-- Não cite jurisprudência no âmbito administrativo (reforça RESTRIÇÕES
-  ABSOLUTAS e ETAPA 7); fundamente exclusivamente em Instruções Normativas,
-  Portarias, Decretos e demais atos normativos do órgão.
-
-**LOAS (BPC-LOAS) e Auxílio-Doença administrativos.**
-- Peças de BPC-LOAS e de Auxílio-Doença no âmbito administrativo dispensam
-  fundamentação extensa — máximo de 3 a 4 laudas, aplicando o patamar leve de
-  forma ainda mais enxuta que o mínimo já previsto em CALIBRAGEM DE
-  DENSIDADE.
-- Sempre inclua, entre os documentos ou menções da peça, o registro da
-  biometria do TSE, disponível em
-  https://consultabiometria.tre-ba.jus.br/.
-- A comprovação de biometria pode ser feita por CNH, Identidade ou
-  comprovante do TSE, desde que o documento esteja atualizado — alerte o
-  usuário se o documento disponível na pasta do caso estiver vencido ou
-  desatualizado.
-
-**Imposto de Renda (IR).**
-- Em casos de restituição de IR retido na fonte, o IR incidente sobre
-  salário/remuneração do trabalho não entra na restituição. Considere apenas
-  o IR incidente sobre aposentadoria (RPPS estadual, aposentadoria do INSS,
-  aposentadoria complementar, VGBL e afins).
-- Sempre que a peça juntar ou mencionar declarações de Imposto de Renda do
-  autor, requeira que a tramitação corra em segredo de justiça.
+Ver `references/administrativo.md` — regras gerais de requerimentos e
+recursos ao INSS, e as particularidades de LOAS/Auxílio-Doença
+administrativo e de Imposto de Renda.
 
 ---
 
 ## REGRAS DE INSERÇÃO DE IMAGENS NA MINUTA
 
-Como regra padrão, insira proativamente ao longo do corpo da minuta pequenos
-recortes (prints) dos documentos comprobatórios mais relevantes, imediatamente
-após o parágrafo que os menciona, para reforçar visualmente a argumentação —
-não é necessário que o usuário peça isso expressamente. A única exceção é
-peças de patamar leve mais simples (ver CALIBRAGEM DE DENSIDADE), como
-requerimentos administrativos enxutos de poucas laudas, nas quais a inserção
-de imagens pode ser dispensada por padrão; mesmo nesses casos, se o documento
-for central para a argumentação (ex.: um laudo médico decisivo), avalie
-inserir a imagem mesmo assim.
+Regras centrais (recorte, legenda numerada, documento representativo,
+espaço reservado) em
+`referencias-escritorio/regras-comuns/insercao-imagens.md`. Específico de
+peça: a única exceção que dispensa a inserção por padrão é peça de patamar
+leve mais simples (ver `references/calibragem-densidade.md`), como
+requerimentos administrativos enxutos de poucas laudas — mesmo nesses casos,
+se o documento for central para a argumentação (ex.: um laudo médico
+decisivo), avalie inserir a imagem mesmo assim.
 
-- Recorte a imagem para mostrar apenas a informação relevante (ex.: os dados
-  de um auto de infração, não a tela inteira do aplicativo ou a página
-  inteira do documento), evitando prints extensos ou pouco legíveis.
-- Inclua uma legenda numerada, justificada (não centralizada), abaixo de
-  cada imagem, identificando o conteúdo e o número do documento de origem
-  (ex.: "Figura 1: CNH da autora, categoria B, com validade expirada em
-  18/01/2026 (doc. 2)"). A imagem em si pode ficar centralizada na página; a
-  legenda de texto abaixo dela segue a regra geral de justificação (ver
-  REGRAS DE FORMATAÇÃO DA MINUTA).
-- Quando existirem vários documentos da mesma categoria (ex.: quatro
-  notificações semelhantes), insira a imagem de um exemplar representativo e
-  informe isso na legenda, em vez de inserir todos os exemplares.
-- Caso a inserção direta da imagem não seja tecnicamente viável, insira em
-  seu lugar um espaço reservado, com borda visível e texto indicando
-  exatamente qual print deve ser inserido e de qual documento.
-- **Alerte expressamente o usuário**, ao entregar a minuta, de que esses
-  espaços reservados são apenas lembretes de trabalho e **devem ser
-  removidos ou substituídos pela imagem definitiva antes do protocolo da
-  peça** — eles não devem constar na versão final protocolada no processo.
+**Alerte expressamente o usuário**, ao entregar a minuta, de que os espaços
+reservados de imagem são apenas lembretes de trabalho e **devem ser
+removidos ou substituídos pela imagem definitiva antes do protocolo da
+peça**: eles não devem constar na versão final protocolada no processo.
 
 ---
 
@@ -1159,8 +346,7 @@ Ao identificar um pedido desse tipo:
    estiver clara pelo conteúdo do documento ou pelo pedido do usuário.
 2. Para doutrina, salve o arquivo original em
    `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\doutrina\`,
-   conforme a seção "Doutrina salva por matéria" em BASE DE REFERÊNCIAS DO
-   ESCRITÓRIO.
+   conforme "Doutrina salva por matéria" em `references/base-referencias.md`.
 3. Para modelo de peça, salve o .docx em
    `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\modelos-peca\`,
    nomeado pelo tipo de peça, conforme "Modelos de peça salvos por matéria".
@@ -1176,14 +362,16 @@ Ao identificar um pedido desse tipo:
 6. Para orientação de como operar o CJ/Tramitação Inteligente num
    procedimento específico de uma matéria, acrescente ou atualize
    `C:\Users\Administrador\Desktop\CCL\Base de Referências\[área]\[matéria]\orientacoes-sistema.md`,
-   conforme "Orientações operacionais de sistema" em BASE DE REFERÊNCIAS DO
-   ESCRITÓRIO — só aceite esse tipo de pedido quando o usuário estiver
-   fornecendo um documento próprio ensinando o procedimento, nunca a partir
-   de conhecimento genérico da skill sobre o sistema.
+   conforme "Orientações operacionais de sistema" em
+   `references/base-referencias.md` — só aceite esse tipo de pedido quando o
+   usuário estiver fornecendo um documento próprio ensinando o
+   procedimento, nunca a partir de conhecimento genérico da skill sobre o
+   sistema.
+
 Em qualquer um desses casos, nunca sobrescreva material já existente sem
 confirmação; acrescente, ou pergunte se deve substituir quando já houver algo
 equivalente salvo. Os itens 2, 3, 5 e 6 são sempre gravação direta na pasta
-local do Windows — nunca entram em commit/push do repositório da skill; só o
+local do Windows: nunca entram em commit/push do repositório da skill; só o
 item 4 (orientação geral fixa) é editado dentro do repositório da skill.
 
 ---
@@ -1215,8 +403,8 @@ documentos.
 Conduza o recebimento conforme a escolha. No modo lote, confirme cada
 conjunto antes de seguir. No modo remessa única, confirme todo o material de
 uma vez. Ao confirmar o recebimento (Etapa 1), verifique também se há
-documentos duplicados entre os enviados e informe o usuário, conforme REGRAS
-DE ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO.
+documentos duplicados entre os enviados e informe o usuário, conforme
+`references/protocolo.md`.
 
 **Modo pasta anexada.** Quando o usuário escolher a opção 3, examine todos os
 arquivos da pasta e classifique cada um nas categorias a-e acima, com base no
@@ -1277,10 +465,10 @@ como 20/10/2023), número e tipo, e indique o motivo da relevância para o
 caso.
 
 Se o caso envolver benefício por incapacidade, aplique aqui o checklist de
-REGRAS DE ANÁLISE DE RELATÓRIOS MÉDICOS/ODONTOLÓGICOS a cada relatório ou
-laudo médico/odontológico identificado. Aplique também, a qualquer documento
-desta etapa, a regra de **Alerta obrigatório de fato desfavorável em
-documento** (RESTRIÇÕES ABSOLUTAS).
+`references/relatorios-medicos.md` a cada relatório ou laudo médico/
+odontológico identificado. Aplique também, a qualquer documento desta etapa,
+a regra de **Alerta obrigatório de fato desfavorável em documento**
+(RESTRIÇÕES ABSOLUTAS).
 
 ---
 
@@ -1311,7 +499,7 @@ representada, indicando insights técnicos de Direito Previdenciário/Tributári
 e Processual vinculados aos dados concretos do caso e aos pontos
 controvertidos.
 
-Não pause aqui — siga direto para a Etapa 6, que reúne a aprovação dos
+Não pause aqui: siga direto para a Etapa 6, que reúne a aprovação dos
 pontos controvertidos e a definição da tese central em uma única parada.
 
 ---
@@ -1348,13 +536,17 @@ abreviada de fontes.
 os pontos controvertidos aprovados e com a tese central definida.
 7c. Caso o usuário tenha fornecido um documento próprio de pesquisa de
 jurisprudência (autenticidade presumida por nome de arquivo/pasta, ou
-confirmada expressamente quando não houver essa indicação — ver REGRAS DE
-TRANSCRIÇÃO DE JURISPRUDÊNCIA), identifique quais julgados serão transcritos
-integralmente na minuta final, conforme aquela seção.
+confirmada expressamente quando não houver essa indicação — ver
+`referencias-escritorio/regras-comuns/transcricao-jurisprudencia.md`),
+identifique quais julgados serão transcritos integralmente na minuta final,
+conforme aquele arquivo.
 7d. Antes de dar a doutrina como definitivamente aplicável, verifique a
-vigência de cada dispositivo legal identificado (ver REGRAS DE CITAÇÃO DE
-FONTES) — a doutrina ou o modelo enviado podem conter referências
+vigência de cada dispositivo legal identificado (ver regra de citação de
+fontes): a doutrina ou o modelo enviado podem conter referências
 desatualizadas.
+7e. Consulte também `references/base-referencias.md` (banco de conhecimento
+local por matéria) e cote-o com o caso concreto, além do material enviado
+nesta conversa.
 
 - Caso administrativo, fundamente em Instruções Normativas, Decretos e
   Portarias.
@@ -1365,28 +557,27 @@ desatualizadas.
 
 ### ETAPA 8 - ANÁLISE DO MODELO E RASCUNHO ESTRUTURADO
 8a. Analise o modelo de peça a usar — o enviado pelo usuário na categoria
-"d", ou, na ausência dele, o timbre padrão em `referencias-escritorio/`
-(ver BASE DE REFERÊNCIAS DO ESCRITÓRIO) — identificando se é administrativo
-ou judicial, a área da causa (previdenciária, tributária ou cível), os
-fundamentos usados e a relação com o caso concreto. Classifique a peça em um
-dos patamares de densidade definidos na seção CALIBRAGEM DE DENSIDADE e
-anuncie ao usuário qual patamar foi aplicado, permitindo ajuste manual.
-Anuncie também quais advogados subscritores serão incluídos na minuta,
-conforme as REGRAS DE QUALIFICAÇÃO DE ADVOGADOS.
+"d", ou, na ausência dele, o timbre padrão (ver `references/base-referencias.md`)
+— identificando se é administrativo ou judicial, a área da causa
+(previdenciária, tributária ou cível), os fundamentos usados e a relação com
+o caso concreto. Classifique a peça em um dos patamares de densidade
+definidos em `references/calibragem-densidade.md` e anuncie ao usuário qual
+patamar foi aplicado, permitindo ajuste manual. Anuncie também quais
+advogados subscritores serão incluídos na minuta, conforme REGRAS DE
+QUALIFICAÇÃO DE ADVOGADOS.
 8b. Elabore o Rascunho Estruturado em tópicos, contendo o resumo dos
 argumentos a desenvolver, a estrutura das preliminares (se houver), a
 estrutura do mérito por ponto controvertido aprovado, e a conclusão
-pretendida com a proposta de pedidos. Não pause aqui — siga direto para 8c,
+pretendida com a proposta de pedidos. Não pause aqui: siga direto para 8c,
 que reúne rascunho e organização de documentos em uma única parada.
 
 8c. **Organização de documentos para protocolo (opcional — ver regra no
-início de REGRAS DE ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO).** Quando não
-dispensada pelo usuário, organize os documentos do caso conforme as REGRAS DE
-ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO (verificação de duplicidade,
-numeração sequencial, consolidação de documentos correlatos, exclusão de
-documentos sem valor probatório autônomo, compressão/divisão para respeitar
-limites de tamanho). Se o usuário tiver dispensado a organização por se
-tratar de petição simples, pule esta etapa.
+início de `references/protocolo.md`).** Quando não dispensada pelo usuário,
+organize os documentos do caso conforme aquele arquivo (verificação de
+duplicidade, numeração sequencial, consolidação de documentos correlatos,
+exclusão de documentos sem valor probatório autônomo, compressão/divisão
+para respeitar limites de tamanho). Se o usuário tiver dispensado a
+organização por se tratar de petição simples, pule esta etapa.
 
 > **PAUSA OBRIGATÓRIA Nº 2**
 > Apresente juntos, em uma única mensagem: o rascunho estruturado (8b) e,
@@ -1419,170 +610,28 @@ Regras de redação.
   com transcrição integral restrita aos casos que atendam à exceção
   controlada (Etapa 7c).
 - Antes de inserir qualquer artigo, decreto, lei, instrução normativa,
-  portaria ou súmula no texto, confirme a vigência conforme REGRAS DE
-  CITAÇÃO DE FONTES. Se um dispositivo perder a vigência entre a Etapa 7 e a
+  portaria ou súmula no texto, confirme a vigência conforme a regra de
+  citação de fontes. Se um dispositivo perder a vigência entre a Etapa 7 e a
   redação final, ou se a verificação de vigência só ocorrer nesta etapa,
   ajuste a fundamentação e, se o dispositivo sustentava algum pedido
   específico, revise também o texto do pedido correspondente para não
   depender dele.
-- Aplique as REGRAS DE FORMATAÇÃO DA MINUTA (espaçamento, justificação,
-  recuo, numeração, datas, negrito pontual) em toda a peça.
-- Aplique as REGRAS DE CITAÇÃO DE FONTES em toda menção a legislação,
+- Aplique as regras de formatação (espaçamento, justificação, recuo,
+  numeração, datas, negrito pontual — `referencias-escritorio/regras-comuns/formatacao-base.md`
+  e `references/formatacao-peca.md`) em toda a peça.
+- Aplique as regras de citação de fontes em toda menção a legislação,
   súmulas ou tribunais, incluindo o uso de notas de rodapé para
   jurisprudência transcrita integralmente.
-- Inclua os advogados subscritores definidos na Etapa 8a, conforme as REGRAS
-  DE QUALIFICAÇÃO DE ADVOGADOS.
+- Inclua os advogados subscritores definidos na Etapa 8a, conforme REGRAS DE
+  QUALIFICAÇÃO DE ADVOGADOS.
 - Aplique as REGRAS DE INSERÇÃO DE IMAGENS NA MINUTA, inserindo prints dos
   documentos mais relevantes proativamente, salvo a exceção de peças
   simples prevista naquela seção.
+- Siga a "Ordem dos tópicos do corpo da peça" e a seção "Dos Pedidos e
+  Requerimentos" definidas em `references/formatacao-peca.md`.
 
-ORDEM DOS TÓPICOS DO CORPO DA PEÇA (fixa, salvo peça administrativa sem
-preliminar aplicável).
-1. **PRELIMINARMENTE.** Sempre o primeiro tópico do corpo, em peça judicial
-   (ver PADRÃO DE ABERTURA DA PEÇA). Reúne as preliminares propriamente
-   ditas do caso (ex.: tramitação prioritária, justiça gratuita, e outras
-   preliminares processuais aplicáveis, como incompetência, ilegitimidade
-   ou prescrição, quando arguidas), cada uma em subtópico próprio (1.1, 1.2,
-   ...). Não inclua aqui a tutela de urgência (ver regra própria abaixo) nem
-   o mérito da causa.
-2. **DOS FATOS.** Inicie com "Trata-se de ação visando o reconhecimento
-   de...". Reconstrua o histórico fático com foco nas provas materiais,
-   observando o mínimo de parágrafos do patamar aplicado.
-3. **DO DIREITO, por ponto controvertido.** Estrutura em três movimentos,
-   norma ou doutrina da Etapa 7, depois cotejo com o fato concreto, depois
-   conclusão favorável. Observe o mínimo de parágrafos por tese conforme o
-   patamar aplicado. No administrativo, fundamente em Instruções Normativas
-   e Decretos. No judicial, use também jurisprudência da doutrina.
-4. **DA TUTELA DE URGÊNCIA, quando cabível.** Sempre o último tópico *de
-   direito* do corpo, ou seja, o último tópico que desenvolve
-   fundamentação/argumentação da causa — nunca misturado às preliminares
-   nem disperso ao longo do mérito. Demonstre probabilidade do direito
-   (remetendo objetivamente à fundamentação já exposta em "DO DIREITO", sem
-   repeti-la por extenso) e perigo de dano ou risco ao resultado útil do
-   processo, com base em dado concreto do caso (ex.: natureza alimentar do
-   benefício, urgência médica, risco de dano irreparável). Se o caso não
-   tiver pedido de tutela de urgência, omita esse tópico inteiramente, sem
-   deixar espaço reservado vazio, e ajuste a numeração dos tópicos
-   seguintes.
-5. **Tópicos processuais de fechamento, quando existirem** (ex.: "DAS
-   PUBLICAÇÕES", ver seção própria em REGRAS DE QUALIFICAÇÃO DE ADVOGADOS).
-   Não são tópicos de direito/argumentação, e por isso podem vir depois da
-   tutela de urgência, mantendo esta como o último tópico argumentativo da
-   peça. Inclua apenas os que forem aplicáveis ao caso.
-6. **DOS PEDIDOS E REQUERIMENTOS.** Sempre o último tópico da peça, depois
-   de qualquer tópico processual de fechamento (ver regras específicas
-   abaixo).
-
-Dos Pedidos e Requerimentos.
-- Inicie a seção com o título numerado "DOS PEDIDOS E REQUERIMENTOS"
-  (continuando a sequência dos tópicos maiores da peça, ex.: se a peça tiver
-  as seções 1, 2 e 3, essa seção é o tópico 4), seguido da frase "Diante de
-  todo o exposto, pleiteia-se:".
-- Liste os pedidos e requerimentos numerados por letras maiúsculas (A, B,
-  C, D...), nunca por números — os tópicos e subtópicos do corpo da peça já
-  usam algarismos arábicos, então a lista final de pedidos se diferencia
-  visualmente usando letras. Escreva cada item com linguagem imperativa
-  (PUGNA, POSTULA).
-- Essa numeração por letras deve ser sempre gerada como lista numerada
-  nativa do Word (`w:numPr`/`w:abstractNum` com `w:numFmt val="upperLetter"`),
-  nunca como letra digitada manualmente no início do texto (ex.: nunca "A. "
-  como caractere literal) — isso garante que o Word reconheça e renumere a
-  lista automaticamente se um item for inserido, movido ou removido depois.
-- **A letra do marcador também é sempre em negrito.** Configure o negrito
-  diretamente na definição do marcador da lista (`w:rPr` do nível de
-  numeração), não apenas no texto do item — o negrito da letra é
-  independente do negrito do trecho de destaque tratado no ponto abaixo, e
-  vale mesmo nos itens em que nenhum trecho do texto for destacado.
-- Dentro de cada item da lista, destaque em **negrito e em CAIXA ALTA** o
-  ponto principal do pedido (a providência central requerida, ex.: "**o
-  RECONHECIMENTO DA PRESCRIÇÃO INTERCORRENTE** da execução fiscal principal,
-  consumada em 18/06/2024, com a extinção do feito, nos termos do art. 40,
-  §4º, da LEF"), mantendo o restante do texto do item em formatação normal,
-  sem caixa alta. A caixa alta acompanha exatamente a extensão do trecho em
-  negrito, nunca mais nem menos que ele.
-- Não cite, dentro de um pedido, um dispositivo, percentual ou fator
-  numérico específico (ex.: um fator de conversão) cuja base legal não
-  esteja vigente ou não tenha sido explicada na fundamentação do item
-  correspondente (ver REGRAS DE CITAÇÃO DE FONTES). Nesses casos, formule o
-  pedido de forma genérica (ex.: "conversão em tempo comum", sem fixar o
-  fator), deixando o dimensionamento a cargo do órgão julgador.
-- Inclua citações e intimações, proveito econômico (DIP, parcelas,
-  correção), gratuidade da justiça, produção de provas e valor da causa.
-- **Honorários advocatícios.** Antes de incluir o pedido de condenação em
-  honorários de sucumbência, verifique a orientação geral sobre honorários
-  em JEF em `referencias-escritorio/orientacoes-gerais.md` (ver BASE DE
-  REFERÊNCIAS DO ESCRITÓRIO) — como regra geral, não são devidos honorários
-  de sucumbência em primeiro grau nos Juizados Especiais Federais, salvo em
-  peça recursal.
-- Não inclua pedido ou tese não aprovada nas Etapas 5/6 sem antes perguntar
-  ao usuário.
-- Evite pedidos puramente descritivos, sem efeito prático sobre o processo
-  (ex.: "seja o Autor cientificado de X", "tome-se ciência de Y"). Um pedido
-  só deve constar da lista se corresponder a uma providência concreta
-  requerida ao juízo (declarar, determinar, condenar, autorizar, intimar,
-  reconhecer e afins). Fatos que mereçam registro, mas sem pedido de
-  providência associado, ficam no corpo da peça (Dos Fatos/Do Direito), não
-  na lista final de pedidos.
-- Entre o último item da lista de pedidos e a sequência de fechamento (valor
-  da causa, "Nestes termos,", "Pede deferimento.", local/data e bloco de
-  assinatura — ver PADRÃO DE FECHAMENTO DA PEÇA), pule uma linha (espaço
-  extra "antes" do primeiro parágrafo de fechamento, além do espaçamento
-  padrão de 12pt), no mesmo padrão aplicado entre tópicos maiores (ver
-  REGRAS DE FORMATAÇÃO DA MINUTA).
-
-Verificação pré-emissão (monólogo interno).
-> "O pedido final é consequência lógica direta de todos os argumentos
-> expostos?" Se não, revise antes de gerar a saída.
-> "Todo artigo, decreto, lei, instrução normativa, portaria ou súmula
-> citado na peça teve sua vigência verificada?" Se não, verifique antes de
-> gerar a saída.
-
----
-
-### CALIBRAGEM DE DENSIDADE POR TIPO DE PEÇA
-
-Na Etapa 8, ao analisar o modelo, identifique o tipo de peça e classifique-a
-em um dos três patamares abaixo. Anuncie ao usuário qual patamar foi aplicado
-antes de redigir, permitindo ajuste manual.
-
-PATAMAR LEVE (peças de menor densidade)
-Aplica-se a recurso administrativo, contrarrazões administrativas,
-requerimentos administrativos, petições intermediárias simples e pedidos de
-reconsideração.
-- Dos Fatos, mínimo de 2 parágrafos.
-- Por preliminar ou questão preliminar, mínimo de 2 parágrafos.
-- Por ponto controvertido ou tese de mérito, mínimo de 2 parágrafos.
-- Fundamentação preferencial em Instruções Normativas, Decretos e Portarias.
-
-PATAMAR MÉDIO (peças judiciais de réplica ou resposta)
-Aplica-se a réplica, contrarrazões judiciais, contraminuta, impugnação ao
-cumprimento de sentença, embargos de declaração e manifestações de mérito
-intermediárias.
-- Dos Fatos, mínimo de 3 parágrafos.
-- Por preliminar, mínimo de 3 parágrafos.
-- Por ponto controvertido ou tese de mérito, mínimo de 3 parágrafos.
-- Fundamentação em leis e jurisprudência da doutrina enviada.
-
-PATAMAR ROBUSTO (peças estruturantes do processo)
-Aplica-se a petição inicial judicial, recurso inominado, apelação, recurso
-especial, recurso extraordinário, mandado de segurança e ações com pedido de
-tutela.
-- Dos Fatos, mínimo de 4 parágrafos.
-- Por preliminar, mínimo de 4 parágrafos.
-- Por ponto controvertido ou tese de mérito, mínimo de 4 parágrafos.
-- Fundamentação em leis e jurisprudência da doutrina, com cotejo analítico
-  caso a caso.
-
-REGRAS DE APLICAÇÃO
-- Os mínimos são piso, não teto. Se o caso concreto exigir mais densidade por
-  riqueza probatória, aprofunde além do mínimo.
-- Se o modelo enviado não se encaixar claramente em um patamar, pergunte ao
-  usuário qual aplicar antes de redigir.
-- A escolha do patamar nunca dispensa o aterramento obrigatório. Todo
-  parágrafo de argumentação, em qualquer patamar, cita documento, laudo,
-  data, valor ou marco temporal.
-- Em peça administrativa, ainda que de patamar leve, mantenha rigor técnico
-  nas Instruções Normativas e Decretos aplicáveis.
+Verificação pré-emissão: ver o monólogo interno ao final de
+`references/formatacao-peca.md`.
 
 ---
 
@@ -1597,22 +646,25 @@ com aterramento em dados concretos) antes de gerar novo texto. Garanta que
 nenhuma jurisprudência tenha sido inventada, que toda transcrição integral
 corresponda exatamente ao documento de pesquisa fornecido pelo usuário, que
 a linguagem permaneça postulatória, e que todo dispositivo legal citado
-tenha tido sua vigência verificada (ver REGRAS DE CITAÇÃO DE FONTES). O
-fluxo encerra apenas na opção 4.
+tenha tido sua vigência verificada. O fluxo encerra apenas na opção 4.
 
 Antes de entregar a versão final, confirme com o usuário:
 - Se há espaços reservados de imagem pendentes de substituição (ver REGRAS DE
   INSERÇÃO DE IMAGENS NA MINUTA), alertando que devem ser resolvidos antes do
   protocolo.
 - Se a lista de documentos numerados está coerente com as citações no texto
-  (ver REGRAS DE ORGANIZAÇÃO DE DOCUMENTOS PARA PROTOCOLO).
+  (ver `references/protocolo.md`).
+
+Na opção 4 (finalizar e aprovar), rode também o fluxo de "Alimentando a
+base" em `references/base-referencias.md`.
 
 ---
 
 ## REGRAS ADICIONAIS
 - Gerar o documento final em .docx, com papel timbrado, fonte, parágrafo,
   espaçamento e formatação idênticos ao modelo enviado, observando ainda as
-  REGRAS DE FORMATAÇÃO DA MINUTA. Sempre que possível, extraia o timbre
+  regras de formatação (`referencias-escritorio/regras-comuns/formatacao-base.md`
+  e `references/formatacao-peca.md`). Sempre que possível, extraia o timbre
   diretamente da estrutura interna (XML) do modelo .docx real do escritório,
   em vez de apenas replicar visualmente. Use a skill `docx` para essa etapa
   de geração do arquivo.
@@ -1633,7 +685,7 @@ Antes de entregar a versão final, confirme com o usuário:
   qual é a versão mais atual, pergunte antes de sobrescrever.
 - Manter o mesmo padrão de escrita e fundamentação do modelo, incluindo
   jurisprudências compatíveis já presentes nele, desde que a verificação de
-  vigência (ver REGRAS DE CITAÇÃO DE FONTES) não indique que algum
+  vigência (ver regra de citação de fontes) não indique que algum
   dispositivo do modelo foi revogado ou substituído.
 - Não inventar jurisprudência nova. Se necessário, solicitar ao usuário o
   envio de jurisprudências reais de Tribunais brasileiros, ou de um
