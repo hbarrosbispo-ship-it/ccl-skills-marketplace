@@ -59,7 +59,10 @@ referência, consultados no ponto do fluxo indicado:
   (leis/jurisprudência por matéria, doutrina, modelos, timbre) e o fluxo de
   "alimentar a base" ao final de cada peça.
 - `references/relatorios-medicos.md` — checklist de requisitos formais de
-  laudo/relatório médico, para casos de benefício por incapacidade.
+  laudo/relatório médico, leitura de perícias administrativas/judiciais
+  (inclusive as que indeferiram o benefício, por dados favoráveis que
+  possam conter) e o tratamento diferente da atividade laboral do segurado
+  conforme o benefício, para casos de benefício por incapacidade.
 - `references/protocolo.md` — organização e numeração de documentos para
   protocolo, por área.
 - `references/administrativo.md` — regras específicas de requerimentos e
@@ -265,12 +268,17 @@ documentos) para aplicar corretamente a restrição geográfica.
 
 ---
 
-## REGRAS DE ANÁLISE DE RELATÓRIOS MÉDICOS/ODONTOLÓGICOS
+## REGRAS DE ANÁLISE DE PROVA MÉDICA E PERICIAL
 
 Ver `references/relatorios-medicos.md` — checklist completo de requisitos
-formais (legibilidade, identificação, CID, assinatura, período de
-afastamento), aplicado na Etapa 3 sempre que o caso envolver benefício por
-incapacidade.
+formais de laudo/relatório apresentado pelo segurado (legibilidade,
+identificação, CID, assinatura, período de afastamento), a leitura de
+perícias administrativas/judiciais já realizadas no caso (mesmo as que
+indeferiram o benefício analisado, por poderem conter constatações
+favoráveis a uma tese diferente) e o tratamento diferente da atividade
+laboral do segurado conforme o benefício (neutro/possivelmente favorável em
+auxílio-doença; tendencialmente desfavorável em BPC-LOAS). Aplicado na
+Etapa 3 sempre que o caso envolver benefício por incapacidade.
 
 ---
 
