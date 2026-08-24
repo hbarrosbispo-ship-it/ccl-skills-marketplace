@@ -39,14 +39,60 @@ em `calibragem-densidade.md` (patamar leve) e nas demais seções do SKILL.md.
   uma edição mais recente do regimento, pergunte ao usuário se ele tem o
   texto atualizado antes de citar.
 
+## Padrão de abertura e numeração dos requerimentos e recursos administrativos ao INSS
+
+Diferente da peça judicial (ver `formatacao-peca.md`), o requerimento e o
+recurso administrativo ao INSS seguem sempre este padrão fixo do escritório,
+independentemente do modelo eventualmente enviado pelo usuário na categoria
+"d" (o modelo, se enviado, define o corpo/fundamentos específicos do caso,
+não este cabeçalho):
+
+1. **Endereçamento.** Sempre "**AO INSS DIGITAL**", em negrito, nunca um
+   endereçamento de juízo — o requerimento/recurso administrativo não se
+   dirige a um juízo, mesmo quando eventualmente citar dispositivos
+   processuais por analogia.
+2. **Qualificação do requerente.** Parágrafo justificado, com recuo de
+   1,25 cm, no mesmo padrão de qualificação usado nas peças judiciais (nome
+   em negrito, nacionalidade, estado civil, CPF, documento de identidade —
+   CIN, RG ou CNH, o que constar do material do caso —, endereço),
+   encerrando com "vem à presença deste d. órgão, por intermédio de seus
+   advogados infra-assinados, devidamente constituídos por meio do Termo de
+   Representação/procuração anexo (doc. [N]), requerer, com fulcro na
+   Instrução Normativa INSS/PRES nº 128/2022, a **[NOME DO PEDIDO EM
+   NEGRITO E CAIXA ALTA, ex.: CONCESSÃO DE BENEFÍCIO ASSISTENCIAL À PESSOA
+   COM DEFICIÊNCIA (BPC-LOAS)]**, pelos fatos e fundamentos a seguir
+   expostos:". A Instrução Normativa INSS/PRES nº 128/2022 é o fundamento
+   padrão do escritório para requerimentos administrativos ao INSS em
+   geral; se o benefício específico do caso tiver instrução normativa
+   própria mais adequada, use a mais específica no lugar dela, sem deixar
+   de citar ao menos uma norma como fulcro do pedido.
+3. **Numeração dos tópicos do corpo, em algarismos romanos, não arábicos.**
+   Diferente da peça judicial (que usa "1.", "2.", "3."...), o corpo do
+   requerimento/recurso administrativo numera os tópicos maiores em
+   algarismos romanos seguidos de travessão baixo/hífen e o título em
+   maiúsculo, no formato "I - DA SINOPSE FÁTICA", "II - DO DIREITO",
+   "III - DOS PEDIDOS" (ajuste os títulos ao conteúdo do caso, mas mantenha
+   o padrão de numeração romana com hífen). O primeiro tópico de fatos é
+   sempre titulado "DA SINOPSE FÁTICA", não "DOS FATOS" (esse último é
+   exclusivo da peça judicial).
+
 ## LOAS (BPC-LOAS) e Auxílio-Doença administrativos
 
 - Peças de BPC-LOAS e de Auxílio-Doença no âmbito administrativo dispensam
   fundamentação extensa: máximo de 3 a 4 laudas, aplicando o patamar leve de
   forma ainda mais enxuta que o mínimo já previsto em `calibragem-densidade.md`.
-- Sempre inclua, entre os documentos ou menções da peça, o registro da
-  biometria do TSE, disponível em
-  https://consultabiometria.tre-ba.jus.br/.
+- **Comprovante de biometria do TSE, documento obrigatório, nunca apenas
+  mencionado de passagem.** Todo requerimento administrativo de BPC-LOAS
+  precisa do registro de biometria do TSE
+  (https://consultabiometria.tre-ba.jus.br/) como documento numerado do
+  protocolo (ver `protocolo.md`), não como uma frase solta no corpo da
+  peça. Antes de finalizar a minuta (Etapa 8c/Etapa 10), confira
+  explicitamente se esse documento está na pasta do caso; se não estiver,
+  trate a ausência pela regra "Categoria ausente na pasta" (ver INSTRUÇÃO
+  DE INÍCIO no SKILL.md) — pergunte ao usuário se ele vai providenciar o
+  comprovante agora ou se confirma que já existe biometria válida a
+  anexar, mas não finalize a minuta silenciosamente sem esse documento nem
+  sem essa pergunta.
 - A comprovação de biometria pode ser feita por CNH, Identidade ou
   comprovante do TSE, desde que o documento esteja atualizado: alerte o
   usuário se o documento disponível na pasta do caso estiver vencido ou

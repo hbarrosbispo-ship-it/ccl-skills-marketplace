@@ -45,16 +45,28 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   deve existir na pasta do caso uma única vez, já com o nome definitivo; não
   pode haver, ao mesmo tempo, um "CNH - [nome do cliente].pdf" e um
   "2. Identidade (CNH).pdf" referentes ao mesmo documento.
-- **A própria peça é sempre o item 1, como arquivo físico real.** Não basta
-  a peça constar como item 1 na lista textual de documentos: depois que a
-  minuta final for aprovada e exportada (ETAPA 10), gere/exporte esse
-  arquivo (PDF ou o formato exigido pelo destino do protocolo) e salve-o
+- **A própria peça é sempre o item 1, como arquivo físico real, sempre em
+  .docx (Word) — nunca em PDF, enquanto durar a elaboração/revisão.** Não
+  basta a peça constar como item 1 na lista textual de documentos: desde o
+  primeiro rascunho gerado (não só na versão final da ETAPA 10), salve-a
   diretamente na pasta do caso (ver "Entrega em arquivos individuais, nunca
-  em zip" abaixo), nomeado como "1. Petição Inicial - [Nome do Cliente]" (ou
+  em zip" abaixo), nomeada como "1. Petição Inicial - [Nome do Cliente]" (ou
   o nome de peça equivalente ao tipo em elaboração), junto com os demais
   documentos numerados. A lista final de documentos (regra
   "Confirmação final" abaixo) só está completa quando o item 1 é esse
   arquivo físico da peça, não uma referência textual a ele.
+  **Um único arquivo por peça, editado no próprio lugar a cada rodada de
+  ajuste — nunca um arquivo novo por versão/revisão** (ex.: nunca
+  "1. Petição Inicial - Fulano.docx" e, numa rodada seguinte,
+  "1. Petição Inicial - Fulano (2).docx" ou um segundo arquivo de nome
+  parecido coexistindo com o primeiro): sobrescreva o mesmo arquivo .docx a
+  cada mudança pedida pelo usuário, como se fosse a mesma peça sendo
+  lapidada, nunca peças novas sendo geradas do zero. **Não gere/exporte PDF
+  da peça automaticamente em nenhuma rodada** — o item 1 da pasta de
+  protocolo permanece .docx durante toda a elaboração; a conversão para PDF
+  (quando o sistema de destino do protocolo exigir esse formato) só
+  acontece se e quando o usuário pedir isso expressamente, tipicamente já
+  no momento efetivo de protocolar.
 - **Nunca fragmente a numeração em sufixos (2A/2B).** Quando mais de um
   arquivo precisar ocupar o espaço de uma mesma categoria (ex.: um documento
   grande demais dividido pelo limite de tamanho, ou múltiplos documentos que
@@ -105,23 +117,41 @@ organização, pergunte ao usuário em vez de decidir sozinho.
   numerados para protocolo — mas, se o fato que ele relata for relevante,
   preserve esse fato na narrativa da petição, ancorado em outro documento ou
   na exposição fática.
-- **Documentos de apoio não protocolados.** Nem todo arquivo da pasta é
+- **Documentos de apoio não protocolados vão para uma subpasta própria,
+  nunca ficam soltos na raiz da pasta do caso.** Nem todo arquivo da pasta é
   para ir ao processo. Documentos de trabalho interno do escritório — como
   planilhas de cálculo, rascunhos de conferência, anotações da entrevista com
-  o cliente ou material de apoio usado só para embasar a argumentação —
-  entram na análise e podem ser citados como referência de raciocínio, mas
-  não recebem numeração de protocolo nem entram na lista numerada de
-  documentos ("N. NOME DO DOCUMENTO") no corpo da peça. Ao apresentar a
-  lista final de documentos (regra "Confirmação final" abaixo), separe
-  claramente os documentos que serão protocolados dos documentos de apoio
-  que ficam só na pasta de trabalho, para não haver confusão entre os dois
-  grupos.
+  o cliente, contrato de honorários, ou material de apoio usado só para
+  embasar a argumentação — entram na análise e podem ser citados como
+  referência de raciocínio, mas não recebem numeração de protocolo nem
+  entram na lista numerada de documentos ("N. NOME DO DOCUMENTO") no corpo
+  da peça. Ao identificá-los (Etapa 8c), **mova-os fisicamente para uma
+  subpasta chamada "Não Protocolo"** dentro da pasta do caso, criando-a se
+  ainda não existir — nunca deixe esses arquivos misturados, soltos, na
+  raiz da pasta do caso junto com os documentos numerados. Ao final da
+  organização, a raiz da pasta do caso deve conter apenas a peça (item 1) e
+  os demais documentos numerados para protocolo, com tudo o mais dentro de
+  "Não Protocolo". Ao apresentar a lista final de documentos (regra
+  "Confirmação final" abaixo), separe claramente os documentos que serão
+  protocolados dos documentos de apoio movidos para "Não Protocolo", para
+  não haver confusão entre os dois grupos.
 - **Contrato de honorários nunca entra no protocolo.** Ainda que o arquivo
   do contrato de honorários esteja na pasta do caso, ele nunca recebe
   numeração de protocolo nem entra na lista numerada de documentos — é
   documento interno da relação entre escritório e cliente, sem lugar nos
   autos ou no processo administrativo. Trate-o sempre como documento de
-  apoio não protocolado, sem exceção.
+  apoio não protocolado (movido para "Não Protocolo", ver regra acima), sem
+  exceção.
+- **Inclusão por padrão, mesmo com ajuste pontual ainda pendente.** Um
+  documento que pertence claramente a uma categoria da ordem padrão (ex.:
+  identidade, procuração, relatório médico) entra na lista numerada de
+  protocolo por padrão, mesmo que ainda precise de algum ajuste específico
+  antes da versão definitiva (ex.: falta assinar, falta uma página, precisa
+  de nova digitalização). Não retire nem deixe de numerar um documento só
+  por causa de uma pendência pontual — inclua-o normalmente na numeração e
+  sinalize a pendência específica na "Confirmação final" (regra abaixo),
+  em vez de tratar o documento como incompleto/fora da lista até a pendência
+  ser resolvida.
 - **Limite de tamanho por documento.** Verifique o tamanho de cada PDF que
   compõe a lista de documentos numerados. O limite depende do sistema de
   destino da peça:
@@ -170,9 +200,8 @@ Cliente]" (ou "1. Requerimento Administrativo - [Nome do Cliente]" /
 "1. Recurso Administrativo - [Nome do Cliente]", conforme o tipo de peça), o
 item 2 se torna "2. Identidade (CNH)", e assim por diante.
 
-Área previdenciária:
-1. Petição inicial / requerimento administrativo / recurso (a própria peça
-   sendo protocolada).
+Área previdenciária (peça judicial):
+1. Petição inicial / recurso (a própria peça sendo protocolada).
 2. Identidade.
 3. Procuração.
 4. Comprovante de residência.
@@ -180,10 +209,31 @@ item 2 se torna "2. Identidade (CNH)", e assim por diante.
 6. CNIS / declarações de Imposto de Renda.
 7. Relatórios médicos.
 
-**Nota para requerimentos e recursos administrativos (INSS):** aplique
-também a exceção descrita em `administrativo.md` — como regra geral,
-comprovante de residência, CNIS e CadÚnico não entram nesses protocolos,
-salvo exigência do caso concreto ou pedido expresso do usuário.
+**Requerimentos e recursos administrativos (INSS) têm ordem própria,
+diferente da judicial:**
+1. Requerimento administrativo / recurso administrativo (a própria peça).
+2. Identidade.
+3. Procuração / Termo de Representação.
+4. **OAB do(s) advogado(s) subscritor(es).** Documento obrigatório em todo
+   requerimento e recurso administrativo — nunca omita este item. Busque o
+   arquivo automaticamente em
+   `C:\Users\Administrador\Desktop\CCL\Base de Referências\Diligências\`,
+   pelo nome do advogado subscritor definido nas REGRAS DE QUALIFICAÇÃO DE
+   ADVOGADOS (ex.: "OAB Aman.pdf", "OAB Caio.pdf", "MINHA OAB.pdf" para
+   Hélio) — sem precisar que o usuário anexe esse documento a cada caso.
+   Se houver mais de um subscritor, inclua a OAB de cada um (ex.: itens 4 e
+   5, consolidando em um único PDF por documento ou um item por
+   advogado, conforme fizer mais sentido para o caso). Se o arquivo não for
+   encontrado na pasta para algum subscritor, trate pela regra "Categoria
+   ausente na pasta" (INSTRUÇÃO DE INÍCIO no SKILL.md) em vez de omitir o
+   item silenciosamente.
+5. Comprovante de biometria do TSE, quando o benefício exigir (ver
+   `administrativo.md`, obrigatório em BPC-LOAS).
+6. Relatórios médicos, quando aplicável.
+
+Como regra geral, comprovante de residência, CNIS e CadÚnico não entram
+nesses protocolos administrativos, salvo exigência do caso concreto ou
+pedido expresso do usuário (ver `administrativo.md`).
 
 Para outras áreas (tributária, cível) sem ordem padrão ainda definida,
 pergunte ao usuário qual ordem seguir na primeira vez que o caso surgir, e

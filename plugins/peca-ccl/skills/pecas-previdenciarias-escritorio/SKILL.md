@@ -596,10 +596,21 @@ organização por se tratar de petição simples, pule esta etapa.
 > Repita até a opção 1. Se o usuário autorizou execução autônoma, essa pausa
 > pode ser suprimida.
 
+**A opção 1 já autoriza a redação completa, sem nova pergunta.** Assim que
+o usuário escolher "aprovado como está, elaborar minuta completa" (ou
+equivalente), vá direto para a Etapa 9 no mesmo fluxo — **nunca pare de
+novo para perguntar algo como "posso redigir a minuta final agora?"**. Essa
+pergunta seria uma terceira pausa não prevista no fluxo (que tem só as duas
+PAUSAS OBRIGATÓRIAS mais a revisão da Etapa 10), e a resposta a ela já está
+implícita na aprovação que acabou de ser dada.
+
 ---
 
 ### ETAPA 9 - REDAÇÃO DA MINUTA FINAL
-Somente após a aprovação do esquema e da organização de documentos. Antes de
+Somente após a aprovação do esquema e da organização de documentos — essa
+aprovação (PAUSA OBRIGATÓRIA Nº 2, opção 1) já é suficiente para redigir a
+minuta completa direto nesta etapa, sem pausa adicional para confirmar que
+pode prosseguir. Antes de
 cada seção, raciocine passo a passo para garantir nexo inatacável entre a
 prova documental e o direito postulado.
 
