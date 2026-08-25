@@ -97,6 +97,29 @@ não este cabeçalho):
   comprovante do TSE, desde que o documento esteja atualizado: alerte o
   usuário se o documento disponível na pasta do caso estiver vencido ou
   desatualizado.
+- **Renda familiar per capita acima do teto legal — declare o valor real,
+  argumente a miserabilidade pela via ampla, nunca escreva um valor
+  diferente do real.** Quando o cálculo de renda familiar per capita do
+  caso ultrapassar 1/4 do salário mínimo (ou o critério então vigente),
+  escreva na peça a renda real apurada, com base nos documentos do caso —
+  nunca um valor menor, e nunca afirme que o requisito estritamente
+  objetivo de renda está cumprido quando não está. Isso não impede
+  argumentar a favor do cliente: apoie-se no art. 20, §11, da Lei 8.742/93
+  (LOAS) e no regulamento do benefício (Decreto 6.214/2007), que autorizam
+  a comprovação da miserabilidade por outros elementos probatórios de
+  vulnerabilidade social, além do critério puro de renda per capita (ex.:
+  despesas extraordinárias com saúde/medicamentos/tratamento continuado,
+  número de dependentes, ausência de outra fonte de subsistência,
+  precariedade habitacional, quando esses elementos constarem do material
+  do caso). Não cite jurisprudência para sustentar esse ponto no âmbito
+  administrativo (reforça a regra geral acima); a base é a própria lei e o
+  regulamento do benefício.
+  Na prática, o INSS tende a indeferir administrativamente de forma rígida
+  quando a renda ultrapassa o teto, independentemente desse argumento — mas
+  ele deve constar do requerimento de qualquer forma, tanto porque pode
+  influenciar a análise quanto porque deixa construído, desde já, o
+  fundamento que sustentará um eventual recurso administrativo ou ação
+  judicial futura.
 
 ## Imposto de Renda (IR)
 
