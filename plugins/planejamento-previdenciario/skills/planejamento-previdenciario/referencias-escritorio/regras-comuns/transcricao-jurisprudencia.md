@@ -8,10 +8,16 @@ excepcionada apenas quando **todas** as condições abaixo estiverem presentes.
 
 ## Condições
 
-1. O usuário forneceu, na pasta do caso, um documento próprio de pesquisa de
-   jurisprudência (ex.: um PDF reunindo ementas pesquisadas por ele) — a
-   transcrição deve ser extraída **exclusivamente** desse documento, nunca de
-   memória ou de outra fonte.
+1. Existe um documento de pesquisa de jurisprudência para o caso, e a
+   transcrição é extraída **exclusivamente** dele, nunca de memória. Esse
+   documento pode ter duas origens:
+   a. Fornecido pelo usuário na pasta do caso (ex.: um PDF reunindo ementas
+      pesquisadas por ele).
+   b. Gerado pela própria skill `pecas-previdenciarias-escritorio` via
+      pesquisa no Jus IA, sob pedido expresso do usuário (ver
+      `references/pesquisa-jurisprudencia-jusia.md` daquela skill). Só conta
+      como origem válida o `.md` gerado por esse procedimento, com as ementas
+      já conferidas na fonte.
 2. **Autenticidade presumida por nome.** Qualquer documento cujo nome de
    arquivo ou de pasta remeta a "jurisprudência(s)" (ou variação óbvia, como
    "jurisprudencias", "pesquisa de jurisprudencia", "julgados") é presumido

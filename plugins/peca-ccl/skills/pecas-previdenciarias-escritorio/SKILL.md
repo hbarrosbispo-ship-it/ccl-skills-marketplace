@@ -14,7 +14,9 @@ description: >
   de infração", "vamos montar o recurso do INSS"). Não é uma skill de pesquisa
   jurídica genérica — o fluxo trabalha exclusivamente com o material (peças,
   documentos, doutrina, modelo do escritório) que o próprio usuário fornecer
-  durante a conversa, nunca com pesquisa externa. Não confundir com a skill
+  durante a conversa, sem pesquisa externa — com a única exceção da pesquisa
+  de jurisprudência no Jus IA (Jusbrasil) quando o usuário pedir isso
+  expressamente. Não confundir com a skill
   `planejamento-previdenciario`: esta produz peças endereçadas a um juízo ou
   órgão público; aquela produz um parecer consultivo endereçado ao cliente.
 ---
@@ -71,6 +73,10 @@ referência, consultados no ponto do fluxo indicado:
   médio, robusto) por tipo de peça.
 - `references/formatacao-peca.md` — padrão de abertura/fechamento da peça,
   ordem dos tópicos do corpo, e a seção "Dos Pedidos e Requerimentos".
+- `references/pesquisa-jurisprudencia-jusia.md` — passo opcional e sob
+  demanda de pesquisa de jurisprudência no Jus IA (Jusbrasil), consultado na
+  Etapa 7 (item 7f) ou quando o usuário pedir jurisprudência a qualquer
+  momento do fluxo.
 
 ---
 
@@ -126,6 +132,16 @@ causa.
   restrita a confirmar se o dispositivo está em vigor ou foi
   revogado/substituído, nunca para pesquisar teses jurídicas, jurisprudência
   ou fundamentação de mérito fora do material do caso.
+- **Exceção pontual — pesquisa de jurisprudência no Jus IA.** A restrição de
+  não pesquisar fora do material do usuário não impede a pesquisa de
+  jurisprudência pelo Jus IA (Jusbrasil) quando o usuário pedir isso
+  expressamente. Essa liberação vale **somente** para jurisprudência,
+  **somente** por esse canal, **somente** sob pedido explícito, e nunca para
+  pesquisar tese, doutrina, legislação ou fundamentação de mérito. O
+  procedimento completo, os guardrails e a geração do documento de pesquisa
+  estão em `references/pesquisa-jurisprudencia-jusia.md`. A transcrição na
+  peça continua sujeita à exceção controlada
+  (`referencias-escritorio/regras-comuns/transcricao-jurisprudencia.md`).
 - **Alerta obrigatório de fato desfavorável em documento.** Sempre que um
   documento do caso (relatório médico, laudo, decisão, declaração, print,
   peça de terceiro etc.) atestar algo desfavorável à tese do cliente (ex.:
@@ -555,6 +571,15 @@ desatualizadas.
 7e. Consulte também `references/base-referencias.md` (banco de conhecimento
 local por matéria) e cote-o com o caso concreto, além do material enviado
 nesta conversa.
+7f. **Pesquisa de jurisprudência no Jus IA (opcional, sob demanda).** Se o
+usuário pediu jurisprudência — nesta etapa ou em qualquer ponto anterior do
+fluxo —, siga `references/pesquisa-jurisprudencia-jusia.md`: montar e aprovar
+as palavras-chave, pesquisar no Jus IA, capturar as ementas integrais do
+painel de fontes (nunca a resposta redigida pelo Jus IA), conferir cada uma
+na fonte, gerar o `.md` de pesquisa na pasta do caso e recomendar os julgados
+mais adequados. Se a pesquisa não trouxer julgado bom o suficiente, diga isso
+claramente e alinhe com o usuário outro caminho. Não dispare este passo sem
+pedido expresso.
 
 - Caso administrativo, fundamente em Instruções Normativas, Decretos e
   Portarias.
