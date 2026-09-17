@@ -89,12 +89,12 @@ esse espaço.
    base do cálculo e o documento de referência ao caso concreto; nunca deixe
    esse parágrafo genérico quando houver memória de cálculo ou planilha nos
    documentos do caso.
-2. **"Nestes termos,"** — parágrafo próprio, apenas essa frase.
-3. **"Pede deferimento."** — parágrafo próprio, apenas essa frase.
-4. **Local e data por extenso**, parágrafo próprio (ex.: "Salvador/BA, 20
+2. **"Nestes termos, pede deferimento."** — parágrafo próprio, uma única
+   linha, fundindo as duas frases.
+3. **Local e data por extenso**, parágrafo próprio (ex.: "Salvador/BA, 20
    de agosto de 2026."), conforme a exceção de data por extenso já prevista
    em `formatacao-base.md`.
-5. **Bloco de assinatura**, centralizado (exceção à justificação padrão, já
+4. **Bloco de assinatura**, centralizado (exceção à justificação padrão, já
    prevista em `formatacao-base.md`), com o(s) advogado(s) subscritor(es)
    definido(s) em `referencias-escritorio/regras-comuns/qualificacao-advogados.md`,
    respeitando a ordem de citação ali definida. Cada advogado ocupa duas
@@ -105,9 +105,10 @@ esse espaço.
 
 Regras adicionais desse bloco:
 - Mantenha o espaçamento padrão entre cada um desses elementos (valor da
-  causa → "Nestes termos," → "Pede deferimento." → local e data → bloco de
-  assinatura): nunca junte dois deles no mesmo parágrafo nem remova o
-  espaço entre eles para economizar espaço na página.
+  causa → "Nestes termos, pede deferimento." → local e data → bloco de
+  assinatura): nunca junte o valor da causa, a data ou o bloco de assinatura
+  no mesmo parágrafo de outro elemento, nem remova o espaço entre eles para
+  economizar espaço na página.
 - **Nunca inclua linha de assinatura** (traço/underline para assinatura
   manuscrita, ex. "_____________________") acima do nome do advogado: a
   peça é assinada eletronicamente, e o bloco de assinatura contém apenas o
@@ -115,7 +116,7 @@ Regras adicionais desse bloco:
   de linha para assinar.
 - Se a peça não tiver valor de causa aplicável (ex.: peça administrativa, ou
   peça judicial incidental sem novo valor de causa a fixar), omita o item 1
-  inteiramente e comece a sequência em "Nestes termos,".
+  inteiramente e comece a sequência em "Nestes termos, pede deferimento.".
 
 ## Fonte do marcador de lista
 
@@ -230,7 +231,7 @@ Fixa, salvo peça sem nenhuma preliminar aplicável (ver item 1 abaixo).
   providência associado, ficam no corpo da peça (Dos Fatos/Do Direito), não
   na lista final de pedidos.
 - Entre o último item da lista de pedidos e a sequência de fechamento (valor
-  da causa, "Nestes termos,", "Pede deferimento.", local/data e bloco de
+  da causa, "Nestes termos, pede deferimento.", local/data e bloco de
   assinatura), pule uma linha (espaço extra "antes" do primeiro parágrafo de
   fechamento, além do espaçamento padrão de 12pt), no mesmo padrão aplicado
   entre tópicos maiores.

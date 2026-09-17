@@ -66,13 +66,12 @@ não este cabeçalho):
    geral; se o benefício específico do caso tiver instrução normativa
    própria mais adequada, use a mais específica no lugar dela, sem deixar
    de citar ao menos uma norma como fulcro do pedido.
-3. **Numeração dos tópicos do corpo, em algarismos romanos, não arábicos.**
-   Diferente da peça judicial (que usa "1.", "2.", "3."...), o corpo do
-   requerimento/recurso administrativo numera os tópicos maiores em
-   algarismos romanos seguidos de travessão baixo/hífen e o título em
-   maiúsculo, no formato "I - DA SINOPSE FÁTICA", "II - DO DIREITO",
-   "III - DOS PEDIDOS" (ajuste os títulos ao conteúdo do caso, mas mantenha
-   o padrão de numeração romana com hífen). O primeiro tópico de fatos é
+3. **Numeração dos tópicos do corpo, em algarismos arábicos, como na peça
+   judicial.** O corpo do requerimento/recurso administrativo numera os
+   tópicos maiores em algarismos arábicos seguidos de ponto e o título em
+   maiúsculo, no formato "1. DA SINOPSE FÁTICA", "2. DO DIREITO",
+   "3. DOS PEDIDOS" (ajuste os títulos ao conteúdo do caso, mas mantenha
+   o padrão de numeração arábica com ponto). O primeiro tópico de fatos é
    sempre titulado "DA SINOPSE FÁTICA", não "DOS FATOS" (esse último é
    exclusivo da peça judicial).
 

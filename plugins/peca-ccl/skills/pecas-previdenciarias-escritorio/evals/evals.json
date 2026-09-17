@@ -4,12 +4,12 @@
     {
       "id": 1,
       "prompt": "peça CCL. INICIAR, autorizo prosseguir internamente sem perguntar etapa por etapa. Caso: petição inicial de auxílio-doença/incapacidade temporária, segurada empregada, tramitando no JEF de Salvador/BA. a. Nenhuma peça anterior (é a inicial). b. Processo administrativo: requerimento NB 123.456.789-0 indeferido em 10/03/2026, motivo 'incapacidade não configurada'. c. Doutrina: nenhuma (use só a lei). d. Modelo: nenhum, use o timbre padrão do escritório. e. Demais documentos: laudo médico de 15/02/2026, Dra. Fernanda Melo, CRM/BA 12345, CID M54.5 (lombalgia), atestando afastamento por 90 dias a partir de 20/02/2026, identificação da paciente completa, assinatura eletrônica válida. Autora: Joana Ribeiro dos Santos, brasileira, solteira, auxiliar de produção, CPF 111.222.333-44, RG 12.345.678-90, residente em Salvador/BA. Valor da causa: proveito econômico de R$ 6.600,00 (11 parcelas de R$ 600,00 estimadas). Gere a minuta final completa em .docx.",
-      "expected_output": "Petição inicial completa, com o padrão fixo de fechamento (valor da causa, 'Nestes termos,', 'Pede deferimento.', data por extenso, bloco de assinatura centralizado com nome do(s) advogado(s) em negrito e CAIXA ALTA seguido da OAB em linha própria, sem linha de assinatura sublinhada) e sem nenhuma das construções de estilo proibidas.",
+      "expected_output": "Petição inicial completa, com o padrão fixo de fechamento (valor da causa, 'Nestes termos, pede deferimento.', data por extenso, bloco de assinatura centralizado com nome do(s) advogado(s) em negrito e CAIXA ALTA seguido da OAB em linha própria, sem linha de assinatura sublinhada) e sem nenhuma das construções de estilo proibidas.",
       "files": [],
       "expectations": [
         "O bloco de assinatura final tem o nome do(s) advogado(s) em negrito e CAIXA ALTA, com o número da OAB na linha abaixo",
         "Não existe nenhuma linha de assinatura tipo '_____________' acima do nome do advogado",
-        "A sequência de fechamento segue, em parágrafos distintos e nesta ordem, valor da causa, 'Nestes termos,', 'Pede deferimento.', local e data por extenso, bloco de assinatura",
+        "A sequência de fechamento segue, em parágrafos distintos e nesta ordem, valor da causa, 'Nestes termos, pede deferimento.', local e data por extenso, bloco de assinatura",
         "Nenhum trecho do texto contém o caractere travessão (—)",
         "Nenhum ':' aparece como conector explicativo dentro de uma frase corrida (fora de lista numerada ou transcrição)"
       ]
