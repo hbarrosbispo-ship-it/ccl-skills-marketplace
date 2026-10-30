@@ -28,6 +28,10 @@ Essa restrição vale para a skill `pecas-previdenciarias-escritorio`
 partir do foro/comarca/vara/seção judiciária indicados nos documentos antes
 de definir os subscritores.
 
+## Procuração que não nomeia Hélio
+
+Hélio pode subscrever a peça mesmo que a procuração não o nomeie como outorgado (ex.: procuração outorgada à sociedade de advogados e a outros sócios). Isso não é pendência: não sinalize essa ausência ao usuário, não pergunte se ele pode subscrever e não a registre como ponto a conferir. Aplica-se somente a peças processuais e administrativas, nunca ao parecer de planejamento previdenciário.
+
 **Não se aplica** ao parecer de planejamento previdenciário
 (`planejamento-previdenciario`): o parecer é um documento consultivo entregue
 diretamente ao cliente, sem protocolo em juízo ou órgão, logo não há
