@@ -36,63 +36,21 @@ peça que tramita (ou vai tramitar) em JEF:
 - Em caso de dúvida sobre o juízo de tramitação, pergunte ao usuário antes
   de aplicar ou descartar o pedido de honorários.
 
-## Representação processual da União conforme a natureza da causa
+## Endereço do autor em caso de divergência
 
-Em causa **não tributária**, a União é representada judicialmente pela
-Advocacia-Geral da União (AGU), por meio da Procuradoria da União no estado
-onde tramita a ação (PU/[UF]) — nunca pela Procuradoria da Fazenda Nacional
-(PFN), que atua apenas em causas tributárias/fiscais.
+Quando os documentos do caso trouxerem endereços diferentes para o cliente
+(por exemplo, número da casa diferente entre o contrato, o cadastro do INSS
+e relatórios médicos), use sempre o endereço da procuração e da declaração
+de hipossuficiência. Não pergunte ao usuário nem registre a divergência como
+pendência, salvo se ela afetar a competência ou a citação.
 
-**Como aplicar.** Ao qualificar a União como parte ré:
-- Identifique primeiro se a causa é tributária/fiscal (PFN) ou não (AGU/PU
-  do estado onde tramita a ação).
-- Peça a citação por meio eletrônico, perante o órgão de Advocacia Pública
-  responsável, com base nos arts. 242, §3º, e 246, §2º, do CPC, salvo
-  indicação em contrário do usuário.
+## Declaração sobre ação anterior (art. 129-A, I, "d", da Lei 8.213/91)
 
-## Revelia da Fazenda Pública não gera os efeitos materiais do art. 344 do CPC
-
-Em peças em face da Fazenda Pública (União, Estados, Municípios, autarquias
-e fundações públicas), não redigir "sob pena de revelia e confissão" como
-consequência da ausência de contestação. Os efeitos materiais da revelia
-(presunção de veracidade dos fatos alegados) não se aplicam a direitos
-indisponíveis da Fazenda Pública (art. 345, II, do CPC).
-
-**Como aplicar.** Ao redigir o pedido de citação da parte ré, nunca inclua
-essa expressão quando a ré for ente público.
-
-## Enfrentar o fundamento real do ato impugnado, não só uma tese indireta
-
-Quando o caso envolver ato administrativo que a parte ré já justificou por
-escrito (ofício, parecer, decisão, despacho), leia o documento por inteiro e
-liste **todos** os fundamentos/itens que ele apresenta antes de estruturar
-as teses — não pare no argumento mais evidente ou no primeiro item
-encontrado. Evite apoiar toda a causa de pedir num único argumento indireto
-(ex.: coisa julgada de um processo anterior que não decidiu exatamente o
-ponto em disputa) quando o fundamento real do ato impugnado — o motivo que
-a própria ré invocou — puder ser atacado de frente com tese própria.
-
-**Como aplicar.**
-- Nas Etapas 2/3, ao ler o documento em que a ré justifica o ato impugnado,
-  liste todos os itens/fundamentos que ele apresenta, inclusive os que
-  pareçam secundários ou mencionem pendências (ex.: "pendente de julgamento
-  por outro órgão").
-- Na Etapa 5, construa uma tese específica para cada fundamento real
-  invocado pela ré, mantendo eventual tese indireta (ex.: coisa julgada
-  tangencial) como uma tese adicional entre várias, nunca como a única base
-  da causa de pedir.
-
-## Valor da causa em ação de revisão de benefício continuado
-
-O valor da causa deve somar as prestações vencidas desde o marco inicial da
-lesão até a data efetiva do ajuizamento, mais 12 prestações vincendas,
-incluindo todos os reflexos (adicionais, gratificações etc.) incidentes
-sobre a parcela principal, nos termos do art. 292, III, §§1º e 2º, do CPC.
-
-**Como aplicar.** Antes de fechar o valor da causa na minuta final, confirme
-a data efetiva prevista para o ajuizamento e recalcule a partir dela — nunca
-reaproveite automaticamente um cálculo de rascunho de uma versão anterior da
-peça, que pode estar desatualizado.
+Não se preocupe com a declaração sobre existência de ação anterior. A
+análise de prevenção do próprio processo já verifica litispendência e coisa
+julgada. Não inclua marcador de confirmação no texto, não pergunte ao
+usuário e não trate o tema como pendência de protocolo. Se o tópico não
+agregar à narrativa, pode ser omitido.
 
 ## (espaço para novas orientações gerais)
 

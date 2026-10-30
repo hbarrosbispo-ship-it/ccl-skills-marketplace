@@ -56,3 +56,15 @@ grafia idêntica em todas as ocorrências (ex.: se a segunda menção de uma
 Portaria Interministerial usa "MTE/MS/MPS", a primeira menção não pode usar
 uma sigla diferente, como "MTE/MS/MP") — revise o documento inteiro ao final
 para garantir essa consistência.
+
+## Doutrina só com página
+
+Nunca cite doutrina sem indicar a página. A doutrina salva na base local
+(por exemplo, os trechos de Castro e Lazzari) existe principalmente como
+base para a escrita da peça. Se a página da obra não for conhecida, use o
+conteúdo para fundamentar o raciocínio, mas não faça citação, nota de
+rodapé nem atribuição ("a doutrina ressalta", "segundo os autores"). Se a
+página for conhecida, cite no formato indicado pelo usuário para a obra.
+Isso vale também para ementas reproduzidas em obras doutrinárias: cite o
+julgado pela sua própria fonte (tribunal, número, relator, data), sem
+atribuir a transcrição à obra.

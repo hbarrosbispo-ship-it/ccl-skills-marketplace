@@ -207,7 +207,38 @@ item 2 se torna "2. Identidade (CNH)", e assim por diante.
 4. Comprovante de residência.
 5. Declaração de hipossuficiência.
 6. CNIS / declarações de Imposto de Renda.
-7. Relatórios médicos.
+7. Relatórios médicos e demais documentos médicos (atestados, exames, receituários), consolidados em ordem cronológica (ver "Preparo físico dos documentos" abaixo).
+8. Perícias médicas do INSS.
+9. Cartas de concessão, comunicações de decisão e processos administrativos.
+10. Pedidos de prorrogação e demais requerimentos administrativos.
+11. Memória de cálculo do valor da causa, quando houver.
+
+**Regra de prioridade.** Documentos médicos vêm sempre antes de perícias,
+decisões, processos administrativos e pedidos de prorrogação, porque são a
+prova mais importante da incapacidade. Dentro dos documentos médicos, a
+ordem é cronológica (do mais antigo ao mais recente); exames de uma mesma
+especialidade e período podem formar um arquivo próprio logo após os
+relatórios, também em ordem cronológica.
+
+## Preparo físico dos documentos
+
+Parte da organização do protocolo (Etapa 8c), aplicada antes de numerar:
+- **Girar páginas e imagens deitadas.** Fotos de documentos e páginas
+  escaneadas de lado devem ser giradas para a posição de leitura antes de
+  entrar no PDF final. Confira a orientação olhando a página, nunca presuma.
+- **Ordenar relatórios médicos por data.** Leia a data de cada página
+  (a data do documento, não a do atendimento ou do afastamento quando
+  diferirem) e consolide em um único PDF cronológico. Use o PDF consolidado
+  como item numerado, e registre o mapa de páginas para citar "doc. N, p. X"
+  na minuta com a numeração do arquivo final.
+- **Páginas em branco, de ruído de scanner e duplicatas exatas** podem ser
+  retiradas do PDF consolidado. Preserve o arquivo original em
+  "Não Protocolo/Originais" e informe ao usuário o que foi retirado.
+- **Comprimir** apenas o necessário para o limite do sistema de destino,
+  conferindo a legibilidade.
+- **Mapa de páginas.** Depois de consolidar e reordenar, as citações de
+  página da minuta são feitas sobre o arquivo final, nunca sobre o scan
+  original.
 
 **Requerimentos e recursos administrativos (INSS) têm ordem própria,
 diferente da judicial:**
