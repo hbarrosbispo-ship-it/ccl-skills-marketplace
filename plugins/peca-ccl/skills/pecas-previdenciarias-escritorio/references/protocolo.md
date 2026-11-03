@@ -208,14 +208,17 @@ item 2 se torna "2. Identidade (CNH)", e assim por diante.
 5. Declaração de hipossuficiência.
 6. CNIS / declarações de Imposto de Renda.
 7. Relatórios médicos e demais documentos médicos (atestados, exames, receituários), consolidados em ordem cronológica (ver "Preparo físico dos documentos" abaixo).
-8. Perícias médicas do INSS.
+8. Perícias médicas do INSS (em incapacidade, a favorável ao cliente vem antes do item 7; ver a regra de prioridade abaixo).
 9. Cartas de concessão, comunicações de decisão e processos administrativos.
 10. Pedidos de prorrogação e demais requerimentos administrativos.
 11. Memória de cálculo do valor da causa, quando houver.
 
-**Regra de prioridade.** Documentos médicos vêm sempre antes de perícias,
-decisões, processos administrativos e pedidos de prorrogação, porque são a
-prova mais importante da incapacidade. Dentro dos documentos médicos, a
+**Regra de prioridade.** Documentos médicos vêm antes de decisões, processos
+administrativos e pedidos de prorrogação. A posição das perícias do INSS
+depende da matéria: em benefícios por incapacidade, a perícia favorável ao
+cliente é a prova mais forte e vem antes dos relatórios médicos, e a
+desfavorável vem depois deles (ver o perfil da matéria, por exemplo
+`peca-incapacidade-ccl`). Dentro dos documentos médicos, a
 ordem é cronológica (do mais antigo ao mais recente); exames de uma mesma
 especialidade e período podem formar um arquivo próprio logo após os
 relatórios, também em ordem cronológica.
