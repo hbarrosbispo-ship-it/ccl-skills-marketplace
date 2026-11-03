@@ -32,12 +32,6 @@ em `calibragem-densidade.md` (patamar leve) e nas demais seções do SKILL.md.
 - Não cite jurisprudência no âmbito administrativo (reforça RESTRIÇÕES
   ABSOLUTAS e ETAPA 7 do SKILL.md); fundamente exclusivamente em Instruções
   Normativas, Portarias, Decretos e demais atos normativos do órgão.
-- **Vigência do Regimento Interno do CRPS.** Antes de citar ou fundamentar
-  algo no Regimento Interno do CRPS, confirme sua vigência conforme a regra
-  de citação de fontes (`referencias-escritorio/regras-comuns/citacao-fontes.md`)
-  como para qualquer outro ato normativo — se houver dúvida concreta sobre
-  uma edição mais recente do regimento, pergunte ao usuário se ele tem o
-  texto atualizado antes de citar.
 
 ## Padrão de abertura e numeração dos requerimentos e recursos administrativos ao INSS
 
