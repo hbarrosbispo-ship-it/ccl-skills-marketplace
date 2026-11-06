@@ -36,6 +36,26 @@ peça que tramita (ou vai tramitar) em JEF:
 - Em caso de dúvida sobre o juízo de tramitação, pergunte ao usuário antes
   de aplicar ou descartar o pedido de honorários.
 
+## Enfoque dos fatos em peças de Juizado (JEF e demais Juizados)
+
+Vale para qualquer peça que tramita (ou vai tramitar) em Juizado, de qualquer matéria (incapacidade, BPC-LOAS,
+salário-maternidade, aposentadoria da pessoa com deficiência e as demais). Orientação do escritório, 06/11/2026.
+
+Nos Juizados, o procurador da parte ré quase sempre junta uma contestação padrão e segue o motivo do
+indeferimento. A descrição fática é a primeira coisa que ele lê. Dar destaque nos fatos a ponto que a parte ré
+não usou para negar o pedido convida-a a questionar esse ponto no processo e a criar um problema que não existia.
+
+**Como aplicar.**
+- Antes de redigir DOS FATOS, leia a decisão ou o motivo do indeferimento e identifique o que a parte ré de fato
+  apontou. Só isso ganha desenvolvimento nos fatos.
+- Ponto favorável que a parte ré não levantou (por exemplo, vínculos e desemprego, extensão do período de graça,
+  outro requisito que o INSS não contestou) não é omitido, porque é fato do caso. Registre-o em uma pincelada,
+  sem destaque e sem tópico ou subtópico próprio, e deixe o fundamento só em DO DIREITO, de forma enxuta.
+- Não narre em detalhe nos fatos o que não foi motivo da negativa. A narrativa cronológica do caso continua,
+  mas sobre o que sustenta o pedido.
+- Antes de fechar a peça, pergunte: "a parte ré apontou isto como motivo? Se não, a descrição está discreta?".
+- Vale para a inicial. Em réplica e recurso, responda ao que a parte ré e a sentença de fato disseram.
+
 ## Endereço do autor em caso de divergência
 
 Quando os documentos do caso trouxerem endereços diferentes para o cliente
